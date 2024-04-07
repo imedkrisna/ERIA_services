@@ -1,30 +1,41 @@
-# Gradle files
-.gradle/
-build/
+# data (find in data)
+*.xlsx
+*.dta
+*.dbf
+*.xls
 
-# Local configuration file (sdk path, etc)
-local.properties
+# Prerequisites
+*.d
 
-# Log/OS Files
-*.log
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
 
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.apk
-output.json
+# Precompiled Headers
+*.gch
+*.pch
 
-# IntelliJ
-*.iml
-.idea/
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
 
-# Keystore files
-*.jks
-*.keystore
+# Fortran module files
+*.mod
+*.smod
 
-# Google Services (e.g. APIs or Firebase)
-google-services.json
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
 
-# Android Profiling
-*.hprof
+# Executables
+*.exe
+*.out
+*.app
+.Rproj.user
+
+/.quarto/
