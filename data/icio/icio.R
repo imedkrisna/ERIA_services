@@ -3,6 +3,8 @@ library(lubridate)
 
 setwd('C:/github/PlasticTrade/data/icio')
 
+#### FOOD MANUFACTURING
+
 i2002<-read_csv("2002.csv") |> select(`...1`,IDN_C10T12) |> arrange(desc(IDN_C10T12)) |>
   rename("2002"="IDN_C10T12")
 i2003<-read_csv("2003.csv") |> select(`...1`,IDN_C10T12) |> arrange(desc(IDN_C10T12)) |>
@@ -51,6 +53,10 @@ gabung1<-gabung |> mutate(across(where(is.numeric), ~./.[1])) ## Bikin persen (h
 
 gabung2<-gabung1 |>
   mutate(group=stringr::str_extract(`...1`, "IDN"))
+gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain IDN ditulis foreign
+
+gabung2<-gabung2 |>
+  mutate(group2=stringr::str_extract(`...1`, ))
 gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain IDN ditulis foreign
 
 gabung2a<-gabung |>
