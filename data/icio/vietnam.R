@@ -2425,7 +2425,7 @@ wew|>write_xlsx('VNM.xlsx')
 
 wew|>
   filter(industry!="C10T12") |>
-  ggplot(aes(x=OUT,y=sfs+sfg,color=industry))+geom_point()+theme_classic()
+  ggplot(aes(x=OUT,y=fs+fg,color=industry))+geom_point()+theme_classic()
 
 wew2<-wew |> mutate(industry=NULL) |> group_by(year) |>
   summarise(across(everything(),sum))
@@ -2433,7 +2433,7 @@ wew2|>write_xlsx('VNM2.xlsx')
 ## wew %>% mutate(industry=NULL) |> group_by(year) %>% summarize_all(sum)
 
 ## ARDL test
-
-asuw<-wew|>filter(industry=="C20")
-ardl(data=asuw,OUT~foreign,order=c(1,1))|>summary()
-ardl(data=asuw,VA~foreign,order=c(1,1))|>summary()
+wew$foreign<-wew$fs+wew$fg
+asuw<-wew|>filter(industry=="C29")
+ardl(data=asuw,OUT~foreign,order=c(1,0))|>summary()
+ardl(data=asuw,VA~foreign,order=c(1,0))|>summary()
