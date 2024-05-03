@@ -6,44 +6,44 @@ setwd('C:/github/ERIA_services/data/icio')
 
 #### FOOD MANUFACTURING
 
-i2002<-read_csv("2002.csv") |> select(`...1`,IDN_C10T12) |> arrange(desc(IDN_C10T12)) |>
-  rename("2002"="IDN_C10T12")
-i2003<-read_csv("2003.csv") |> select(`...1`,IDN_C10T12) |> arrange(desc(IDN_C10T12)) |>
-  rename("2003"="IDN_C10T12")
-i2004<-read_csv("2004.csv") |> select(`...1`,IDN_C10T12) |> arrange(desc(IDN_C10T12)) |>
-  rename("2004"="IDN_C10T12")
-i2005<-read_csv("2005.csv") |> select(`...1`,IDN_C10T12) |> arrange(desc(IDN_C10T12)) |>
-  rename("2005"="IDN_C10T12")
-i2006<-read_csv("2006.csv") |> select(`...1`,IDN_C10T12) |> arrange(desc(IDN_C10T12)) |>
-  rename("2006"="IDN_C10T12")
-i2007<-read_csv("2007.csv") |> select(`...1`,IDN_C10T12) |> arrange(desc(IDN_C10T12)) |>
-  rename("2007"="IDN_C10T12")
-i2008<-read_csv("2008.csv") |> select(`...1`,IDN_C10T12) |> arrange(desc(IDN_C10T12)) |>
-  rename("2008"="IDN_C10T12")
-i2009<-read_csv("2008.csv") |> select(`...1`,IDN_C10T12) |> arrange(desc(IDN_C10T12)) |>
-  rename("2009"="IDN_C10T12")
-i2010<-read_csv("2010.csv") |> select(`...1`,IDN_C10T12) |> arrange(desc(IDN_C10T12)) |>
-  rename("2010"="IDN_C10T12")
-i2011<-read_csv("2011.csv") |> select(`...1`,IDN_C10T12) |> arrange(desc(IDN_C10T12)) |>
-  rename("2011"="IDN_C10T12")
-i2012<-read_csv("2012.csv") |> select(`...1`,IDN_C10T12) |> arrange(desc(IDN_C10T12)) |>
-  rename("2012"="IDN_C10T12")
-i2013<-read_csv("2013.csv") |> select(`...1`,IDN_C10T12) |> arrange(desc(IDN_C10T12)) |>
-  rename("2013"="IDN_C10T12")
-i2014<-read_csv("2014.csv") |> select(`...1`,IDN_C10T12) |> arrange(desc(IDN_C10T12)) |>
-  rename("2014"="IDN_C10T12")
-i2015<-read_csv("2015.csv") |> select(`...1`,IDN_C10T12) |> arrange(desc(IDN_C10T12)) |>
-  rename("2015"="IDN_C10T12")
-i2016<-read_csv("2016.csv") |> select(`...1`,IDN_C10T12) |> arrange(desc(IDN_C10T12)) |>
-  rename("2016"="IDN_C10T12")
-i2017<-read_csv("2017.csv") |> select(`...1`,IDN_C10T12) |> arrange(desc(IDN_C10T12)) |>
-  rename("2017"="IDN_C10T12")
-i2018<-read_csv("2018.csv") |> select(`...1`,IDN_C10T12) |> arrange(desc(IDN_C10T12)) |>
-  rename("2018"="IDN_C10T12")
-i2019<-read_csv("2019.csv") |> select(`...1`,IDN_C10T12) |> arrange(desc(IDN_C10T12)) |>
-  rename("2019"="IDN_C10T12")
-i2020<-read_csv("2020.csv") |> select(`...1`,IDN_C10T12) |> arrange(desc(IDN_C10T12)) |>
-  rename("2020"="IDN_C10T12")
+i2002<-read_csv("2002.csv") |> select(`...1`,VNM_C10T12) |> arrange(desc(VNM_C10T12)) |>
+  rename("2002"="VNM_C10T12")
+i2003<-read_csv("2003.csv") |> select(`...1`,VNM_C10T12) |> arrange(desc(VNM_C10T12)) |>
+  rename("2003"="VNM_C10T12")
+i2004<-read_csv("2004.csv") |> select(`...1`,VNM_C10T12) |> arrange(desc(VNM_C10T12)) |>
+  rename("2004"="VNM_C10T12")
+i2005<-read_csv("2005.csv") |> select(`...1`,VNM_C10T12) |> arrange(desc(VNM_C10T12)) |>
+  rename("2005"="VNM_C10T12")
+i2006<-read_csv("2006.csv") |> select(`...1`,VNM_C10T12) |> arrange(desc(VNM_C10T12)) |>
+  rename("2006"="VNM_C10T12")
+i2007<-read_csv("2007.csv") |> select(`...1`,VNM_C10T12) |> arrange(desc(VNM_C10T12)) |>
+  rename("2007"="VNM_C10T12")
+i2008<-read_csv("2008.csv") |> select(`...1`,VNM_C10T12) |> arrange(desc(VNM_C10T12)) |>
+  rename("2008"="VNM_C10T12")
+i2009<-read_csv("2008.csv") |> select(`...1`,VNM_C10T12) |> arrange(desc(VNM_C10T12)) |>
+  rename("2009"="VNM_C10T12")
+i2010<-read_csv("2010.csv") |> select(`...1`,VNM_C10T12) |> arrange(desc(VNM_C10T12)) |>
+  rename("2010"="VNM_C10T12")
+i2011<-read_csv("2011.csv") |> select(`...1`,VNM_C10T12) |> arrange(desc(VNM_C10T12)) |>
+  rename("2011"="VNM_C10T12")
+i2012<-read_csv("2012.csv") |> select(`...1`,VNM_C10T12) |> arrange(desc(VNM_C10T12)) |>
+  rename("2012"="VNM_C10T12")
+i2013<-read_csv("2013.csv") |> select(`...1`,VNM_C10T12) |> arrange(desc(VNM_C10T12)) |>
+  rename("2013"="VNM_C10T12")
+i2014<-read_csv("2014.csv") |> select(`...1`,VNM_C10T12) |> arrange(desc(VNM_C10T12)) |>
+  rename("2014"="VNM_C10T12")
+i2015<-read_csv("2015.csv") |> select(`...1`,VNM_C10T12) |> arrange(desc(VNM_C10T12)) |>
+  rename("2015"="VNM_C10T12")
+i2016<-read_csv("2016.csv") |> select(`...1`,VNM_C10T12) |> arrange(desc(VNM_C10T12)) |>
+  rename("2016"="VNM_C10T12")
+i2017<-read_csv("2017.csv") |> select(`...1`,VNM_C10T12) |> arrange(desc(VNM_C10T12)) |>
+  rename("2017"="VNM_C10T12")
+i2018<-read_csv("2018.csv") |> select(`...1`,VNM_C10T12) |> arrange(desc(VNM_C10T12)) |>
+  rename("2018"="VNM_C10T12")
+i2019<-read_csv("2019.csv") |> select(`...1`,VNM_C10T12) |> arrange(desc(VNM_C10T12)) |>
+  rename("2019"="VNM_C10T12")
+i2020<-read_csv("2020.csv") |> select(`...1`,VNM_C10T12) |> arrange(desc(VNM_C10T12)) |>
+  rename("2020"="VNM_C10T12")
 
 is<-list(i2002,i2003,i2004,i2005,i2006,i2007,i2008,i2009,i2010,i2011,i2012,
          i2013,i2014,i2015,i2016,i2017,i2018,i2019,i2020)
@@ -53,8 +53,8 @@ gabung<-reduce(is,inner_join) ## Gabung semua data per tahun itu dengan cara
 gabung1<-gabung |> mutate(across(where(is.numeric), ~./.[1])) ## Bikin persen (how to use . and ...)
 
 gabung2<-gabung1 |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
-gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain IDN ditulis foreign
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
+gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain VNM ditulis foreign
 
 gabung2<-gabung2 |>
   mutate(service=ifelse(
@@ -70,14 +70,14 @@ gabung2<-gabung2 |>
 
 gabung2<-gabung2 |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "sds",
-    group=="IDN" & service==0 ~ "sdg",
+    group=="VNM" & service==1 ~ "sds",
+    group=="VNM" & service==0 ~ "sdg",
     group=="foreign" & service==1 ~ "sfs",
     TRUE~"sfg"
   ))
     
 gabung2a<-gabung |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
 gabung2a<-gabung2a |>  replace(is.na(gabung2a),"foreign") ## sama tapi bukan persen
 
 gabung2a<-gabung2a |>
@@ -94,8 +94,8 @@ gabung2a<-gabung2a |>
 
 gabung2a<-gabung2a |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "ds",
-    group=="IDN" & service==0 ~ "dg",
+    group=="VNM" & service==1 ~ "ds",
+    group=="VNM" & service==0 ~ "dg",
     group=="foreign" & service==1 ~ "fs",
     TRUE~"fg"
   ))
@@ -146,7 +146,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ] |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -157,44 +157,44 @@ food$industry<-"C10T12"
 
 #### TEXTILES
 
-i2002<-read_csv("2002.csv") |> select(`...1`,IDN_C13T15) |> arrange(desc(IDN_C13T15)) |>
-  rename("2002"="IDN_C13T15")
-i2003<-read_csv("2003.csv") |> select(`...1`,IDN_C13T15) |> arrange(desc(IDN_C13T15)) |>
-  rename("2003"="IDN_C13T15")
-i2004<-read_csv("2004.csv") |> select(`...1`,IDN_C13T15) |> arrange(desc(IDN_C13T15)) |>
-  rename("2004"="IDN_C13T15")
-i2005<-read_csv("2005.csv") |> select(`...1`,IDN_C13T15) |> arrange(desc(IDN_C13T15)) |>
-  rename("2005"="IDN_C13T15")
-i2006<-read_csv("2006.csv") |> select(`...1`,IDN_C13T15) |> arrange(desc(IDN_C13T15)) |>
-  rename("2006"="IDN_C13T15")
-i2007<-read_csv("2007.csv") |> select(`...1`,IDN_C13T15) |> arrange(desc(IDN_C13T15)) |>
-  rename("2007"="IDN_C13T15")
-i2008<-read_csv("2008.csv") |> select(`...1`,IDN_C13T15) |> arrange(desc(IDN_C13T15)) |>
-  rename("2008"="IDN_C13T15")
-i2009<-read_csv("2008.csv") |> select(`...1`,IDN_C13T15) |> arrange(desc(IDN_C13T15)) |>
-  rename("2009"="IDN_C13T15")
-i2010<-read_csv("2010.csv") |> select(`...1`,IDN_C13T15) |> arrange(desc(IDN_C13T15)) |>
-  rename("2010"="IDN_C13T15")
-i2011<-read_csv("2011.csv") |> select(`...1`,IDN_C13T15) |> arrange(desc(IDN_C13T15)) |>
-  rename("2011"="IDN_C13T15")
-i2012<-read_csv("2012.csv") |> select(`...1`,IDN_C13T15) |> arrange(desc(IDN_C13T15)) |>
-  rename("2012"="IDN_C13T15")
-i2013<-read_csv("2013.csv") |> select(`...1`,IDN_C13T15) |> arrange(desc(IDN_C13T15)) |>
-  rename("2013"="IDN_C13T15")
-i2014<-read_csv("2014.csv") |> select(`...1`,IDN_C13T15) |> arrange(desc(IDN_C13T15)) |>
-  rename("2014"="IDN_C13T15")
-i2015<-read_csv("2015.csv") |> select(`...1`,IDN_C13T15) |> arrange(desc(IDN_C13T15)) |>
-  rename("2015"="IDN_C13T15")
-i2016<-read_csv("2016.csv") |> select(`...1`,IDN_C13T15) |> arrange(desc(IDN_C13T15)) |>
-  rename("2016"="IDN_C13T15")
-i2017<-read_csv("2017.csv") |> select(`...1`,IDN_C13T15) |> arrange(desc(IDN_C13T15)) |>
-  rename("2017"="IDN_C13T15")
-i2018<-read_csv("2018.csv") |> select(`...1`,IDN_C13T15) |> arrange(desc(IDN_C13T15)) |>
-  rename("2018"="IDN_C13T15")
-i2019<-read_csv("2019.csv") |> select(`...1`,IDN_C13T15) |> arrange(desc(IDN_C13T15)) |>
-  rename("2019"="IDN_C13T15")
-i2020<-read_csv("2020.csv") |> select(`...1`,IDN_C13T15) |> arrange(desc(IDN_C13T15)) |>
-  rename("2020"="IDN_C13T15")
+i2002<-read_csv("2002.csv") |> select(`...1`,VNM_C13T15) |> arrange(desc(VNM_C13T15)) |>
+  rename("2002"="VNM_C13T15")
+i2003<-read_csv("2003.csv") |> select(`...1`,VNM_C13T15) |> arrange(desc(VNM_C13T15)) |>
+  rename("2003"="VNM_C13T15")
+i2004<-read_csv("2004.csv") |> select(`...1`,VNM_C13T15) |> arrange(desc(VNM_C13T15)) |>
+  rename("2004"="VNM_C13T15")
+i2005<-read_csv("2005.csv") |> select(`...1`,VNM_C13T15) |> arrange(desc(VNM_C13T15)) |>
+  rename("2005"="VNM_C13T15")
+i2006<-read_csv("2006.csv") |> select(`...1`,VNM_C13T15) |> arrange(desc(VNM_C13T15)) |>
+  rename("2006"="VNM_C13T15")
+i2007<-read_csv("2007.csv") |> select(`...1`,VNM_C13T15) |> arrange(desc(VNM_C13T15)) |>
+  rename("2007"="VNM_C13T15")
+i2008<-read_csv("2008.csv") |> select(`...1`,VNM_C13T15) |> arrange(desc(VNM_C13T15)) |>
+  rename("2008"="VNM_C13T15")
+i2009<-read_csv("2008.csv") |> select(`...1`,VNM_C13T15) |> arrange(desc(VNM_C13T15)) |>
+  rename("2009"="VNM_C13T15")
+i2010<-read_csv("2010.csv") |> select(`...1`,VNM_C13T15) |> arrange(desc(VNM_C13T15)) |>
+  rename("2010"="VNM_C13T15")
+i2011<-read_csv("2011.csv") |> select(`...1`,VNM_C13T15) |> arrange(desc(VNM_C13T15)) |>
+  rename("2011"="VNM_C13T15")
+i2012<-read_csv("2012.csv") |> select(`...1`,VNM_C13T15) |> arrange(desc(VNM_C13T15)) |>
+  rename("2012"="VNM_C13T15")
+i2013<-read_csv("2013.csv") |> select(`...1`,VNM_C13T15) |> arrange(desc(VNM_C13T15)) |>
+  rename("2013"="VNM_C13T15")
+i2014<-read_csv("2014.csv") |> select(`...1`,VNM_C13T15) |> arrange(desc(VNM_C13T15)) |>
+  rename("2014"="VNM_C13T15")
+i2015<-read_csv("2015.csv") |> select(`...1`,VNM_C13T15) |> arrange(desc(VNM_C13T15)) |>
+  rename("2015"="VNM_C13T15")
+i2016<-read_csv("2016.csv") |> select(`...1`,VNM_C13T15) |> arrange(desc(VNM_C13T15)) |>
+  rename("2016"="VNM_C13T15")
+i2017<-read_csv("2017.csv") |> select(`...1`,VNM_C13T15) |> arrange(desc(VNM_C13T15)) |>
+  rename("2017"="VNM_C13T15")
+i2018<-read_csv("2018.csv") |> select(`...1`,VNM_C13T15) |> arrange(desc(VNM_C13T15)) |>
+  rename("2018"="VNM_C13T15")
+i2019<-read_csv("2019.csv") |> select(`...1`,VNM_C13T15) |> arrange(desc(VNM_C13T15)) |>
+  rename("2019"="VNM_C13T15")
+i2020<-read_csv("2020.csv") |> select(`...1`,VNM_C13T15) |> arrange(desc(VNM_C13T15)) |>
+  rename("2020"="VNM_C13T15")
 
 is<-list(i2002,i2003,i2004,i2005,i2006,i2007,i2008,i2009,i2010,i2011,i2012,
          i2013,i2014,i2015,i2016,i2017,i2018,i2019,i2020)
@@ -204,8 +204,8 @@ gabung<-reduce(is,inner_join) ## Gabung semua data per tahun itu dengan cara
 gabung1<-gabung |> mutate(across(where(is.numeric), ~./.[1])) ## Bikin persen (how to use . and ...)
 
 gabung2<-gabung1 |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
-gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain IDN ditulis foreign
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
+gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain VNM ditulis foreign
 
 gabung2<-gabung2 |>
   mutate(service=ifelse(
@@ -221,14 +221,14 @@ gabung2<-gabung2 |>
 
 gabung2<-gabung2 |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "sds",
-    group=="IDN" & service==0 ~ "sdg",
+    group=="VNM" & service==1 ~ "sds",
+    group=="VNM" & service==0 ~ "sdg",
     group=="foreign" & service==1 ~ "sfs",
     TRUE~"sfg"
   ))
 
 gabung2a<-gabung |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
 gabung2a<-gabung2a |>  replace(is.na(gabung2a),"foreign") ## sama tapi bukan persen
 
 gabung2a<-gabung2a |>
@@ -245,8 +245,8 @@ gabung2a<-gabung2a |>
 
 gabung2a<-gabung2a |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "ds",
-    group=="IDN" & service==0 ~ "dg",
+    group=="VNM" & service==1 ~ "ds",
+    group=="VNM" & service==0 ~ "dg",
     group=="foreign" & service==1 ~ "fs",
     TRUE~"fg"
   ))
@@ -297,7 +297,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ] |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -308,44 +308,44 @@ textiles$industry<-"C13T15"
 
 #### WOOD
 
-i2002<-read_csv("2002.csv") |> select(`...1`,IDN_C16) |> arrange(desc(IDN_C16)) |>
-  rename("2002"="IDN_C16")
-i2003<-read_csv("2003.csv") |> select(`...1`,IDN_C16) |> arrange(desc(IDN_C16)) |>
-  rename("2003"="IDN_C16")
-i2004<-read_csv("2004.csv") |> select(`...1`,IDN_C16) |> arrange(desc(IDN_C16)) |>
-  rename("2004"="IDN_C16")
-i2005<-read_csv("2005.csv") |> select(`...1`,IDN_C16) |> arrange(desc(IDN_C16)) |>
-  rename("2005"="IDN_C16")
-i2006<-read_csv("2006.csv") |> select(`...1`,IDN_C16) |> arrange(desc(IDN_C16)) |>
-  rename("2006"="IDN_C16")
-i2007<-read_csv("2007.csv") |> select(`...1`,IDN_C16) |> arrange(desc(IDN_C16)) |>
-  rename("2007"="IDN_C16")
-i2008<-read_csv("2008.csv") |> select(`...1`,IDN_C16) |> arrange(desc(IDN_C16)) |>
-  rename("2008"="IDN_C16")
-i2009<-read_csv("2008.csv") |> select(`...1`,IDN_C16) |> arrange(desc(IDN_C16)) |>
-  rename("2009"="IDN_C16")
-i2010<-read_csv("2010.csv") |> select(`...1`,IDN_C16) |> arrange(desc(IDN_C16)) |>
-  rename("2010"="IDN_C16")
-i2011<-read_csv("2011.csv") |> select(`...1`,IDN_C16) |> arrange(desc(IDN_C16)) |>
-  rename("2011"="IDN_C16")
-i2012<-read_csv("2012.csv") |> select(`...1`,IDN_C16) |> arrange(desc(IDN_C16)) |>
-  rename("2012"="IDN_C16")
-i2013<-read_csv("2013.csv") |> select(`...1`,IDN_C16) |> arrange(desc(IDN_C16)) |>
-  rename("2013"="IDN_C16")
-i2014<-read_csv("2014.csv") |> select(`...1`,IDN_C16) |> arrange(desc(IDN_C16)) |>
-  rename("2014"="IDN_C16")
-i2015<-read_csv("2015.csv") |> select(`...1`,IDN_C16) |> arrange(desc(IDN_C16)) |>
-  rename("2015"="IDN_C16")
-i2016<-read_csv("2016.csv") |> select(`...1`,IDN_C16) |> arrange(desc(IDN_C16)) |>
-  rename("2016"="IDN_C16")
-i2017<-read_csv("2017.csv") |> select(`...1`,IDN_C16) |> arrange(desc(IDN_C16)) |>
-  rename("2017"="IDN_C16")
-i2018<-read_csv("2018.csv") |> select(`...1`,IDN_C16) |> arrange(desc(IDN_C16)) |>
-  rename("2018"="IDN_C16")
-i2019<-read_csv("2019.csv") |> select(`...1`,IDN_C16) |> arrange(desc(IDN_C16)) |>
-  rename("2019"="IDN_C16")
-i2020<-read_csv("2020.csv") |> select(`...1`,IDN_C16) |> arrange(desc(IDN_C16)) |>
-  rename("2020"="IDN_C16")
+i2002<-read_csv("2002.csv") |> select(`...1`,VNM_C16) |> arrange(desc(VNM_C16)) |>
+  rename("2002"="VNM_C16")
+i2003<-read_csv("2003.csv") |> select(`...1`,VNM_C16) |> arrange(desc(VNM_C16)) |>
+  rename("2003"="VNM_C16")
+i2004<-read_csv("2004.csv") |> select(`...1`,VNM_C16) |> arrange(desc(VNM_C16)) |>
+  rename("2004"="VNM_C16")
+i2005<-read_csv("2005.csv") |> select(`...1`,VNM_C16) |> arrange(desc(VNM_C16)) |>
+  rename("2005"="VNM_C16")
+i2006<-read_csv("2006.csv") |> select(`...1`,VNM_C16) |> arrange(desc(VNM_C16)) |>
+  rename("2006"="VNM_C16")
+i2007<-read_csv("2007.csv") |> select(`...1`,VNM_C16) |> arrange(desc(VNM_C16)) |>
+  rename("2007"="VNM_C16")
+i2008<-read_csv("2008.csv") |> select(`...1`,VNM_C16) |> arrange(desc(VNM_C16)) |>
+  rename("2008"="VNM_C16")
+i2009<-read_csv("2008.csv") |> select(`...1`,VNM_C16) |> arrange(desc(VNM_C16)) |>
+  rename("2009"="VNM_C16")
+i2010<-read_csv("2010.csv") |> select(`...1`,VNM_C16) |> arrange(desc(VNM_C16)) |>
+  rename("2010"="VNM_C16")
+i2011<-read_csv("2011.csv") |> select(`...1`,VNM_C16) |> arrange(desc(VNM_C16)) |>
+  rename("2011"="VNM_C16")
+i2012<-read_csv("2012.csv") |> select(`...1`,VNM_C16) |> arrange(desc(VNM_C16)) |>
+  rename("2012"="VNM_C16")
+i2013<-read_csv("2013.csv") |> select(`...1`,VNM_C16) |> arrange(desc(VNM_C16)) |>
+  rename("2013"="VNM_C16")
+i2014<-read_csv("2014.csv") |> select(`...1`,VNM_C16) |> arrange(desc(VNM_C16)) |>
+  rename("2014"="VNM_C16")
+i2015<-read_csv("2015.csv") |> select(`...1`,VNM_C16) |> arrange(desc(VNM_C16)) |>
+  rename("2015"="VNM_C16")
+i2016<-read_csv("2016.csv") |> select(`...1`,VNM_C16) |> arrange(desc(VNM_C16)) |>
+  rename("2016"="VNM_C16")
+i2017<-read_csv("2017.csv") |> select(`...1`,VNM_C16) |> arrange(desc(VNM_C16)) |>
+  rename("2017"="VNM_C16")
+i2018<-read_csv("2018.csv") |> select(`...1`,VNM_C16) |> arrange(desc(VNM_C16)) |>
+  rename("2018"="VNM_C16")
+i2019<-read_csv("2019.csv") |> select(`...1`,VNM_C16) |> arrange(desc(VNM_C16)) |>
+  rename("2019"="VNM_C16")
+i2020<-read_csv("2020.csv") |> select(`...1`,VNM_C16) |> arrange(desc(VNM_C16)) |>
+  rename("2020"="VNM_C16")
 
 is<-list(i2002,i2003,i2004,i2005,i2006,i2007,i2008,i2009,i2010,i2011,i2012,
          i2013,i2014,i2015,i2016,i2017,i2018,i2019,i2020)
@@ -355,8 +355,8 @@ gabung<-reduce(is,inner_join) ## Gabung semua data per tahun itu dengan cara
 gabung1<-gabung |> mutate(across(where(is.numeric), ~./.[1])) ## Bikin persen (how to use . and ...)
 
 gabung2<-gabung1 |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
-gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain IDN ditulis foreign
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
+gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain VNM ditulis foreign
 
 gabung2<-gabung2 |>
   mutate(service=ifelse(
@@ -372,14 +372,14 @@ gabung2<-gabung2 |>
 
 gabung2<-gabung2 |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "sds",
-    group=="IDN" & service==0 ~ "sdg",
+    group=="VNM" & service==1 ~ "sds",
+    group=="VNM" & service==0 ~ "sdg",
     group=="foreign" & service==1 ~ "sfs",
     TRUE~"sfg"
   ))
 
 gabung2a<-gabung |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
 gabung2a<-gabung2a |>  replace(is.na(gabung2a),"foreign") ## sama tapi bukan persen
 
 gabung2a<-gabung2a |>
@@ -396,8 +396,8 @@ gabung2a<-gabung2a |>
 
 gabung2a<-gabung2a |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "ds",
-    group=="IDN" & service==0 ~ "dg",
+    group=="VNM" & service==1 ~ "ds",
+    group=="VNM" & service==0 ~ "dg",
     group=="foreign" & service==1 ~ "fs",
     TRUE~"fg"
   ))
@@ -448,7 +448,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ] |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -459,44 +459,44 @@ wood$industry<-"C16"
 
 #### PAPER
 
-i2002<-read_csv("2002.csv") |> select(`...1`,IDN_C17_18) |> arrange(desc(IDN_C17_18)) |>
-  rename("2002"="IDN_C17_18")
-i2003<-read_csv("2003.csv") |> select(`...1`,IDN_C17_18) |> arrange(desc(IDN_C17_18)) |>
-  rename("2003"="IDN_C17_18")
-i2004<-read_csv("2004.csv") |> select(`...1`,IDN_C17_18) |> arrange(desc(IDN_C17_18)) |>
-  rename("2004"="IDN_C17_18")
-i2005<-read_csv("2005.csv") |> select(`...1`,IDN_C17_18) |> arrange(desc(IDN_C17_18)) |>
-  rename("2005"="IDN_C17_18")
-i2006<-read_csv("2006.csv") |> select(`...1`,IDN_C17_18) |> arrange(desc(IDN_C17_18)) |>
-  rename("2006"="IDN_C17_18")
-i2007<-read_csv("2007.csv") |> select(`...1`,IDN_C17_18) |> arrange(desc(IDN_C17_18)) |>
-  rename("2007"="IDN_C17_18")
-i2008<-read_csv("2008.csv") |> select(`...1`,IDN_C17_18) |> arrange(desc(IDN_C17_18)) |>
-  rename("2008"="IDN_C17_18")
-i2009<-read_csv("2008.csv") |> select(`...1`,IDN_C17_18) |> arrange(desc(IDN_C17_18)) |>
-  rename("2009"="IDN_C17_18")
-i2010<-read_csv("2010.csv") |> select(`...1`,IDN_C17_18) |> arrange(desc(IDN_C17_18)) |>
-  rename("2010"="IDN_C17_18")
-i2011<-read_csv("2011.csv") |> select(`...1`,IDN_C17_18) |> arrange(desc(IDN_C17_18)) |>
-  rename("2011"="IDN_C17_18")
-i2012<-read_csv("2012.csv") |> select(`...1`,IDN_C17_18) |> arrange(desc(IDN_C17_18)) |>
-  rename("2012"="IDN_C17_18")
-i2013<-read_csv("2013.csv") |> select(`...1`,IDN_C17_18) |> arrange(desc(IDN_C17_18)) |>
-  rename("2013"="IDN_C17_18")
-i2014<-read_csv("2014.csv") |> select(`...1`,IDN_C17_18) |> arrange(desc(IDN_C17_18)) |>
-  rename("2014"="IDN_C17_18")
-i2015<-read_csv("2015.csv") |> select(`...1`,IDN_C17_18) |> arrange(desc(IDN_C17_18)) |>
-  rename("2015"="IDN_C17_18")
-i2016<-read_csv("2016.csv") |> select(`...1`,IDN_C17_18) |> arrange(desc(IDN_C17_18)) |>
-  rename("2016"="IDN_C17_18")
-i2017<-read_csv("2017.csv") |> select(`...1`,IDN_C17_18) |> arrange(desc(IDN_C17_18)) |>
-  rename("2017"="IDN_C17_18")
-i2018<-read_csv("2018.csv") |> select(`...1`,IDN_C17_18) |> arrange(desc(IDN_C17_18)) |>
-  rename("2018"="IDN_C17_18")
-i2019<-read_csv("2019.csv") |> select(`...1`,IDN_C17_18) |> arrange(desc(IDN_C17_18)) |>
-  rename("2019"="IDN_C17_18")
-i2020<-read_csv("2020.csv") |> select(`...1`,IDN_C17_18) |> arrange(desc(IDN_C17_18)) |>
-  rename("2020"="IDN_C17_18")
+i2002<-read_csv("2002.csv") |> select(`...1`,VNM_C17_18) |> arrange(desc(VNM_C17_18)) |>
+  rename("2002"="VNM_C17_18")
+i2003<-read_csv("2003.csv") |> select(`...1`,VNM_C17_18) |> arrange(desc(VNM_C17_18)) |>
+  rename("2003"="VNM_C17_18")
+i2004<-read_csv("2004.csv") |> select(`...1`,VNM_C17_18) |> arrange(desc(VNM_C17_18)) |>
+  rename("2004"="VNM_C17_18")
+i2005<-read_csv("2005.csv") |> select(`...1`,VNM_C17_18) |> arrange(desc(VNM_C17_18)) |>
+  rename("2005"="VNM_C17_18")
+i2006<-read_csv("2006.csv") |> select(`...1`,VNM_C17_18) |> arrange(desc(VNM_C17_18)) |>
+  rename("2006"="VNM_C17_18")
+i2007<-read_csv("2007.csv") |> select(`...1`,VNM_C17_18) |> arrange(desc(VNM_C17_18)) |>
+  rename("2007"="VNM_C17_18")
+i2008<-read_csv("2008.csv") |> select(`...1`,VNM_C17_18) |> arrange(desc(VNM_C17_18)) |>
+  rename("2008"="VNM_C17_18")
+i2009<-read_csv("2008.csv") |> select(`...1`,VNM_C17_18) |> arrange(desc(VNM_C17_18)) |>
+  rename("2009"="VNM_C17_18")
+i2010<-read_csv("2010.csv") |> select(`...1`,VNM_C17_18) |> arrange(desc(VNM_C17_18)) |>
+  rename("2010"="VNM_C17_18")
+i2011<-read_csv("2011.csv") |> select(`...1`,VNM_C17_18) |> arrange(desc(VNM_C17_18)) |>
+  rename("2011"="VNM_C17_18")
+i2012<-read_csv("2012.csv") |> select(`...1`,VNM_C17_18) |> arrange(desc(VNM_C17_18)) |>
+  rename("2012"="VNM_C17_18")
+i2013<-read_csv("2013.csv") |> select(`...1`,VNM_C17_18) |> arrange(desc(VNM_C17_18)) |>
+  rename("2013"="VNM_C17_18")
+i2014<-read_csv("2014.csv") |> select(`...1`,VNM_C17_18) |> arrange(desc(VNM_C17_18)) |>
+  rename("2014"="VNM_C17_18")
+i2015<-read_csv("2015.csv") |> select(`...1`,VNM_C17_18) |> arrange(desc(VNM_C17_18)) |>
+  rename("2015"="VNM_C17_18")
+i2016<-read_csv("2016.csv") |> select(`...1`,VNM_C17_18) |> arrange(desc(VNM_C17_18)) |>
+  rename("2016"="VNM_C17_18")
+i2017<-read_csv("2017.csv") |> select(`...1`,VNM_C17_18) |> arrange(desc(VNM_C17_18)) |>
+  rename("2017"="VNM_C17_18")
+i2018<-read_csv("2018.csv") |> select(`...1`,VNM_C17_18) |> arrange(desc(VNM_C17_18)) |>
+  rename("2018"="VNM_C17_18")
+i2019<-read_csv("2019.csv") |> select(`...1`,VNM_C17_18) |> arrange(desc(VNM_C17_18)) |>
+  rename("2019"="VNM_C17_18")
+i2020<-read_csv("2020.csv") |> select(`...1`,VNM_C17_18) |> arrange(desc(VNM_C17_18)) |>
+  rename("2020"="VNM_C17_18")
 
 is<-list(i2002,i2003,i2004,i2005,i2006,i2007,i2008,i2009,i2010,i2011,i2012,
          i2013,i2014,i2015,i2016,i2017,i2018,i2019,i2020)
@@ -506,8 +506,8 @@ gabung<-reduce(is,inner_join) ## Gabung semua data per tahun itu dengan cara
 gabung1<-gabung |> mutate(across(where(is.numeric), ~./.[1])) ## Bikin persen (how to use . and ...)
 
 gabung2<-gabung1 |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
-gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain IDN ditulis foreign
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
+gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain VNM ditulis foreign
 
 gabung2<-gabung2 |>
   mutate(service=ifelse(
@@ -523,14 +523,14 @@ gabung2<-gabung2 |>
 
 gabung2<-gabung2 |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "sds",
-    group=="IDN" & service==0 ~ "sdg",
+    group=="VNM" & service==1 ~ "sds",
+    group=="VNM" & service==0 ~ "sdg",
     group=="foreign" & service==1 ~ "sfs",
     TRUE~"sfg"
   ))
 
 gabung2a<-gabung |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
 gabung2a<-gabung2a |>  replace(is.na(gabung2a),"foreign") ## sama tapi bukan persen
 
 gabung2a<-gabung2a |>
@@ -547,8 +547,8 @@ gabung2a<-gabung2a |>
 
 gabung2a<-gabung2a |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "ds",
-    group=="IDN" & service==0 ~ "dg",
+    group=="VNM" & service==1 ~ "ds",
+    group=="VNM" & service==0 ~ "dg",
     group=="foreign" & service==1 ~ "fs",
     TRUE~"fg"
   ))
@@ -599,7 +599,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ] |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -610,44 +610,44 @@ paper$industry<-"C17_18"
 
 #### CHEMICAL
 
-i2002<-read_csv("2002.csv") |> select(`...1`,IDN_C20) |> arrange(desc(IDN_C20)) |>
-  rename("2002"="IDN_C20")
-i2003<-read_csv("2003.csv") |> select(`...1`,IDN_C20) |> arrange(desc(IDN_C20)) |>
-  rename("2003"="IDN_C20")
-i2004<-read_csv("2004.csv") |> select(`...1`,IDN_C20) |> arrange(desc(IDN_C20)) |>
-  rename("2004"="IDN_C20")
-i2005<-read_csv("2005.csv") |> select(`...1`,IDN_C20) |> arrange(desc(IDN_C20)) |>
-  rename("2005"="IDN_C20")
-i2006<-read_csv("2006.csv") |> select(`...1`,IDN_C20) |> arrange(desc(IDN_C20)) |>
-  rename("2006"="IDN_C20")
-i2007<-read_csv("2007.csv") |> select(`...1`,IDN_C20) |> arrange(desc(IDN_C20)) |>
-  rename("2007"="IDN_C20")
-i2008<-read_csv("2008.csv") |> select(`...1`,IDN_C20) |> arrange(desc(IDN_C20)) |>
-  rename("2008"="IDN_C20")
-i2009<-read_csv("2008.csv") |> select(`...1`,IDN_C20) |> arrange(desc(IDN_C20)) |>
-  rename("2009"="IDN_C20")
-i2010<-read_csv("2010.csv") |> select(`...1`,IDN_C20) |> arrange(desc(IDN_C20)) |>
-  rename("2010"="IDN_C20")
-i2011<-read_csv("2011.csv") |> select(`...1`,IDN_C20) |> arrange(desc(IDN_C20)) |>
-  rename("2011"="IDN_C20")
-i2012<-read_csv("2012.csv") |> select(`...1`,IDN_C20) |> arrange(desc(IDN_C20)) |>
-  rename("2012"="IDN_C20")
-i2013<-read_csv("2013.csv") |> select(`...1`,IDN_C20) |> arrange(desc(IDN_C20)) |>
-  rename("2013"="IDN_C20")
-i2014<-read_csv("2014.csv") |> select(`...1`,IDN_C20) |> arrange(desc(IDN_C20)) |>
-  rename("2014"="IDN_C20")
-i2015<-read_csv("2015.csv") |> select(`...1`,IDN_C20) |> arrange(desc(IDN_C20)) |>
-  rename("2015"="IDN_C20")
-i2016<-read_csv("2016.csv") |> select(`...1`,IDN_C20) |> arrange(desc(IDN_C20)) |>
-  rename("2016"="IDN_C20")
-i2017<-read_csv("2017.csv") |> select(`...1`,IDN_C20) |> arrange(desc(IDN_C20)) |>
-  rename("2017"="IDN_C20")
-i2018<-read_csv("2018.csv") |> select(`...1`,IDN_C20) |> arrange(desc(IDN_C20)) |>
-  rename("2018"="IDN_C20")
-i2019<-read_csv("2019.csv") |> select(`...1`,IDN_C20) |> arrange(desc(IDN_C20)) |>
-  rename("2019"="IDN_C20")
-i2020<-read_csv("2020.csv") |> select(`...1`,IDN_C20) |> arrange(desc(IDN_C20)) |>
-  rename("2020"="IDN_C20")
+i2002<-read_csv("2002.csv") |> select(`...1`,VNM_C20) |> arrange(desc(VNM_C20)) |>
+  rename("2002"="VNM_C20")
+i2003<-read_csv("2003.csv") |> select(`...1`,VNM_C20) |> arrange(desc(VNM_C20)) |>
+  rename("2003"="VNM_C20")
+i2004<-read_csv("2004.csv") |> select(`...1`,VNM_C20) |> arrange(desc(VNM_C20)) |>
+  rename("2004"="VNM_C20")
+i2005<-read_csv("2005.csv") |> select(`...1`,VNM_C20) |> arrange(desc(VNM_C20)) |>
+  rename("2005"="VNM_C20")
+i2006<-read_csv("2006.csv") |> select(`...1`,VNM_C20) |> arrange(desc(VNM_C20)) |>
+  rename("2006"="VNM_C20")
+i2007<-read_csv("2007.csv") |> select(`...1`,VNM_C20) |> arrange(desc(VNM_C20)) |>
+  rename("2007"="VNM_C20")
+i2008<-read_csv("2008.csv") |> select(`...1`,VNM_C20) |> arrange(desc(VNM_C20)) |>
+  rename("2008"="VNM_C20")
+i2009<-read_csv("2008.csv") |> select(`...1`,VNM_C20) |> arrange(desc(VNM_C20)) |>
+  rename("2009"="VNM_C20")
+i2010<-read_csv("2010.csv") |> select(`...1`,VNM_C20) |> arrange(desc(VNM_C20)) |>
+  rename("2010"="VNM_C20")
+i2011<-read_csv("2011.csv") |> select(`...1`,VNM_C20) |> arrange(desc(VNM_C20)) |>
+  rename("2011"="VNM_C20")
+i2012<-read_csv("2012.csv") |> select(`...1`,VNM_C20) |> arrange(desc(VNM_C20)) |>
+  rename("2012"="VNM_C20")
+i2013<-read_csv("2013.csv") |> select(`...1`,VNM_C20) |> arrange(desc(VNM_C20)) |>
+  rename("2013"="VNM_C20")
+i2014<-read_csv("2014.csv") |> select(`...1`,VNM_C20) |> arrange(desc(VNM_C20)) |>
+  rename("2014"="VNM_C20")
+i2015<-read_csv("2015.csv") |> select(`...1`,VNM_C20) |> arrange(desc(VNM_C20)) |>
+  rename("2015"="VNM_C20")
+i2016<-read_csv("2016.csv") |> select(`...1`,VNM_C20) |> arrange(desc(VNM_C20)) |>
+  rename("2016"="VNM_C20")
+i2017<-read_csv("2017.csv") |> select(`...1`,VNM_C20) |> arrange(desc(VNM_C20)) |>
+  rename("2017"="VNM_C20")
+i2018<-read_csv("2018.csv") |> select(`...1`,VNM_C20) |> arrange(desc(VNM_C20)) |>
+  rename("2018"="VNM_C20")
+i2019<-read_csv("2019.csv") |> select(`...1`,VNM_C20) |> arrange(desc(VNM_C20)) |>
+  rename("2019"="VNM_C20")
+i2020<-read_csv("2020.csv") |> select(`...1`,VNM_C20) |> arrange(desc(VNM_C20)) |>
+  rename("2020"="VNM_C20")
 
 is<-list(i2002,i2003,i2004,i2005,i2006,i2007,i2008,i2009,i2010,i2011,i2012,
          i2013,i2014,i2015,i2016,i2017,i2018,i2019,i2020)
@@ -657,8 +657,8 @@ gabung<-reduce(is,inner_join) ## Gabung semua data per tahun itu dengan cara
 gabung1<-gabung |> mutate(across(where(is.numeric), ~./.[1])) ## Bikin persen (how to use . and ...)
 
 gabung2<-gabung1 |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
-gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain IDN ditulis foreign
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
+gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain VNM ditulis foreign
 
 gabung2<-gabung2 |>
   mutate(service=ifelse(
@@ -674,14 +674,14 @@ gabung2<-gabung2 |>
 
 gabung2<-gabung2 |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "sds",
-    group=="IDN" & service==0 ~ "sdg",
+    group=="VNM" & service==1 ~ "sds",
+    group=="VNM" & service==0 ~ "sdg",
     group=="foreign" & service==1 ~ "sfs",
     TRUE~"sfg"
   ))
 
 gabung2a<-gabung |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
 gabung2a<-gabung2a |>  replace(is.na(gabung2a),"foreign") ## sama tapi bukan persen
 
 gabung2a<-gabung2a |>
@@ -698,8 +698,8 @@ gabung2a<-gabung2a |>
 
 gabung2a<-gabung2a |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "ds",
-    group=="IDN" & service==0 ~ "dg",
+    group=="VNM" & service==1 ~ "ds",
+    group=="VNM" & service==0 ~ "dg",
     group=="foreign" & service==1 ~ "fs",
     TRUE~"fg"
   ))
@@ -750,7 +750,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ] |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -761,44 +761,44 @@ chemical$industry<-"C20"
 
 #### PHARMA
 
-i2002<-read_csv("2002.csv") |> select(`...1`,IDN_C21) |> arrange(desc(IDN_C21)) |>
-  rename("2002"="IDN_C21")
-i2003<-read_csv("2003.csv") |> select(`...1`,IDN_C21) |> arrange(desc(IDN_C21)) |>
-  rename("2003"="IDN_C21")
-i2004<-read_csv("2004.csv") |> select(`...1`,IDN_C21) |> arrange(desc(IDN_C21)) |>
-  rename("2004"="IDN_C21")
-i2005<-read_csv("2005.csv") |> select(`...1`,IDN_C21) |> arrange(desc(IDN_C21)) |>
-  rename("2005"="IDN_C21")
-i2006<-read_csv("2006.csv") |> select(`...1`,IDN_C21) |> arrange(desc(IDN_C21)) |>
-  rename("2006"="IDN_C21")
-i2007<-read_csv("2007.csv") |> select(`...1`,IDN_C21) |> arrange(desc(IDN_C21)) |>
-  rename("2007"="IDN_C21")
-i2008<-read_csv("2008.csv") |> select(`...1`,IDN_C21) |> arrange(desc(IDN_C21)) |>
-  rename("2008"="IDN_C21")
-i2009<-read_csv("2008.csv") |> select(`...1`,IDN_C21) |> arrange(desc(IDN_C21)) |>
-  rename("2009"="IDN_C21")
-i2010<-read_csv("2010.csv") |> select(`...1`,IDN_C21) |> arrange(desc(IDN_C21)) |>
-  rename("2010"="IDN_C21")
-i2011<-read_csv("2011.csv") |> select(`...1`,IDN_C21) |> arrange(desc(IDN_C21)) |>
-  rename("2011"="IDN_C21")
-i2012<-read_csv("2012.csv") |> select(`...1`,IDN_C21) |> arrange(desc(IDN_C21)) |>
-  rename("2012"="IDN_C21")
-i2013<-read_csv("2013.csv") |> select(`...1`,IDN_C21) |> arrange(desc(IDN_C21)) |>
-  rename("2013"="IDN_C21")
-i2014<-read_csv("2014.csv") |> select(`...1`,IDN_C21) |> arrange(desc(IDN_C21)) |>
-  rename("2014"="IDN_C21")
-i2015<-read_csv("2015.csv") |> select(`...1`,IDN_C21) |> arrange(desc(IDN_C21)) |>
-  rename("2015"="IDN_C21")
-i2016<-read_csv("2016.csv") |> select(`...1`,IDN_C21) |> arrange(desc(IDN_C21)) |>
-  rename("2016"="IDN_C21")
-i2017<-read_csv("2017.csv") |> select(`...1`,IDN_C21) |> arrange(desc(IDN_C21)) |>
-  rename("2017"="IDN_C21")
-i2018<-read_csv("2018.csv") |> select(`...1`,IDN_C21) |> arrange(desc(IDN_C21)) |>
-  rename("2018"="IDN_C21")
-i2019<-read_csv("2019.csv") |> select(`...1`,IDN_C21) |> arrange(desc(IDN_C21)) |>
-  rename("2019"="IDN_C21")
-i2020<-read_csv("2020.csv") |> select(`...1`,IDN_C21) |> arrange(desc(IDN_C21)) |>
-  rename("2020"="IDN_C21")
+i2002<-read_csv("2002.csv") |> select(`...1`,VNM_C21) |> arrange(desc(VNM_C21)) |>
+  rename("2002"="VNM_C21")
+i2003<-read_csv("2003.csv") |> select(`...1`,VNM_C21) |> arrange(desc(VNM_C21)) |>
+  rename("2003"="VNM_C21")
+i2004<-read_csv("2004.csv") |> select(`...1`,VNM_C21) |> arrange(desc(VNM_C21)) |>
+  rename("2004"="VNM_C21")
+i2005<-read_csv("2005.csv") |> select(`...1`,VNM_C21) |> arrange(desc(VNM_C21)) |>
+  rename("2005"="VNM_C21")
+i2006<-read_csv("2006.csv") |> select(`...1`,VNM_C21) |> arrange(desc(VNM_C21)) |>
+  rename("2006"="VNM_C21")
+i2007<-read_csv("2007.csv") |> select(`...1`,VNM_C21) |> arrange(desc(VNM_C21)) |>
+  rename("2007"="VNM_C21")
+i2008<-read_csv("2008.csv") |> select(`...1`,VNM_C21) |> arrange(desc(VNM_C21)) |>
+  rename("2008"="VNM_C21")
+i2009<-read_csv("2008.csv") |> select(`...1`,VNM_C21) |> arrange(desc(VNM_C21)) |>
+  rename("2009"="VNM_C21")
+i2010<-read_csv("2010.csv") |> select(`...1`,VNM_C21) |> arrange(desc(VNM_C21)) |>
+  rename("2010"="VNM_C21")
+i2011<-read_csv("2011.csv") |> select(`...1`,VNM_C21) |> arrange(desc(VNM_C21)) |>
+  rename("2011"="VNM_C21")
+i2012<-read_csv("2012.csv") |> select(`...1`,VNM_C21) |> arrange(desc(VNM_C21)) |>
+  rename("2012"="VNM_C21")
+i2013<-read_csv("2013.csv") |> select(`...1`,VNM_C21) |> arrange(desc(VNM_C21)) |>
+  rename("2013"="VNM_C21")
+i2014<-read_csv("2014.csv") |> select(`...1`,VNM_C21) |> arrange(desc(VNM_C21)) |>
+  rename("2014"="VNM_C21")
+i2015<-read_csv("2015.csv") |> select(`...1`,VNM_C21) |> arrange(desc(VNM_C21)) |>
+  rename("2015"="VNM_C21")
+i2016<-read_csv("2016.csv") |> select(`...1`,VNM_C21) |> arrange(desc(VNM_C21)) |>
+  rename("2016"="VNM_C21")
+i2017<-read_csv("2017.csv") |> select(`...1`,VNM_C21) |> arrange(desc(VNM_C21)) |>
+  rename("2017"="VNM_C21")
+i2018<-read_csv("2018.csv") |> select(`...1`,VNM_C21) |> arrange(desc(VNM_C21)) |>
+  rename("2018"="VNM_C21")
+i2019<-read_csv("2019.csv") |> select(`...1`,VNM_C21) |> arrange(desc(VNM_C21)) |>
+  rename("2019"="VNM_C21")
+i2020<-read_csv("2020.csv") |> select(`...1`,VNM_C21) |> arrange(desc(VNM_C21)) |>
+  rename("2020"="VNM_C21")
 
 is<-list(i2002,i2003,i2004,i2005,i2006,i2007,i2008,i2009,i2010,i2011,i2012,
          i2013,i2014,i2015,i2016,i2017,i2018,i2019,i2020)
@@ -808,8 +808,8 @@ gabung<-reduce(is,inner_join) ## Gabung semua data per tahun itu dengan cara
 gabung1<-gabung |> mutate(across(where(is.numeric), ~./.[1])) ## Bikin persen (how to use . and ...)
 
 gabung2<-gabung1 |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
-gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain IDN ditulis foreign
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
+gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain VNM ditulis foreign
 
 gabung2<-gabung2 |>
   mutate(service=ifelse(
@@ -825,14 +825,14 @@ gabung2<-gabung2 |>
 
 gabung2<-gabung2 |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "sds",
-    group=="IDN" & service==0 ~ "sdg",
+    group=="VNM" & service==1 ~ "sds",
+    group=="VNM" & service==0 ~ "sdg",
     group=="foreign" & service==1 ~ "sfs",
     TRUE~"sfg"
   ))
 
 gabung2a<-gabung |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
 gabung2a<-gabung2a |>  replace(is.na(gabung2a),"foreign") ## sama tapi bukan persen
 
 gabung2a<-gabung2a |>
@@ -849,8 +849,8 @@ gabung2a<-gabung2a |>
 
 gabung2a<-gabung2a |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "ds",
-    group=="IDN" & service==0 ~ "dg",
+    group=="VNM" & service==1 ~ "ds",
+    group=="VNM" & service==0 ~ "dg",
     group=="foreign" & service==1 ~ "fs",
     TRUE~"fg"
   ))
@@ -901,7 +901,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ] |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -912,44 +912,44 @@ pharma$industry<-"C21"
 
 #### RUBBER PLASTIC
 
-i2002<-read_csv("2002.csv") |> select(`...1`,IDN_C22) |> arrange(desc(IDN_C22)) |>
-  rename("2002"="IDN_C22")
-i2003<-read_csv("2003.csv") |> select(`...1`,IDN_C22) |> arrange(desc(IDN_C22)) |>
-  rename("2003"="IDN_C22")
-i2004<-read_csv("2004.csv") |> select(`...1`,IDN_C22) |> arrange(desc(IDN_C22)) |>
-  rename("2004"="IDN_C22")
-i2005<-read_csv("2005.csv") |> select(`...1`,IDN_C22) |> arrange(desc(IDN_C22)) |>
-  rename("2005"="IDN_C22")
-i2006<-read_csv("2006.csv") |> select(`...1`,IDN_C22) |> arrange(desc(IDN_C22)) |>
-  rename("2006"="IDN_C22")
-i2007<-read_csv("2007.csv") |> select(`...1`,IDN_C22) |> arrange(desc(IDN_C22)) |>
-  rename("2007"="IDN_C22")
-i2008<-read_csv("2008.csv") |> select(`...1`,IDN_C22) |> arrange(desc(IDN_C22)) |>
-  rename("2008"="IDN_C22")
-i2009<-read_csv("2008.csv") |> select(`...1`,IDN_C22) |> arrange(desc(IDN_C22)) |>
-  rename("2009"="IDN_C22")
-i2010<-read_csv("2010.csv") |> select(`...1`,IDN_C22) |> arrange(desc(IDN_C22)) |>
-  rename("2010"="IDN_C22")
-i2011<-read_csv("2011.csv") |> select(`...1`,IDN_C22) |> arrange(desc(IDN_C22)) |>
-  rename("2011"="IDN_C22")
-i2012<-read_csv("2012.csv") |> select(`...1`,IDN_C22) |> arrange(desc(IDN_C22)) |>
-  rename("2012"="IDN_C22")
-i2013<-read_csv("2013.csv") |> select(`...1`,IDN_C22) |> arrange(desc(IDN_C22)) |>
-  rename("2013"="IDN_C22")
-i2014<-read_csv("2014.csv") |> select(`...1`,IDN_C22) |> arrange(desc(IDN_C22)) |>
-  rename("2014"="IDN_C22")
-i2015<-read_csv("2015.csv") |> select(`...1`,IDN_C22) |> arrange(desc(IDN_C22)) |>
-  rename("2015"="IDN_C22")
-i2016<-read_csv("2016.csv") |> select(`...1`,IDN_C22) |> arrange(desc(IDN_C22)) |>
-  rename("2016"="IDN_C22")
-i2017<-read_csv("2017.csv") |> select(`...1`,IDN_C22) |> arrange(desc(IDN_C22)) |>
-  rename("2017"="IDN_C22")
-i2018<-read_csv("2018.csv") |> select(`...1`,IDN_C22) |> arrange(desc(IDN_C22)) |>
-  rename("2018"="IDN_C22")
-i2019<-read_csv("2019.csv") |> select(`...1`,IDN_C22) |> arrange(desc(IDN_C22)) |>
-  rename("2019"="IDN_C22")
-i2020<-read_csv("2020.csv") |> select(`...1`,IDN_C22) |> arrange(desc(IDN_C22)) |>
-  rename("2020"="IDN_C22")
+i2002<-read_csv("2002.csv") |> select(`...1`,VNM_C22) |> arrange(desc(VNM_C22)) |>
+  rename("2002"="VNM_C22")
+i2003<-read_csv("2003.csv") |> select(`...1`,VNM_C22) |> arrange(desc(VNM_C22)) |>
+  rename("2003"="VNM_C22")
+i2004<-read_csv("2004.csv") |> select(`...1`,VNM_C22) |> arrange(desc(VNM_C22)) |>
+  rename("2004"="VNM_C22")
+i2005<-read_csv("2005.csv") |> select(`...1`,VNM_C22) |> arrange(desc(VNM_C22)) |>
+  rename("2005"="VNM_C22")
+i2006<-read_csv("2006.csv") |> select(`...1`,VNM_C22) |> arrange(desc(VNM_C22)) |>
+  rename("2006"="VNM_C22")
+i2007<-read_csv("2007.csv") |> select(`...1`,VNM_C22) |> arrange(desc(VNM_C22)) |>
+  rename("2007"="VNM_C22")
+i2008<-read_csv("2008.csv") |> select(`...1`,VNM_C22) |> arrange(desc(VNM_C22)) |>
+  rename("2008"="VNM_C22")
+i2009<-read_csv("2008.csv") |> select(`...1`,VNM_C22) |> arrange(desc(VNM_C22)) |>
+  rename("2009"="VNM_C22")
+i2010<-read_csv("2010.csv") |> select(`...1`,VNM_C22) |> arrange(desc(VNM_C22)) |>
+  rename("2010"="VNM_C22")
+i2011<-read_csv("2011.csv") |> select(`...1`,VNM_C22) |> arrange(desc(VNM_C22)) |>
+  rename("2011"="VNM_C22")
+i2012<-read_csv("2012.csv") |> select(`...1`,VNM_C22) |> arrange(desc(VNM_C22)) |>
+  rename("2012"="VNM_C22")
+i2013<-read_csv("2013.csv") |> select(`...1`,VNM_C22) |> arrange(desc(VNM_C22)) |>
+  rename("2013"="VNM_C22")
+i2014<-read_csv("2014.csv") |> select(`...1`,VNM_C22) |> arrange(desc(VNM_C22)) |>
+  rename("2014"="VNM_C22")
+i2015<-read_csv("2015.csv") |> select(`...1`,VNM_C22) |> arrange(desc(VNM_C22)) |>
+  rename("2015"="VNM_C22")
+i2016<-read_csv("2016.csv") |> select(`...1`,VNM_C22) |> arrange(desc(VNM_C22)) |>
+  rename("2016"="VNM_C22")
+i2017<-read_csv("2017.csv") |> select(`...1`,VNM_C22) |> arrange(desc(VNM_C22)) |>
+  rename("2017"="VNM_C22")
+i2018<-read_csv("2018.csv") |> select(`...1`,VNM_C22) |> arrange(desc(VNM_C22)) |>
+  rename("2018"="VNM_C22")
+i2019<-read_csv("2019.csv") |> select(`...1`,VNM_C22) |> arrange(desc(VNM_C22)) |>
+  rename("2019"="VNM_C22")
+i2020<-read_csv("2020.csv") |> select(`...1`,VNM_C22) |> arrange(desc(VNM_C22)) |>
+  rename("2020"="VNM_C22")
 
 is<-list(i2002,i2003,i2004,i2005,i2006,i2007,i2008,i2009,i2010,i2011,i2012,
          i2013,i2014,i2015,i2016,i2017,i2018,i2019,i2020)
@@ -959,8 +959,8 @@ gabung<-reduce(is,inner_join) ## Gabung semua data per tahun itu dengan cara
 gabung1<-gabung |> mutate(across(where(is.numeric), ~./.[1])) ## Bikin persen (how to use . and ...)
 
 gabung2<-gabung1 |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
-gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain IDN ditulis foreign
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
+gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain VNM ditulis foreign
 
 gabung2<-gabung2 |>
   mutate(service=ifelse(
@@ -976,14 +976,14 @@ gabung2<-gabung2 |>
 
 gabung2<-gabung2 |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "sds",
-    group=="IDN" & service==0 ~ "sdg",
+    group=="VNM" & service==1 ~ "sds",
+    group=="VNM" & service==0 ~ "sdg",
     group=="foreign" & service==1 ~ "sfs",
     TRUE~"sfg"
   ))
 
 gabung2a<-gabung |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
 gabung2a<-gabung2a |>  replace(is.na(gabung2a),"foreign") ## sama tapi bukan persen
 
 gabung2a<-gabung2a |>
@@ -1000,8 +1000,8 @@ gabung2a<-gabung2a |>
 
 gabung2a<-gabung2a |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "ds",
-    group=="IDN" & service==0 ~ "dg",
+    group=="VNM" & service==1 ~ "ds",
+    group=="VNM" & service==0 ~ "dg",
     group=="foreign" & service==1 ~ "fs",
     TRUE~"fg"
   ))
@@ -1052,7 +1052,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ] |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -1063,44 +1063,44 @@ rubber$industry<-"C22"
 
 #### OTHER MINERAL
 
-i2002<-read_csv("2002.csv") |> select(`...1`,IDN_C23) |> arrange(desc(IDN_C23)) |>
-  rename("2002"="IDN_C23")
-i2003<-read_csv("2003.csv") |> select(`...1`,IDN_C23) |> arrange(desc(IDN_C23)) |>
-  rename("2003"="IDN_C23")
-i2004<-read_csv("2004.csv") |> select(`...1`,IDN_C23) |> arrange(desc(IDN_C23)) |>
-  rename("2004"="IDN_C23")
-i2005<-read_csv("2005.csv") |> select(`...1`,IDN_C23) |> arrange(desc(IDN_C23)) |>
-  rename("2005"="IDN_C23")
-i2006<-read_csv("2006.csv") |> select(`...1`,IDN_C23) |> arrange(desc(IDN_C23)) |>
-  rename("2006"="IDN_C23")
-i2007<-read_csv("2007.csv") |> select(`...1`,IDN_C23) |> arrange(desc(IDN_C23)) |>
-  rename("2007"="IDN_C23")
-i2008<-read_csv("2008.csv") |> select(`...1`,IDN_C23) |> arrange(desc(IDN_C23)) |>
-  rename("2008"="IDN_C23")
-i2009<-read_csv("2008.csv") |> select(`...1`,IDN_C23) |> arrange(desc(IDN_C23)) |>
-  rename("2009"="IDN_C23")
-i2010<-read_csv("2010.csv") |> select(`...1`,IDN_C23) |> arrange(desc(IDN_C23)) |>
-  rename("2010"="IDN_C23")
-i2011<-read_csv("2011.csv") |> select(`...1`,IDN_C23) |> arrange(desc(IDN_C23)) |>
-  rename("2011"="IDN_C23")
-i2012<-read_csv("2012.csv") |> select(`...1`,IDN_C23) |> arrange(desc(IDN_C23)) |>
-  rename("2012"="IDN_C23")
-i2013<-read_csv("2013.csv") |> select(`...1`,IDN_C23) |> arrange(desc(IDN_C23)) |>
-  rename("2013"="IDN_C23")
-i2014<-read_csv("2014.csv") |> select(`...1`,IDN_C23) |> arrange(desc(IDN_C23)) |>
-  rename("2014"="IDN_C23")
-i2015<-read_csv("2015.csv") |> select(`...1`,IDN_C23) |> arrange(desc(IDN_C23)) |>
-  rename("2015"="IDN_C23")
-i2016<-read_csv("2016.csv") |> select(`...1`,IDN_C23) |> arrange(desc(IDN_C23)) |>
-  rename("2016"="IDN_C23")
-i2017<-read_csv("2017.csv") |> select(`...1`,IDN_C23) |> arrange(desc(IDN_C23)) |>
-  rename("2017"="IDN_C23")
-i2018<-read_csv("2018.csv") |> select(`...1`,IDN_C23) |> arrange(desc(IDN_C23)) |>
-  rename("2018"="IDN_C23")
-i2019<-read_csv("2019.csv") |> select(`...1`,IDN_C23) |> arrange(desc(IDN_C23)) |>
-  rename("2019"="IDN_C23")
-i2020<-read_csv("2020.csv") |> select(`...1`,IDN_C23) |> arrange(desc(IDN_C23)) |>
-  rename("2020"="IDN_C23")
+i2002<-read_csv("2002.csv") |> select(`...1`,VNM_C23) |> arrange(desc(VNM_C23)) |>
+  rename("2002"="VNM_C23")
+i2003<-read_csv("2003.csv") |> select(`...1`,VNM_C23) |> arrange(desc(VNM_C23)) |>
+  rename("2003"="VNM_C23")
+i2004<-read_csv("2004.csv") |> select(`...1`,VNM_C23) |> arrange(desc(VNM_C23)) |>
+  rename("2004"="VNM_C23")
+i2005<-read_csv("2005.csv") |> select(`...1`,VNM_C23) |> arrange(desc(VNM_C23)) |>
+  rename("2005"="VNM_C23")
+i2006<-read_csv("2006.csv") |> select(`...1`,VNM_C23) |> arrange(desc(VNM_C23)) |>
+  rename("2006"="VNM_C23")
+i2007<-read_csv("2007.csv") |> select(`...1`,VNM_C23) |> arrange(desc(VNM_C23)) |>
+  rename("2007"="VNM_C23")
+i2008<-read_csv("2008.csv") |> select(`...1`,VNM_C23) |> arrange(desc(VNM_C23)) |>
+  rename("2008"="VNM_C23")
+i2009<-read_csv("2008.csv") |> select(`...1`,VNM_C23) |> arrange(desc(VNM_C23)) |>
+  rename("2009"="VNM_C23")
+i2010<-read_csv("2010.csv") |> select(`...1`,VNM_C23) |> arrange(desc(VNM_C23)) |>
+  rename("2010"="VNM_C23")
+i2011<-read_csv("2011.csv") |> select(`...1`,VNM_C23) |> arrange(desc(VNM_C23)) |>
+  rename("2011"="VNM_C23")
+i2012<-read_csv("2012.csv") |> select(`...1`,VNM_C23) |> arrange(desc(VNM_C23)) |>
+  rename("2012"="VNM_C23")
+i2013<-read_csv("2013.csv") |> select(`...1`,VNM_C23) |> arrange(desc(VNM_C23)) |>
+  rename("2013"="VNM_C23")
+i2014<-read_csv("2014.csv") |> select(`...1`,VNM_C23) |> arrange(desc(VNM_C23)) |>
+  rename("2014"="VNM_C23")
+i2015<-read_csv("2015.csv") |> select(`...1`,VNM_C23) |> arrange(desc(VNM_C23)) |>
+  rename("2015"="VNM_C23")
+i2016<-read_csv("2016.csv") |> select(`...1`,VNM_C23) |> arrange(desc(VNM_C23)) |>
+  rename("2016"="VNM_C23")
+i2017<-read_csv("2017.csv") |> select(`...1`,VNM_C23) |> arrange(desc(VNM_C23)) |>
+  rename("2017"="VNM_C23")
+i2018<-read_csv("2018.csv") |> select(`...1`,VNM_C23) |> arrange(desc(VNM_C23)) |>
+  rename("2018"="VNM_C23")
+i2019<-read_csv("2019.csv") |> select(`...1`,VNM_C23) |> arrange(desc(VNM_C23)) |>
+  rename("2019"="VNM_C23")
+i2020<-read_csv("2020.csv") |> select(`...1`,VNM_C23) |> arrange(desc(VNM_C23)) |>
+  rename("2020"="VNM_C23")
 
 is<-list(i2002,i2003,i2004,i2005,i2006,i2007,i2008,i2009,i2010,i2011,i2012,
          i2013,i2014,i2015,i2016,i2017,i2018,i2019,i2020)
@@ -1110,8 +1110,8 @@ gabung<-reduce(is,inner_join) ## Gabung semua data per tahun itu dengan cara
 gabung1<-gabung |> mutate(across(where(is.numeric), ~./.[1])) ## Bikin persen (how to use . and ...)
 
 gabung2<-gabung1 |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
-gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain IDN ditulis foreign
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
+gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain VNM ditulis foreign
 
 gabung2<-gabung2 |>
   mutate(service=ifelse(
@@ -1127,14 +1127,14 @@ gabung2<-gabung2 |>
 
 gabung2<-gabung2 |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "sds",
-    group=="IDN" & service==0 ~ "sdg",
+    group=="VNM" & service==1 ~ "sds",
+    group=="VNM" & service==0 ~ "sdg",
     group=="foreign" & service==1 ~ "sfs",
     TRUE~"sfg"
   ))
 
 gabung2a<-gabung |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
 gabung2a<-gabung2a |>  replace(is.na(gabung2a),"foreign") ## sama tapi bukan persen
 
 gabung2a<-gabung2a |>
@@ -1151,8 +1151,8 @@ gabung2a<-gabung2a |>
 
 gabung2a<-gabung2a |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "ds",
-    group=="IDN" & service==0 ~ "dg",
+    group=="VNM" & service==1 ~ "ds",
+    group=="VNM" & service==0 ~ "dg",
     group=="foreign" & service==1 ~ "fs",
     TRUE~"fg"
   ))
@@ -1203,7 +1203,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ] |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -1214,44 +1214,44 @@ onon$industry<-"C23"
 
 #### BASIC METALS
 
-i2002<-read_csv("2002.csv") |> select(`...1`,IDN_C24) |> arrange(desc(IDN_C24)) |>
-  rename("2002"="IDN_C24")
-i2003<-read_csv("2003.csv") |> select(`...1`,IDN_C24) |> arrange(desc(IDN_C24)) |>
-  rename("2003"="IDN_C24")
-i2004<-read_csv("2004.csv") |> select(`...1`,IDN_C24) |> arrange(desc(IDN_C24)) |>
-  rename("2004"="IDN_C24")
-i2005<-read_csv("2005.csv") |> select(`...1`,IDN_C24) |> arrange(desc(IDN_C24)) |>
-  rename("2005"="IDN_C24")
-i2006<-read_csv("2006.csv") |> select(`...1`,IDN_C24) |> arrange(desc(IDN_C24)) |>
-  rename("2006"="IDN_C24")
-i2007<-read_csv("2007.csv") |> select(`...1`,IDN_C24) |> arrange(desc(IDN_C24)) |>
-  rename("2007"="IDN_C24")
-i2008<-read_csv("2008.csv") |> select(`...1`,IDN_C24) |> arrange(desc(IDN_C24)) |>
-  rename("2008"="IDN_C24")
-i2009<-read_csv("2008.csv") |> select(`...1`,IDN_C24) |> arrange(desc(IDN_C24)) |>
-  rename("2009"="IDN_C24")
-i2010<-read_csv("2010.csv") |> select(`...1`,IDN_C24) |> arrange(desc(IDN_C24)) |>
-  rename("2010"="IDN_C24")
-i2011<-read_csv("2011.csv") |> select(`...1`,IDN_C24) |> arrange(desc(IDN_C24)) |>
-  rename("2011"="IDN_C24")
-i2012<-read_csv("2012.csv") |> select(`...1`,IDN_C24) |> arrange(desc(IDN_C24)) |>
-  rename("2012"="IDN_C24")
-i2013<-read_csv("2013.csv") |> select(`...1`,IDN_C24) |> arrange(desc(IDN_C24)) |>
-  rename("2013"="IDN_C24")
-i2014<-read_csv("2014.csv") |> select(`...1`,IDN_C24) |> arrange(desc(IDN_C24)) |>
-  rename("2014"="IDN_C24")
-i2015<-read_csv("2015.csv") |> select(`...1`,IDN_C24) |> arrange(desc(IDN_C24)) |>
-  rename("2015"="IDN_C24")
-i2016<-read_csv("2016.csv") |> select(`...1`,IDN_C24) |> arrange(desc(IDN_C24)) |>
-  rename("2016"="IDN_C24")
-i2017<-read_csv("2017.csv") |> select(`...1`,IDN_C24) |> arrange(desc(IDN_C24)) |>
-  rename("2017"="IDN_C24")
-i2018<-read_csv("2018.csv") |> select(`...1`,IDN_C24) |> arrange(desc(IDN_C24)) |>
-  rename("2018"="IDN_C24")
-i2019<-read_csv("2019.csv") |> select(`...1`,IDN_C24) |> arrange(desc(IDN_C24)) |>
-  rename("2019"="IDN_C24")
-i2020<-read_csv("2020.csv") |> select(`...1`,IDN_C24) |> arrange(desc(IDN_C24)) |>
-  rename("2020"="IDN_C24")
+i2002<-read_csv("2002.csv") |> select(`...1`,VNM_C24) |> arrange(desc(VNM_C24)) |>
+  rename("2002"="VNM_C24")
+i2003<-read_csv("2003.csv") |> select(`...1`,VNM_C24) |> arrange(desc(VNM_C24)) |>
+  rename("2003"="VNM_C24")
+i2004<-read_csv("2004.csv") |> select(`...1`,VNM_C24) |> arrange(desc(VNM_C24)) |>
+  rename("2004"="VNM_C24")
+i2005<-read_csv("2005.csv") |> select(`...1`,VNM_C24) |> arrange(desc(VNM_C24)) |>
+  rename("2005"="VNM_C24")
+i2006<-read_csv("2006.csv") |> select(`...1`,VNM_C24) |> arrange(desc(VNM_C24)) |>
+  rename("2006"="VNM_C24")
+i2007<-read_csv("2007.csv") |> select(`...1`,VNM_C24) |> arrange(desc(VNM_C24)) |>
+  rename("2007"="VNM_C24")
+i2008<-read_csv("2008.csv") |> select(`...1`,VNM_C24) |> arrange(desc(VNM_C24)) |>
+  rename("2008"="VNM_C24")
+i2009<-read_csv("2008.csv") |> select(`...1`,VNM_C24) |> arrange(desc(VNM_C24)) |>
+  rename("2009"="VNM_C24")
+i2010<-read_csv("2010.csv") |> select(`...1`,VNM_C24) |> arrange(desc(VNM_C24)) |>
+  rename("2010"="VNM_C24")
+i2011<-read_csv("2011.csv") |> select(`...1`,VNM_C24) |> arrange(desc(VNM_C24)) |>
+  rename("2011"="VNM_C24")
+i2012<-read_csv("2012.csv") |> select(`...1`,VNM_C24) |> arrange(desc(VNM_C24)) |>
+  rename("2012"="VNM_C24")
+i2013<-read_csv("2013.csv") |> select(`...1`,VNM_C24) |> arrange(desc(VNM_C24)) |>
+  rename("2013"="VNM_C24")
+i2014<-read_csv("2014.csv") |> select(`...1`,VNM_C24) |> arrange(desc(VNM_C24)) |>
+  rename("2014"="VNM_C24")
+i2015<-read_csv("2015.csv") |> select(`...1`,VNM_C24) |> arrange(desc(VNM_C24)) |>
+  rename("2015"="VNM_C24")
+i2016<-read_csv("2016.csv") |> select(`...1`,VNM_C24) |> arrange(desc(VNM_C24)) |>
+  rename("2016"="VNM_C24")
+i2017<-read_csv("2017.csv") |> select(`...1`,VNM_C24) |> arrange(desc(VNM_C24)) |>
+  rename("2017"="VNM_C24")
+i2018<-read_csv("2018.csv") |> select(`...1`,VNM_C24) |> arrange(desc(VNM_C24)) |>
+  rename("2018"="VNM_C24")
+i2019<-read_csv("2019.csv") |> select(`...1`,VNM_C24) |> arrange(desc(VNM_C24)) |>
+  rename("2019"="VNM_C24")
+i2020<-read_csv("2020.csv") |> select(`...1`,VNM_C24) |> arrange(desc(VNM_C24)) |>
+  rename("2020"="VNM_C24")
 
 is<-list(i2002,i2003,i2004,i2005,i2006,i2007,i2008,i2009,i2010,i2011,i2012,
          i2013,i2014,i2015,i2016,i2017,i2018,i2019,i2020)
@@ -1261,8 +1261,8 @@ gabung<-reduce(is,inner_join) ## Gabung semua data per tahun itu dengan cara
 gabung1<-gabung |> mutate(across(where(is.numeric), ~./.[1])) ## Bikin persen (how to use . and ...)
 
 gabung2<-gabung1 |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
-gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain IDN ditulis foreign
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
+gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain VNM ditulis foreign
 
 gabung2<-gabung2 |>
   mutate(service=ifelse(
@@ -1278,14 +1278,14 @@ gabung2<-gabung2 |>
 
 gabung2<-gabung2 |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "sds",
-    group=="IDN" & service==0 ~ "sdg",
+    group=="VNM" & service==1 ~ "sds",
+    group=="VNM" & service==0 ~ "sdg",
     group=="foreign" & service==1 ~ "sfs",
     TRUE~"sfg"
   ))
 
 gabung2a<-gabung |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
 gabung2a<-gabung2a |>  replace(is.na(gabung2a),"foreign") ## sama tapi bukan persen
 
 gabung2a<-gabung2a |>
@@ -1302,8 +1302,8 @@ gabung2a<-gabung2a |>
 
 gabung2a<-gabung2a |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "ds",
-    group=="IDN" & service==0 ~ "dg",
+    group=="VNM" & service==1 ~ "ds",
+    group=="VNM" & service==0 ~ "dg",
     group=="foreign" & service==1 ~ "fs",
     TRUE~"fg"
   ))
@@ -1354,7 +1354,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ] |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -1365,44 +1365,44 @@ basic$industry<-"C24"
 
 #### FABRICATED METAL
 
-i2002<-read_csv("2002.csv") |> select(`...1`,IDN_C25) |> arrange(desc(IDN_C25)) |>
-  rename("2002"="IDN_C25")
-i2003<-read_csv("2003.csv") |> select(`...1`,IDN_C25) |> arrange(desc(IDN_C25)) |>
-  rename("2003"="IDN_C25")
-i2004<-read_csv("2004.csv") |> select(`...1`,IDN_C25) |> arrange(desc(IDN_C25)) |>
-  rename("2004"="IDN_C25")
-i2005<-read_csv("2005.csv") |> select(`...1`,IDN_C25) |> arrange(desc(IDN_C25)) |>
-  rename("2005"="IDN_C25")
-i2006<-read_csv("2006.csv") |> select(`...1`,IDN_C25) |> arrange(desc(IDN_C25)) |>
-  rename("2006"="IDN_C25")
-i2007<-read_csv("2007.csv") |> select(`...1`,IDN_C25) |> arrange(desc(IDN_C25)) |>
-  rename("2007"="IDN_C25")
-i2008<-read_csv("2008.csv") |> select(`...1`,IDN_C25) |> arrange(desc(IDN_C25)) |>
-  rename("2008"="IDN_C25")
-i2009<-read_csv("2008.csv") |> select(`...1`,IDN_C25) |> arrange(desc(IDN_C25)) |>
-  rename("2009"="IDN_C25")
-i2010<-read_csv("2010.csv") |> select(`...1`,IDN_C25) |> arrange(desc(IDN_C25)) |>
-  rename("2010"="IDN_C25")
-i2011<-read_csv("2011.csv") |> select(`...1`,IDN_C25) |> arrange(desc(IDN_C25)) |>
-  rename("2011"="IDN_C25")
-i2012<-read_csv("2012.csv") |> select(`...1`,IDN_C25) |> arrange(desc(IDN_C25)) |>
-  rename("2012"="IDN_C25")
-i2013<-read_csv("2013.csv") |> select(`...1`,IDN_C25) |> arrange(desc(IDN_C25)) |>
-  rename("2013"="IDN_C25")
-i2014<-read_csv("2014.csv") |> select(`...1`,IDN_C25) |> arrange(desc(IDN_C25)) |>
-  rename("2014"="IDN_C25")
-i2015<-read_csv("2015.csv") |> select(`...1`,IDN_C25) |> arrange(desc(IDN_C25)) |>
-  rename("2015"="IDN_C25")
-i2016<-read_csv("2016.csv") |> select(`...1`,IDN_C25) |> arrange(desc(IDN_C25)) |>
-  rename("2016"="IDN_C25")
-i2017<-read_csv("2017.csv") |> select(`...1`,IDN_C25) |> arrange(desc(IDN_C25)) |>
-  rename("2017"="IDN_C25")
-i2018<-read_csv("2018.csv") |> select(`...1`,IDN_C25) |> arrange(desc(IDN_C25)) |>
-  rename("2018"="IDN_C25")
-i2019<-read_csv("2019.csv") |> select(`...1`,IDN_C25) |> arrange(desc(IDN_C25)) |>
-  rename("2019"="IDN_C25")
-i2020<-read_csv("2020.csv") |> select(`...1`,IDN_C25) |> arrange(desc(IDN_C25)) |>
-  rename("2020"="IDN_C25")
+i2002<-read_csv("2002.csv") |> select(`...1`,VNM_C25) |> arrange(desc(VNM_C25)) |>
+  rename("2002"="VNM_C25")
+i2003<-read_csv("2003.csv") |> select(`...1`,VNM_C25) |> arrange(desc(VNM_C25)) |>
+  rename("2003"="VNM_C25")
+i2004<-read_csv("2004.csv") |> select(`...1`,VNM_C25) |> arrange(desc(VNM_C25)) |>
+  rename("2004"="VNM_C25")
+i2005<-read_csv("2005.csv") |> select(`...1`,VNM_C25) |> arrange(desc(VNM_C25)) |>
+  rename("2005"="VNM_C25")
+i2006<-read_csv("2006.csv") |> select(`...1`,VNM_C25) |> arrange(desc(VNM_C25)) |>
+  rename("2006"="VNM_C25")
+i2007<-read_csv("2007.csv") |> select(`...1`,VNM_C25) |> arrange(desc(VNM_C25)) |>
+  rename("2007"="VNM_C25")
+i2008<-read_csv("2008.csv") |> select(`...1`,VNM_C25) |> arrange(desc(VNM_C25)) |>
+  rename("2008"="VNM_C25")
+i2009<-read_csv("2008.csv") |> select(`...1`,VNM_C25) |> arrange(desc(VNM_C25)) |>
+  rename("2009"="VNM_C25")
+i2010<-read_csv("2010.csv") |> select(`...1`,VNM_C25) |> arrange(desc(VNM_C25)) |>
+  rename("2010"="VNM_C25")
+i2011<-read_csv("2011.csv") |> select(`...1`,VNM_C25) |> arrange(desc(VNM_C25)) |>
+  rename("2011"="VNM_C25")
+i2012<-read_csv("2012.csv") |> select(`...1`,VNM_C25) |> arrange(desc(VNM_C25)) |>
+  rename("2012"="VNM_C25")
+i2013<-read_csv("2013.csv") |> select(`...1`,VNM_C25) |> arrange(desc(VNM_C25)) |>
+  rename("2013"="VNM_C25")
+i2014<-read_csv("2014.csv") |> select(`...1`,VNM_C25) |> arrange(desc(VNM_C25)) |>
+  rename("2014"="VNM_C25")
+i2015<-read_csv("2015.csv") |> select(`...1`,VNM_C25) |> arrange(desc(VNM_C25)) |>
+  rename("2015"="VNM_C25")
+i2016<-read_csv("2016.csv") |> select(`...1`,VNM_C25) |> arrange(desc(VNM_C25)) |>
+  rename("2016"="VNM_C25")
+i2017<-read_csv("2017.csv") |> select(`...1`,VNM_C25) |> arrange(desc(VNM_C25)) |>
+  rename("2017"="VNM_C25")
+i2018<-read_csv("2018.csv") |> select(`...1`,VNM_C25) |> arrange(desc(VNM_C25)) |>
+  rename("2018"="VNM_C25")
+i2019<-read_csv("2019.csv") |> select(`...1`,VNM_C25) |> arrange(desc(VNM_C25)) |>
+  rename("2019"="VNM_C25")
+i2020<-read_csv("2020.csv") |> select(`...1`,VNM_C25) |> arrange(desc(VNM_C25)) |>
+  rename("2020"="VNM_C25")
 
 is<-list(i2002,i2003,i2004,i2005,i2006,i2007,i2008,i2009,i2010,i2011,i2012,
          i2013,i2014,i2015,i2016,i2017,i2018,i2019,i2020)
@@ -1412,8 +1412,8 @@ gabung<-reduce(is,inner_join) ## Gabung semua data per tahun itu dengan cara
 gabung1<-gabung |> mutate(across(where(is.numeric), ~./.[1])) ## Bikin persen (how to use . and ...)
 
 gabung2<-gabung1 |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
-gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain IDN ditulis foreign
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
+gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain VNM ditulis foreign
 
 gabung2<-gabung2 |>
   mutate(service=ifelse(
@@ -1429,14 +1429,14 @@ gabung2<-gabung2 |>
 
 gabung2<-gabung2 |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "sds",
-    group=="IDN" & service==0 ~ "sdg",
+    group=="VNM" & service==1 ~ "sds",
+    group=="VNM" & service==0 ~ "sdg",
     group=="foreign" & service==1 ~ "sfs",
     TRUE~"sfg"
   ))
 
 gabung2a<-gabung |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
 gabung2a<-gabung2a |>  replace(is.na(gabung2a),"foreign") ## sama tapi bukan persen
 
 gabung2a<-gabung2a |>
@@ -1453,8 +1453,8 @@ gabung2a<-gabung2a |>
 
 gabung2a<-gabung2a |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "ds",
-    group=="IDN" & service==0 ~ "dg",
+    group=="VNM" & service==1 ~ "ds",
+    group=="VNM" & service==0 ~ "dg",
     group=="foreign" & service==1 ~ "fs",
     TRUE~"fg"
   ))
@@ -1505,7 +1505,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ] |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -1516,44 +1516,44 @@ fab$industry<-"C25"
 
 #### COMPUTER
 
-i2002<-read_csv("2002.csv") |> select(`...1`,IDN_C26) |> arrange(desc(IDN_C26)) |>
-  rename("2002"="IDN_C26")
-i2003<-read_csv("2003.csv") |> select(`...1`,IDN_C26) |> arrange(desc(IDN_C26)) |>
-  rename("2003"="IDN_C26")
-i2004<-read_csv("2004.csv") |> select(`...1`,IDN_C26) |> arrange(desc(IDN_C26)) |>
-  rename("2004"="IDN_C26")
-i2005<-read_csv("2005.csv") |> select(`...1`,IDN_C26) |> arrange(desc(IDN_C26)) |>
-  rename("2005"="IDN_C26")
-i2006<-read_csv("2006.csv") |> select(`...1`,IDN_C26) |> arrange(desc(IDN_C26)) |>
-  rename("2006"="IDN_C26")
-i2007<-read_csv("2007.csv") |> select(`...1`,IDN_C26) |> arrange(desc(IDN_C26)) |>
-  rename("2007"="IDN_C26")
-i2008<-read_csv("2008.csv") |> select(`...1`,IDN_C26) |> arrange(desc(IDN_C26)) |>
-  rename("2008"="IDN_C26")
-i2009<-read_csv("2008.csv") |> select(`...1`,IDN_C26) |> arrange(desc(IDN_C26)) |>
-  rename("2009"="IDN_C26")
-i2010<-read_csv("2010.csv") |> select(`...1`,IDN_C26) |> arrange(desc(IDN_C26)) |>
-  rename("2010"="IDN_C26")
-i2011<-read_csv("2011.csv") |> select(`...1`,IDN_C26) |> arrange(desc(IDN_C26)) |>
-  rename("2011"="IDN_C26")
-i2012<-read_csv("2012.csv") |> select(`...1`,IDN_C26) |> arrange(desc(IDN_C26)) |>
-  rename("2012"="IDN_C26")
-i2013<-read_csv("2013.csv") |> select(`...1`,IDN_C26) |> arrange(desc(IDN_C26)) |>
-  rename("2013"="IDN_C26")
-i2014<-read_csv("2014.csv") |> select(`...1`,IDN_C26) |> arrange(desc(IDN_C26)) |>
-  rename("2014"="IDN_C26")
-i2015<-read_csv("2015.csv") |> select(`...1`,IDN_C26) |> arrange(desc(IDN_C26)) |>
-  rename("2015"="IDN_C26")
-i2016<-read_csv("2016.csv") |> select(`...1`,IDN_C26) |> arrange(desc(IDN_C26)) |>
-  rename("2016"="IDN_C26")
-i2017<-read_csv("2017.csv") |> select(`...1`,IDN_C26) |> arrange(desc(IDN_C26)) |>
-  rename("2017"="IDN_C26")
-i2018<-read_csv("2018.csv") |> select(`...1`,IDN_C26) |> arrange(desc(IDN_C26)) |>
-  rename("2018"="IDN_C26")
-i2019<-read_csv("2019.csv") |> select(`...1`,IDN_C26) |> arrange(desc(IDN_C26)) |>
-  rename("2019"="IDN_C26")
-i2020<-read_csv("2020.csv") |> select(`...1`,IDN_C26) |> arrange(desc(IDN_C26)) |>
-  rename("2020"="IDN_C26")
+i2002<-read_csv("2002.csv") |> select(`...1`,VNM_C26) |> arrange(desc(VNM_C26)) |>
+  rename("2002"="VNM_C26")
+i2003<-read_csv("2003.csv") |> select(`...1`,VNM_C26) |> arrange(desc(VNM_C26)) |>
+  rename("2003"="VNM_C26")
+i2004<-read_csv("2004.csv") |> select(`...1`,VNM_C26) |> arrange(desc(VNM_C26)) |>
+  rename("2004"="VNM_C26")
+i2005<-read_csv("2005.csv") |> select(`...1`,VNM_C26) |> arrange(desc(VNM_C26)) |>
+  rename("2005"="VNM_C26")
+i2006<-read_csv("2006.csv") |> select(`...1`,VNM_C26) |> arrange(desc(VNM_C26)) |>
+  rename("2006"="VNM_C26")
+i2007<-read_csv("2007.csv") |> select(`...1`,VNM_C26) |> arrange(desc(VNM_C26)) |>
+  rename("2007"="VNM_C26")
+i2008<-read_csv("2008.csv") |> select(`...1`,VNM_C26) |> arrange(desc(VNM_C26)) |>
+  rename("2008"="VNM_C26")
+i2009<-read_csv("2008.csv") |> select(`...1`,VNM_C26) |> arrange(desc(VNM_C26)) |>
+  rename("2009"="VNM_C26")
+i2010<-read_csv("2010.csv") |> select(`...1`,VNM_C26) |> arrange(desc(VNM_C26)) |>
+  rename("2010"="VNM_C26")
+i2011<-read_csv("2011.csv") |> select(`...1`,VNM_C26) |> arrange(desc(VNM_C26)) |>
+  rename("2011"="VNM_C26")
+i2012<-read_csv("2012.csv") |> select(`...1`,VNM_C26) |> arrange(desc(VNM_C26)) |>
+  rename("2012"="VNM_C26")
+i2013<-read_csv("2013.csv") |> select(`...1`,VNM_C26) |> arrange(desc(VNM_C26)) |>
+  rename("2013"="VNM_C26")
+i2014<-read_csv("2014.csv") |> select(`...1`,VNM_C26) |> arrange(desc(VNM_C26)) |>
+  rename("2014"="VNM_C26")
+i2015<-read_csv("2015.csv") |> select(`...1`,VNM_C26) |> arrange(desc(VNM_C26)) |>
+  rename("2015"="VNM_C26")
+i2016<-read_csv("2016.csv") |> select(`...1`,VNM_C26) |> arrange(desc(VNM_C26)) |>
+  rename("2016"="VNM_C26")
+i2017<-read_csv("2017.csv") |> select(`...1`,VNM_C26) |> arrange(desc(VNM_C26)) |>
+  rename("2017"="VNM_C26")
+i2018<-read_csv("2018.csv") |> select(`...1`,VNM_C26) |> arrange(desc(VNM_C26)) |>
+  rename("2018"="VNM_C26")
+i2019<-read_csv("2019.csv") |> select(`...1`,VNM_C26) |> arrange(desc(VNM_C26)) |>
+  rename("2019"="VNM_C26")
+i2020<-read_csv("2020.csv") |> select(`...1`,VNM_C26) |> arrange(desc(VNM_C26)) |>
+  rename("2020"="VNM_C26")
 
 is<-list(i2002,i2003,i2004,i2005,i2006,i2007,i2008,i2009,i2010,i2011,i2012,
          i2013,i2014,i2015,i2016,i2017,i2018,i2019,i2020)
@@ -1563,8 +1563,8 @@ gabung<-reduce(is,inner_join) ## Gabung semua data per tahun itu dengan cara
 gabung1<-gabung |> mutate(across(where(is.numeric), ~./.[1])) ## Bikin persen (how to use . and ...)
 
 gabung2<-gabung1 |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
-gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain IDN ditulis foreign
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
+gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain VNM ditulis foreign
 
 gabung2<-gabung2 |>
   mutate(service=ifelse(
@@ -1580,14 +1580,14 @@ gabung2<-gabung2 |>
 
 gabung2<-gabung2 |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "sds",
-    group=="IDN" & service==0 ~ "sdg",
+    group=="VNM" & service==1 ~ "sds",
+    group=="VNM" & service==0 ~ "sdg",
     group=="foreign" & service==1 ~ "sfs",
     TRUE~"sfg"
   ))
 
 gabung2a<-gabung |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
 gabung2a<-gabung2a |>  replace(is.na(gabung2a),"foreign") ## sama tapi bukan persen
 
 gabung2a<-gabung2a |>
@@ -1604,8 +1604,8 @@ gabung2a<-gabung2a |>
 
 gabung2a<-gabung2a |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "ds",
-    group=="IDN" & service==0 ~ "dg",
+    group=="VNM" & service==1 ~ "ds",
+    group=="VNM" & service==0 ~ "dg",
     group=="foreign" & service==1 ~ "fs",
     TRUE~"fg"
   ))
@@ -1656,7 +1656,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ] |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -1667,44 +1667,44 @@ com$industry<-"C26"
 
 #### ELECTRICAL
 
-i2002<-read_csv("2002.csv") |> select(`...1`,IDN_C27) |> arrange(desc(IDN_C27)) |>
-  rename("2002"="IDN_C27")
-i2003<-read_csv("2003.csv") |> select(`...1`,IDN_C27) |> arrange(desc(IDN_C27)) |>
-  rename("2003"="IDN_C27")
-i2004<-read_csv("2004.csv") |> select(`...1`,IDN_C27) |> arrange(desc(IDN_C27)) |>
-  rename("2004"="IDN_C27")
-i2005<-read_csv("2005.csv") |> select(`...1`,IDN_C27) |> arrange(desc(IDN_C27)) |>
-  rename("2005"="IDN_C27")
-i2006<-read_csv("2006.csv") |> select(`...1`,IDN_C27) |> arrange(desc(IDN_C27)) |>
-  rename("2006"="IDN_C27")
-i2007<-read_csv("2007.csv") |> select(`...1`,IDN_C27) |> arrange(desc(IDN_C27)) |>
-  rename("2007"="IDN_C27")
-i2008<-read_csv("2008.csv") |> select(`...1`,IDN_C27) |> arrange(desc(IDN_C27)) |>
-  rename("2008"="IDN_C27")
-i2009<-read_csv("2008.csv") |> select(`...1`,IDN_C27) |> arrange(desc(IDN_C27)) |>
-  rename("2009"="IDN_C27")
-i2010<-read_csv("2010.csv") |> select(`...1`,IDN_C27) |> arrange(desc(IDN_C27)) |>
-  rename("2010"="IDN_C27")
-i2011<-read_csv("2011.csv") |> select(`...1`,IDN_C27) |> arrange(desc(IDN_C27)) |>
-  rename("2011"="IDN_C27")
-i2012<-read_csv("2012.csv") |> select(`...1`,IDN_C27) |> arrange(desc(IDN_C27)) |>
-  rename("2012"="IDN_C27")
-i2013<-read_csv("2013.csv") |> select(`...1`,IDN_C27) |> arrange(desc(IDN_C27)) |>
-  rename("2013"="IDN_C27")
-i2014<-read_csv("2014.csv") |> select(`...1`,IDN_C27) |> arrange(desc(IDN_C27)) |>
-  rename("2014"="IDN_C27")
-i2015<-read_csv("2015.csv") |> select(`...1`,IDN_C27) |> arrange(desc(IDN_C27)) |>
-  rename("2015"="IDN_C27")
-i2016<-read_csv("2016.csv") |> select(`...1`,IDN_C27) |> arrange(desc(IDN_C27)) |>
-  rename("2016"="IDN_C27")
-i2017<-read_csv("2017.csv") |> select(`...1`,IDN_C27) |> arrange(desc(IDN_C27)) |>
-  rename("2017"="IDN_C27")
-i2018<-read_csv("2018.csv") |> select(`...1`,IDN_C27) |> arrange(desc(IDN_C27)) |>
-  rename("2018"="IDN_C27")
-i2019<-read_csv("2019.csv") |> select(`...1`,IDN_C27) |> arrange(desc(IDN_C27)) |>
-  rename("2019"="IDN_C27")
-i2020<-read_csv("2020.csv") |> select(`...1`,IDN_C27) |> arrange(desc(IDN_C27)) |>
-  rename("2020"="IDN_C27")
+i2002<-read_csv("2002.csv") |> select(`...1`,VNM_C27) |> arrange(desc(VNM_C27)) |>
+  rename("2002"="VNM_C27")
+i2003<-read_csv("2003.csv") |> select(`...1`,VNM_C27) |> arrange(desc(VNM_C27)) |>
+  rename("2003"="VNM_C27")
+i2004<-read_csv("2004.csv") |> select(`...1`,VNM_C27) |> arrange(desc(VNM_C27)) |>
+  rename("2004"="VNM_C27")
+i2005<-read_csv("2005.csv") |> select(`...1`,VNM_C27) |> arrange(desc(VNM_C27)) |>
+  rename("2005"="VNM_C27")
+i2006<-read_csv("2006.csv") |> select(`...1`,VNM_C27) |> arrange(desc(VNM_C27)) |>
+  rename("2006"="VNM_C27")
+i2007<-read_csv("2007.csv") |> select(`...1`,VNM_C27) |> arrange(desc(VNM_C27)) |>
+  rename("2007"="VNM_C27")
+i2008<-read_csv("2008.csv") |> select(`...1`,VNM_C27) |> arrange(desc(VNM_C27)) |>
+  rename("2008"="VNM_C27")
+i2009<-read_csv("2008.csv") |> select(`...1`,VNM_C27) |> arrange(desc(VNM_C27)) |>
+  rename("2009"="VNM_C27")
+i2010<-read_csv("2010.csv") |> select(`...1`,VNM_C27) |> arrange(desc(VNM_C27)) |>
+  rename("2010"="VNM_C27")
+i2011<-read_csv("2011.csv") |> select(`...1`,VNM_C27) |> arrange(desc(VNM_C27)) |>
+  rename("2011"="VNM_C27")
+i2012<-read_csv("2012.csv") |> select(`...1`,VNM_C27) |> arrange(desc(VNM_C27)) |>
+  rename("2012"="VNM_C27")
+i2013<-read_csv("2013.csv") |> select(`...1`,VNM_C27) |> arrange(desc(VNM_C27)) |>
+  rename("2013"="VNM_C27")
+i2014<-read_csv("2014.csv") |> select(`...1`,VNM_C27) |> arrange(desc(VNM_C27)) |>
+  rename("2014"="VNM_C27")
+i2015<-read_csv("2015.csv") |> select(`...1`,VNM_C27) |> arrange(desc(VNM_C27)) |>
+  rename("2015"="VNM_C27")
+i2016<-read_csv("2016.csv") |> select(`...1`,VNM_C27) |> arrange(desc(VNM_C27)) |>
+  rename("2016"="VNM_C27")
+i2017<-read_csv("2017.csv") |> select(`...1`,VNM_C27) |> arrange(desc(VNM_C27)) |>
+  rename("2017"="VNM_C27")
+i2018<-read_csv("2018.csv") |> select(`...1`,VNM_C27) |> arrange(desc(VNM_C27)) |>
+  rename("2018"="VNM_C27")
+i2019<-read_csv("2019.csv") |> select(`...1`,VNM_C27) |> arrange(desc(VNM_C27)) |>
+  rename("2019"="VNM_C27")
+i2020<-read_csv("2020.csv") |> select(`...1`,VNM_C27) |> arrange(desc(VNM_C27)) |>
+  rename("2020"="VNM_C27")
 
 is<-list(i2002,i2003,i2004,i2005,i2006,i2007,i2008,i2009,i2010,i2011,i2012,
          i2013,i2014,i2015,i2016,i2017,i2018,i2019,i2020)
@@ -1714,8 +1714,8 @@ gabung<-reduce(is,inner_join) ## Gabung semua data per tahun itu dengan cara
 gabung1<-gabung |> mutate(across(where(is.numeric), ~./.[1])) ## Bikin persen (how to use . and ...)
 
 gabung2<-gabung1 |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
-gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain IDN ditulis foreign
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
+gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain VNM ditulis foreign
 
 gabung2<-gabung2 |>
   mutate(service=ifelse(
@@ -1731,14 +1731,14 @@ gabung2<-gabung2 |>
 
 gabung2<-gabung2 |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "sds",
-    group=="IDN" & service==0 ~ "sdg",
+    group=="VNM" & service==1 ~ "sds",
+    group=="VNM" & service==0 ~ "sdg",
     group=="foreign" & service==1 ~ "sfs",
     TRUE~"sfg"
   ))
 
 gabung2a<-gabung |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
 gabung2a<-gabung2a |>  replace(is.na(gabung2a),"foreign") ## sama tapi bukan persen
 
 gabung2a<-gabung2a |>
@@ -1755,8 +1755,8 @@ gabung2a<-gabung2a |>
 
 gabung2a<-gabung2a |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "ds",
-    group=="IDN" & service==0 ~ "dg",
+    group=="VNM" & service==1 ~ "ds",
+    group=="VNM" & service==0 ~ "dg",
     group=="foreign" & service==1 ~ "fs",
     TRUE~"fg"
   ))
@@ -1807,7 +1807,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ] |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -1818,44 +1818,44 @@ elec$industry<-"C27"
 
 #### MACHINERY
 
-i2002<-read_csv("2002.csv") |> select(`...1`,IDN_C28) |> arrange(desc(IDN_C28)) |>
-  rename("2002"="IDN_C28")
-i2003<-read_csv("2003.csv") |> select(`...1`,IDN_C28) |> arrange(desc(IDN_C28)) |>
-  rename("2003"="IDN_C28")
-i2004<-read_csv("2004.csv") |> select(`...1`,IDN_C28) |> arrange(desc(IDN_C28)) |>
-  rename("2004"="IDN_C28")
-i2005<-read_csv("2005.csv") |> select(`...1`,IDN_C28) |> arrange(desc(IDN_C28)) |>
-  rename("2005"="IDN_C28")
-i2006<-read_csv("2006.csv") |> select(`...1`,IDN_C28) |> arrange(desc(IDN_C28)) |>
-  rename("2006"="IDN_C28")
-i2007<-read_csv("2007.csv") |> select(`...1`,IDN_C28) |> arrange(desc(IDN_C28)) |>
-  rename("2007"="IDN_C28")
-i2008<-read_csv("2008.csv") |> select(`...1`,IDN_C28) |> arrange(desc(IDN_C28)) |>
-  rename("2008"="IDN_C28")
-i2009<-read_csv("2008.csv") |> select(`...1`,IDN_C28) |> arrange(desc(IDN_C28)) |>
-  rename("2009"="IDN_C28")
-i2010<-read_csv("2010.csv") |> select(`...1`,IDN_C28) |> arrange(desc(IDN_C28)) |>
-  rename("2010"="IDN_C28")
-i2011<-read_csv("2011.csv") |> select(`...1`,IDN_C28) |> arrange(desc(IDN_C28)) |>
-  rename("2011"="IDN_C28")
-i2012<-read_csv("2012.csv") |> select(`...1`,IDN_C28) |> arrange(desc(IDN_C28)) |>
-  rename("2012"="IDN_C28")
-i2013<-read_csv("2013.csv") |> select(`...1`,IDN_C28) |> arrange(desc(IDN_C28)) |>
-  rename("2013"="IDN_C28")
-i2014<-read_csv("2014.csv") |> select(`...1`,IDN_C28) |> arrange(desc(IDN_C28)) |>
-  rename("2014"="IDN_C28")
-i2015<-read_csv("2015.csv") |> select(`...1`,IDN_C28) |> arrange(desc(IDN_C28)) |>
-  rename("2015"="IDN_C28")
-i2016<-read_csv("2016.csv") |> select(`...1`,IDN_C28) |> arrange(desc(IDN_C28)) |>
-  rename("2016"="IDN_C28")
-i2017<-read_csv("2017.csv") |> select(`...1`,IDN_C28) |> arrange(desc(IDN_C28)) |>
-  rename("2017"="IDN_C28")
-i2018<-read_csv("2018.csv") |> select(`...1`,IDN_C28) |> arrange(desc(IDN_C28)) |>
-  rename("2018"="IDN_C28")
-i2019<-read_csv("2019.csv") |> select(`...1`,IDN_C28) |> arrange(desc(IDN_C28)) |>
-  rename("2019"="IDN_C28")
-i2020<-read_csv("2020.csv") |> select(`...1`,IDN_C28) |> arrange(desc(IDN_C28)) |>
-  rename("2020"="IDN_C28")
+i2002<-read_csv("2002.csv") |> select(`...1`,VNM_C28) |> arrange(desc(VNM_C28)) |>
+  rename("2002"="VNM_C28")
+i2003<-read_csv("2003.csv") |> select(`...1`,VNM_C28) |> arrange(desc(VNM_C28)) |>
+  rename("2003"="VNM_C28")
+i2004<-read_csv("2004.csv") |> select(`...1`,VNM_C28) |> arrange(desc(VNM_C28)) |>
+  rename("2004"="VNM_C28")
+i2005<-read_csv("2005.csv") |> select(`...1`,VNM_C28) |> arrange(desc(VNM_C28)) |>
+  rename("2005"="VNM_C28")
+i2006<-read_csv("2006.csv") |> select(`...1`,VNM_C28) |> arrange(desc(VNM_C28)) |>
+  rename("2006"="VNM_C28")
+i2007<-read_csv("2007.csv") |> select(`...1`,VNM_C28) |> arrange(desc(VNM_C28)) |>
+  rename("2007"="VNM_C28")
+i2008<-read_csv("2008.csv") |> select(`...1`,VNM_C28) |> arrange(desc(VNM_C28)) |>
+  rename("2008"="VNM_C28")
+i2009<-read_csv("2008.csv") |> select(`...1`,VNM_C28) |> arrange(desc(VNM_C28)) |>
+  rename("2009"="VNM_C28")
+i2010<-read_csv("2010.csv") |> select(`...1`,VNM_C28) |> arrange(desc(VNM_C28)) |>
+  rename("2010"="VNM_C28")
+i2011<-read_csv("2011.csv") |> select(`...1`,VNM_C28) |> arrange(desc(VNM_C28)) |>
+  rename("2011"="VNM_C28")
+i2012<-read_csv("2012.csv") |> select(`...1`,VNM_C28) |> arrange(desc(VNM_C28)) |>
+  rename("2012"="VNM_C28")
+i2013<-read_csv("2013.csv") |> select(`...1`,VNM_C28) |> arrange(desc(VNM_C28)) |>
+  rename("2013"="VNM_C28")
+i2014<-read_csv("2014.csv") |> select(`...1`,VNM_C28) |> arrange(desc(VNM_C28)) |>
+  rename("2014"="VNM_C28")
+i2015<-read_csv("2015.csv") |> select(`...1`,VNM_C28) |> arrange(desc(VNM_C28)) |>
+  rename("2015"="VNM_C28")
+i2016<-read_csv("2016.csv") |> select(`...1`,VNM_C28) |> arrange(desc(VNM_C28)) |>
+  rename("2016"="VNM_C28")
+i2017<-read_csv("2017.csv") |> select(`...1`,VNM_C28) |> arrange(desc(VNM_C28)) |>
+  rename("2017"="VNM_C28")
+i2018<-read_csv("2018.csv") |> select(`...1`,VNM_C28) |> arrange(desc(VNM_C28)) |>
+  rename("2018"="VNM_C28")
+i2019<-read_csv("2019.csv") |> select(`...1`,VNM_C28) |> arrange(desc(VNM_C28)) |>
+  rename("2019"="VNM_C28")
+i2020<-read_csv("2020.csv") |> select(`...1`,VNM_C28) |> arrange(desc(VNM_C28)) |>
+  rename("2020"="VNM_C28")
 
 is<-list(i2002,i2003,i2004,i2005,i2006,i2007,i2008,i2009,i2010,i2011,i2012,
          i2013,i2014,i2015,i2016,i2017,i2018,i2019,i2020)
@@ -1865,8 +1865,8 @@ gabung<-reduce(is,inner_join) ## Gabung semua data per tahun itu dengan cara
 gabung1<-gabung |> mutate(across(where(is.numeric), ~./.[1])) ## Bikin persen (how to use . and ...)
 
 gabung2<-gabung1 |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
-gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain IDN ditulis foreign
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
+gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain VNM ditulis foreign
 
 gabung2<-gabung2 |>
   mutate(service=ifelse(
@@ -1882,14 +1882,14 @@ gabung2<-gabung2 |>
 
 gabung2<-gabung2 |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "sds",
-    group=="IDN" & service==0 ~ "sdg",
+    group=="VNM" & service==1 ~ "sds",
+    group=="VNM" & service==0 ~ "sdg",
     group=="foreign" & service==1 ~ "sfs",
     TRUE~"sfg"
   ))
 
 gabung2a<-gabung |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
 gabung2a<-gabung2a |>  replace(is.na(gabung2a),"foreign") ## sama tapi bukan persen
 
 gabung2a<-gabung2a |>
@@ -1906,8 +1906,8 @@ gabung2a<-gabung2a |>
 
 gabung2a<-gabung2a |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "ds",
-    group=="IDN" & service==0 ~ "dg",
+    group=="VNM" & service==1 ~ "ds",
+    group=="VNM" & service==0 ~ "dg",
     group=="foreign" & service==1 ~ "fs",
     TRUE~"fg"
   ))
@@ -1958,7 +1958,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ] |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -1969,44 +1969,44 @@ machine$industry<-"C28"
 
 #### VEHICLES
 
-i2002<-read_csv("2002.csv") |> select(`...1`,IDN_C29) |> arrange(desc(IDN_C29)) |>
-  rename("2002"="IDN_C29")
-i2003<-read_csv("2003.csv") |> select(`...1`,IDN_C29) |> arrange(desc(IDN_C29)) |>
-  rename("2003"="IDN_C29")
-i2004<-read_csv("2004.csv") |> select(`...1`,IDN_C29) |> arrange(desc(IDN_C29)) |>
-  rename("2004"="IDN_C29")
-i2005<-read_csv("2005.csv") |> select(`...1`,IDN_C29) |> arrange(desc(IDN_C29)) |>
-  rename("2005"="IDN_C29")
-i2006<-read_csv("2006.csv") |> select(`...1`,IDN_C29) |> arrange(desc(IDN_C29)) |>
-  rename("2006"="IDN_C29")
-i2007<-read_csv("2007.csv") |> select(`...1`,IDN_C29) |> arrange(desc(IDN_C29)) |>
-  rename("2007"="IDN_C29")
-i2008<-read_csv("2008.csv") |> select(`...1`,IDN_C29) |> arrange(desc(IDN_C29)) |>
-  rename("2008"="IDN_C29")
-i2009<-read_csv("2008.csv") |> select(`...1`,IDN_C29) |> arrange(desc(IDN_C29)) |>
-  rename("2009"="IDN_C29")
-i2010<-read_csv("2010.csv") |> select(`...1`,IDN_C29) |> arrange(desc(IDN_C29)) |>
-  rename("2010"="IDN_C29")
-i2011<-read_csv("2011.csv") |> select(`...1`,IDN_C29) |> arrange(desc(IDN_C29)) |>
-  rename("2011"="IDN_C29")
-i2012<-read_csv("2012.csv") |> select(`...1`,IDN_C29) |> arrange(desc(IDN_C29)) |>
-  rename("2012"="IDN_C29")
-i2013<-read_csv("2013.csv") |> select(`...1`,IDN_C29) |> arrange(desc(IDN_C29)) |>
-  rename("2013"="IDN_C29")
-i2014<-read_csv("2014.csv") |> select(`...1`,IDN_C29) |> arrange(desc(IDN_C29)) |>
-  rename("2014"="IDN_C29")
-i2015<-read_csv("2015.csv") |> select(`...1`,IDN_C29) |> arrange(desc(IDN_C29)) |>
-  rename("2015"="IDN_C29")
-i2016<-read_csv("2016.csv") |> select(`...1`,IDN_C29) |> arrange(desc(IDN_C29)) |>
-  rename("2016"="IDN_C29")
-i2017<-read_csv("2017.csv") |> select(`...1`,IDN_C29) |> arrange(desc(IDN_C29)) |>
-  rename("2017"="IDN_C29")
-i2018<-read_csv("2018.csv") |> select(`...1`,IDN_C29) |> arrange(desc(IDN_C29)) |>
-  rename("2018"="IDN_C29")
-i2019<-read_csv("2019.csv") |> select(`...1`,IDN_C29) |> arrange(desc(IDN_C29)) |>
-  rename("2019"="IDN_C29")
-i2020<-read_csv("2020.csv") |> select(`...1`,IDN_C29) |> arrange(desc(IDN_C29)) |>
-  rename("2020"="IDN_C29")
+i2002<-read_csv("2002.csv") |> select(`...1`,VNM_C29) |> arrange(desc(VNM_C29)) |>
+  rename("2002"="VNM_C29")
+i2003<-read_csv("2003.csv") |> select(`...1`,VNM_C29) |> arrange(desc(VNM_C29)) |>
+  rename("2003"="VNM_C29")
+i2004<-read_csv("2004.csv") |> select(`...1`,VNM_C29) |> arrange(desc(VNM_C29)) |>
+  rename("2004"="VNM_C29")
+i2005<-read_csv("2005.csv") |> select(`...1`,VNM_C29) |> arrange(desc(VNM_C29)) |>
+  rename("2005"="VNM_C29")
+i2006<-read_csv("2006.csv") |> select(`...1`,VNM_C29) |> arrange(desc(VNM_C29)) |>
+  rename("2006"="VNM_C29")
+i2007<-read_csv("2007.csv") |> select(`...1`,VNM_C29) |> arrange(desc(VNM_C29)) |>
+  rename("2007"="VNM_C29")
+i2008<-read_csv("2008.csv") |> select(`...1`,VNM_C29) |> arrange(desc(VNM_C29)) |>
+  rename("2008"="VNM_C29")
+i2009<-read_csv("2008.csv") |> select(`...1`,VNM_C29) |> arrange(desc(VNM_C29)) |>
+  rename("2009"="VNM_C29")
+i2010<-read_csv("2010.csv") |> select(`...1`,VNM_C29) |> arrange(desc(VNM_C29)) |>
+  rename("2010"="VNM_C29")
+i2011<-read_csv("2011.csv") |> select(`...1`,VNM_C29) |> arrange(desc(VNM_C29)) |>
+  rename("2011"="VNM_C29")
+i2012<-read_csv("2012.csv") |> select(`...1`,VNM_C29) |> arrange(desc(VNM_C29)) |>
+  rename("2012"="VNM_C29")
+i2013<-read_csv("2013.csv") |> select(`...1`,VNM_C29) |> arrange(desc(VNM_C29)) |>
+  rename("2013"="VNM_C29")
+i2014<-read_csv("2014.csv") |> select(`...1`,VNM_C29) |> arrange(desc(VNM_C29)) |>
+  rename("2014"="VNM_C29")
+i2015<-read_csv("2015.csv") |> select(`...1`,VNM_C29) |> arrange(desc(VNM_C29)) |>
+  rename("2015"="VNM_C29")
+i2016<-read_csv("2016.csv") |> select(`...1`,VNM_C29) |> arrange(desc(VNM_C29)) |>
+  rename("2016"="VNM_C29")
+i2017<-read_csv("2017.csv") |> select(`...1`,VNM_C29) |> arrange(desc(VNM_C29)) |>
+  rename("2017"="VNM_C29")
+i2018<-read_csv("2018.csv") |> select(`...1`,VNM_C29) |> arrange(desc(VNM_C29)) |>
+  rename("2018"="VNM_C29")
+i2019<-read_csv("2019.csv") |> select(`...1`,VNM_C29) |> arrange(desc(VNM_C29)) |>
+  rename("2019"="VNM_C29")
+i2020<-read_csv("2020.csv") |> select(`...1`,VNM_C29) |> arrange(desc(VNM_C29)) |>
+  rename("2020"="VNM_C29")
 
 is<-list(i2002,i2003,i2004,i2005,i2006,i2007,i2008,i2009,i2010,i2011,i2012,
          i2013,i2014,i2015,i2016,i2017,i2018,i2019,i2020)
@@ -2016,8 +2016,8 @@ gabung<-reduce(is,inner_join) ## Gabung semua data per tahun itu dengan cara
 gabung1<-gabung |> mutate(across(where(is.numeric), ~./.[1])) ## Bikin persen (how to use . and ...)
 
 gabung2<-gabung1 |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
-gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain IDN ditulis foreign
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
+gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain VNM ditulis foreign
 
 gabung2<-gabung2 |>
   mutate(service=ifelse(
@@ -2033,14 +2033,14 @@ gabung2<-gabung2 |>
 
 gabung2<-gabung2 |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "sds",
-    group=="IDN" & service==0 ~ "sdg",
+    group=="VNM" & service==1 ~ "sds",
+    group=="VNM" & service==0 ~ "sdg",
     group=="foreign" & service==1 ~ "sfs",
     TRUE~"sfg"
   ))
 
 gabung2a<-gabung |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
 gabung2a<-gabung2a |>  replace(is.na(gabung2a),"foreign") ## sama tapi bukan persen
 
 gabung2a<-gabung2a |>
@@ -2057,8 +2057,8 @@ gabung2a<-gabung2a |>
 
 gabung2a<-gabung2a |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "ds",
-    group=="IDN" & service==0 ~ "dg",
+    group=="VNM" & service==1 ~ "ds",
+    group=="VNM" & service==0 ~ "dg",
     group=="foreign" & service==1 ~ "fs",
     TRUE~"fg"
   ))
@@ -2109,7 +2109,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ] |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -2120,44 +2120,44 @@ vehicles$industry<-"C29"
 
 #### OTHER TRANSPORT
 
-i2002<-read_csv("2002.csv") |> select(`...1`,IDN_C30) |> arrange(desc(IDN_C30)) |>
-  rename("2002"="IDN_C30")
-i2003<-read_csv("2003.csv") |> select(`...1`,IDN_C30) |> arrange(desc(IDN_C30)) |>
-  rename("2003"="IDN_C30")
-i2004<-read_csv("2004.csv") |> select(`...1`,IDN_C30) |> arrange(desc(IDN_C30)) |>
-  rename("2004"="IDN_C30")
-i2005<-read_csv("2005.csv") |> select(`...1`,IDN_C30) |> arrange(desc(IDN_C30)) |>
-  rename("2005"="IDN_C30")
-i2006<-read_csv("2006.csv") |> select(`...1`,IDN_C30) |> arrange(desc(IDN_C30)) |>
-  rename("2006"="IDN_C30")
-i2007<-read_csv("2007.csv") |> select(`...1`,IDN_C30) |> arrange(desc(IDN_C30)) |>
-  rename("2007"="IDN_C30")
-i2008<-read_csv("2008.csv") |> select(`...1`,IDN_C30) |> arrange(desc(IDN_C30)) |>
-  rename("2008"="IDN_C30")
-i2009<-read_csv("2008.csv") |> select(`...1`,IDN_C30) |> arrange(desc(IDN_C30)) |>
-  rename("2009"="IDN_C30")
-i2010<-read_csv("2010.csv") |> select(`...1`,IDN_C30) |> arrange(desc(IDN_C30)) |>
-  rename("2010"="IDN_C30")
-i2011<-read_csv("2011.csv") |> select(`...1`,IDN_C30) |> arrange(desc(IDN_C30)) |>
-  rename("2011"="IDN_C30")
-i2012<-read_csv("2012.csv") |> select(`...1`,IDN_C30) |> arrange(desc(IDN_C30)) |>
-  rename("2012"="IDN_C30")
-i2013<-read_csv("2013.csv") |> select(`...1`,IDN_C30) |> arrange(desc(IDN_C30)) |>
-  rename("2013"="IDN_C30")
-i2014<-read_csv("2014.csv") |> select(`...1`,IDN_C30) |> arrange(desc(IDN_C30)) |>
-  rename("2014"="IDN_C30")
-i2015<-read_csv("2015.csv") |> select(`...1`,IDN_C30) |> arrange(desc(IDN_C30)) |>
-  rename("2015"="IDN_C30")
-i2016<-read_csv("2016.csv") |> select(`...1`,IDN_C30) |> arrange(desc(IDN_C30)) |>
-  rename("2016"="IDN_C30")
-i2017<-read_csv("2017.csv") |> select(`...1`,IDN_C30) |> arrange(desc(IDN_C30)) |>
-  rename("2017"="IDN_C30")
-i2018<-read_csv("2018.csv") |> select(`...1`,IDN_C30) |> arrange(desc(IDN_C30)) |>
-  rename("2018"="IDN_C30")
-i2019<-read_csv("2019.csv") |> select(`...1`,IDN_C30) |> arrange(desc(IDN_C30)) |>
-  rename("2019"="IDN_C30")
-i2020<-read_csv("2020.csv") |> select(`...1`,IDN_C30) |> arrange(desc(IDN_C30)) |>
-  rename("2020"="IDN_C30")
+i2002<-read_csv("2002.csv") |> select(`...1`,VNM_C30) |> arrange(desc(VNM_C30)) |>
+  rename("2002"="VNM_C30")
+i2003<-read_csv("2003.csv") |> select(`...1`,VNM_C30) |> arrange(desc(VNM_C30)) |>
+  rename("2003"="VNM_C30")
+i2004<-read_csv("2004.csv") |> select(`...1`,VNM_C30) |> arrange(desc(VNM_C30)) |>
+  rename("2004"="VNM_C30")
+i2005<-read_csv("2005.csv") |> select(`...1`,VNM_C30) |> arrange(desc(VNM_C30)) |>
+  rename("2005"="VNM_C30")
+i2006<-read_csv("2006.csv") |> select(`...1`,VNM_C30) |> arrange(desc(VNM_C30)) |>
+  rename("2006"="VNM_C30")
+i2007<-read_csv("2007.csv") |> select(`...1`,VNM_C30) |> arrange(desc(VNM_C30)) |>
+  rename("2007"="VNM_C30")
+i2008<-read_csv("2008.csv") |> select(`...1`,VNM_C30) |> arrange(desc(VNM_C30)) |>
+  rename("2008"="VNM_C30")
+i2009<-read_csv("2008.csv") |> select(`...1`,VNM_C30) |> arrange(desc(VNM_C30)) |>
+  rename("2009"="VNM_C30")
+i2010<-read_csv("2010.csv") |> select(`...1`,VNM_C30) |> arrange(desc(VNM_C30)) |>
+  rename("2010"="VNM_C30")
+i2011<-read_csv("2011.csv") |> select(`...1`,VNM_C30) |> arrange(desc(VNM_C30)) |>
+  rename("2011"="VNM_C30")
+i2012<-read_csv("2012.csv") |> select(`...1`,VNM_C30) |> arrange(desc(VNM_C30)) |>
+  rename("2012"="VNM_C30")
+i2013<-read_csv("2013.csv") |> select(`...1`,VNM_C30) |> arrange(desc(VNM_C30)) |>
+  rename("2013"="VNM_C30")
+i2014<-read_csv("2014.csv") |> select(`...1`,VNM_C30) |> arrange(desc(VNM_C30)) |>
+  rename("2014"="VNM_C30")
+i2015<-read_csv("2015.csv") |> select(`...1`,VNM_C30) |> arrange(desc(VNM_C30)) |>
+  rename("2015"="VNM_C30")
+i2016<-read_csv("2016.csv") |> select(`...1`,VNM_C30) |> arrange(desc(VNM_C30)) |>
+  rename("2016"="VNM_C30")
+i2017<-read_csv("2017.csv") |> select(`...1`,VNM_C30) |> arrange(desc(VNM_C30)) |>
+  rename("2017"="VNM_C30")
+i2018<-read_csv("2018.csv") |> select(`...1`,VNM_C30) |> arrange(desc(VNM_C30)) |>
+  rename("2018"="VNM_C30")
+i2019<-read_csv("2019.csv") |> select(`...1`,VNM_C30) |> arrange(desc(VNM_C30)) |>
+  rename("2019"="VNM_C30")
+i2020<-read_csv("2020.csv") |> select(`...1`,VNM_C30) |> arrange(desc(VNM_C30)) |>
+  rename("2020"="VNM_C30")
 
 is<-list(i2002,i2003,i2004,i2005,i2006,i2007,i2008,i2009,i2010,i2011,i2012,
          i2013,i2014,i2015,i2016,i2017,i2018,i2019,i2020)
@@ -2167,8 +2167,8 @@ gabung<-reduce(is,inner_join) ## Gabung semua data per tahun itu dengan cara
 gabung1<-gabung |> mutate(across(where(is.numeric), ~./.[1])) ## Bikin persen (how to use . and ...)
 
 gabung2<-gabung1 |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
-gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain IDN ditulis foreign
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
+gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain VNM ditulis foreign
 
 gabung2<-gabung2 |>
   mutate(service=ifelse(
@@ -2184,14 +2184,14 @@ gabung2<-gabung2 |>
 
 gabung2<-gabung2 |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "sds",
-    group=="IDN" & service==0 ~ "sdg",
+    group=="VNM" & service==1 ~ "sds",
+    group=="VNM" & service==0 ~ "sdg",
     group=="foreign" & service==1 ~ "sfs",
     TRUE~"sfg"
   ))
 
 gabung2a<-gabung |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
 gabung2a<-gabung2a |>  replace(is.na(gabung2a),"foreign") ## sama tapi bukan persen
 
 gabung2a<-gabung2a |>
@@ -2208,8 +2208,8 @@ gabung2a<-gabung2a |>
 
 gabung2a<-gabung2a |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "ds",
-    group=="IDN" & service==0 ~ "dg",
+    group=="VNM" & service==1 ~ "ds",
+    group=="VNM" & service==0 ~ "dg",
     group=="foreign" & service==1 ~ "fs",
     TRUE~"fg"
   ))
@@ -2271,44 +2271,44 @@ otr$industry<-"C30"
 
 #### OTHER MANUF
 
-i2002<-read_csv("2002.csv") |> select(`...1`,IDN_C31T33) |> arrange(desc(IDN_C31T33)) |>
-  rename("2002"="IDN_C31T33")
-i2003<-read_csv("2003.csv") |> select(`...1`,IDN_C31T33) |> arrange(desc(IDN_C31T33)) |>
-  rename("2003"="IDN_C31T33")
-i2004<-read_csv("2004.csv") |> select(`...1`,IDN_C31T33) |> arrange(desc(IDN_C31T33)) |>
-  rename("2004"="IDN_C31T33")
-i2005<-read_csv("2005.csv") |> select(`...1`,IDN_C31T33) |> arrange(desc(IDN_C31T33)) |>
-  rename("2005"="IDN_C31T33")
-i2006<-read_csv("2006.csv") |> select(`...1`,IDN_C31T33) |> arrange(desc(IDN_C31T33)) |>
-  rename("2006"="IDN_C31T33")
-i2007<-read_csv("2007.csv") |> select(`...1`,IDN_C31T33) |> arrange(desc(IDN_C31T33)) |>
-  rename("2007"="IDN_C31T33")
-i2008<-read_csv("2008.csv") |> select(`...1`,IDN_C31T33) |> arrange(desc(IDN_C31T33)) |>
-  rename("2008"="IDN_C31T33")
-i2009<-read_csv("2008.csv") |> select(`...1`,IDN_C31T33) |> arrange(desc(IDN_C31T33)) |>
-  rename("2009"="IDN_C31T33")
-i2010<-read_csv("2010.csv") |> select(`...1`,IDN_C31T33) |> arrange(desc(IDN_C31T33)) |>
-  rename("2010"="IDN_C31T33")
-i2011<-read_csv("2011.csv") |> select(`...1`,IDN_C31T33) |> arrange(desc(IDN_C31T33)) |>
-  rename("2011"="IDN_C31T33")
-i2012<-read_csv("2012.csv") |> select(`...1`,IDN_C31T33) |> arrange(desc(IDN_C31T33)) |>
-  rename("2012"="IDN_C31T33")
-i2013<-read_csv("2013.csv") |> select(`...1`,IDN_C31T33) |> arrange(desc(IDN_C31T33)) |>
-  rename("2013"="IDN_C31T33")
-i2014<-read_csv("2014.csv") |> select(`...1`,IDN_C31T33) |> arrange(desc(IDN_C31T33)) |>
-  rename("2014"="IDN_C31T33")
-i2015<-read_csv("2015.csv") |> select(`...1`,IDN_C31T33) |> arrange(desc(IDN_C31T33)) |>
-  rename("2015"="IDN_C31T33")
-i2016<-read_csv("2016.csv") |> select(`...1`,IDN_C31T33) |> arrange(desc(IDN_C31T33)) |>
-  rename("2016"="IDN_C31T33")
-i2017<-read_csv("2017.csv") |> select(`...1`,IDN_C31T33) |> arrange(desc(IDN_C31T33)) |>
-  rename("2017"="IDN_C31T33")
-i2018<-read_csv("2018.csv") |> select(`...1`,IDN_C31T33) |> arrange(desc(IDN_C31T33)) |>
-  rename("2018"="IDN_C31T33")
-i2019<-read_csv("2019.csv") |> select(`...1`,IDN_C31T33) |> arrange(desc(IDN_C31T33)) |>
-  rename("2019"="IDN_C31T33")
-i2020<-read_csv("2020.csv") |> select(`...1`,IDN_C31T33) |> arrange(desc(IDN_C31T33)) |>
-  rename("2020"="IDN_C31T33")
+i2002<-read_csv("2002.csv") |> select(`...1`,VNM_C31T33) |> arrange(desc(VNM_C31T33)) |>
+  rename("2002"="VNM_C31T33")
+i2003<-read_csv("2003.csv") |> select(`...1`,VNM_C31T33) |> arrange(desc(VNM_C31T33)) |>
+  rename("2003"="VNM_C31T33")
+i2004<-read_csv("2004.csv") |> select(`...1`,VNM_C31T33) |> arrange(desc(VNM_C31T33)) |>
+  rename("2004"="VNM_C31T33")
+i2005<-read_csv("2005.csv") |> select(`...1`,VNM_C31T33) |> arrange(desc(VNM_C31T33)) |>
+  rename("2005"="VNM_C31T33")
+i2006<-read_csv("2006.csv") |> select(`...1`,VNM_C31T33) |> arrange(desc(VNM_C31T33)) |>
+  rename("2006"="VNM_C31T33")
+i2007<-read_csv("2007.csv") |> select(`...1`,VNM_C31T33) |> arrange(desc(VNM_C31T33)) |>
+  rename("2007"="VNM_C31T33")
+i2008<-read_csv("2008.csv") |> select(`...1`,VNM_C31T33) |> arrange(desc(VNM_C31T33)) |>
+  rename("2008"="VNM_C31T33")
+i2009<-read_csv("2008.csv") |> select(`...1`,VNM_C31T33) |> arrange(desc(VNM_C31T33)) |>
+  rename("2009"="VNM_C31T33")
+i2010<-read_csv("2010.csv") |> select(`...1`,VNM_C31T33) |> arrange(desc(VNM_C31T33)) |>
+  rename("2010"="VNM_C31T33")
+i2011<-read_csv("2011.csv") |> select(`...1`,VNM_C31T33) |> arrange(desc(VNM_C31T33)) |>
+  rename("2011"="VNM_C31T33")
+i2012<-read_csv("2012.csv") |> select(`...1`,VNM_C31T33) |> arrange(desc(VNM_C31T33)) |>
+  rename("2012"="VNM_C31T33")
+i2013<-read_csv("2013.csv") |> select(`...1`,VNM_C31T33) |> arrange(desc(VNM_C31T33)) |>
+  rename("2013"="VNM_C31T33")
+i2014<-read_csv("2014.csv") |> select(`...1`,VNM_C31T33) |> arrange(desc(VNM_C31T33)) |>
+  rename("2014"="VNM_C31T33")
+i2015<-read_csv("2015.csv") |> select(`...1`,VNM_C31T33) |> arrange(desc(VNM_C31T33)) |>
+  rename("2015"="VNM_C31T33")
+i2016<-read_csv("2016.csv") |> select(`...1`,VNM_C31T33) |> arrange(desc(VNM_C31T33)) |>
+  rename("2016"="VNM_C31T33")
+i2017<-read_csv("2017.csv") |> select(`...1`,VNM_C31T33) |> arrange(desc(VNM_C31T33)) |>
+  rename("2017"="VNM_C31T33")
+i2018<-read_csv("2018.csv") |> select(`...1`,VNM_C31T33) |> arrange(desc(VNM_C31T33)) |>
+  rename("2018"="VNM_C31T33")
+i2019<-read_csv("2019.csv") |> select(`...1`,VNM_C31T33) |> arrange(desc(VNM_C31T33)) |>
+  rename("2019"="VNM_C31T33")
+i2020<-read_csv("2020.csv") |> select(`...1`,VNM_C31T33) |> arrange(desc(VNM_C31T33)) |>
+  rename("2020"="VNM_C31T33")
 
 is<-list(i2002,i2003,i2004,i2005,i2006,i2007,i2008,i2009,i2010,i2011,i2012,
          i2013,i2014,i2015,i2016,i2017,i2018,i2019,i2020)
@@ -2318,8 +2318,8 @@ gabung<-reduce(is,inner_join) ## Gabung semua data per tahun itu dengan cara
 gabung1<-gabung |> mutate(across(where(is.numeric), ~./.[1])) ## Bikin persen (how to use . and ...)
 
 gabung2<-gabung1 |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
-gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain IDN ditulis foreign
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
+gabung2<-gabung2 |>  replace(is.na(gabung2),"foreign") ## Selain VNM ditulis foreign
 
 gabung2<-gabung2 |>
   mutate(service=ifelse(
@@ -2335,14 +2335,14 @@ gabung2<-gabung2 |>
 
 gabung2<-gabung2 |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "sds",
-    group=="IDN" & service==0 ~ "sdg",
+    group=="VNM" & service==1 ~ "sds",
+    group=="VNM" & service==0 ~ "sdg",
     group=="foreign" & service==1 ~ "sfs",
     TRUE~"sfg"
   ))
 
 gabung2a<-gabung |>
-  mutate(group=stringr::str_extract(`...1`, "IDN"))
+  mutate(group=stringr::str_extract(`...1`, "VNM"))
 gabung2a<-gabung2a |>  replace(is.na(gabung2a),"foreign") ## sama tapi bukan persen
 
 gabung2a<-gabung2a |>
@@ -2359,8 +2359,8 @@ gabung2a<-gabung2a |>
 
 gabung2a<-gabung2a |>
   mutate(category=case_when(
-    group=="IDN" & service==1 ~ "ds",
-    group=="IDN" & service==0 ~ "dg",
+    group=="VNM" & service==1 ~ "ds",
+    group=="VNM" & service==0 ~ "dg",
     group=="foreign" & service==1 ~ "fs",
     TRUE~"fg"
   ))
@@ -2411,7 +2411,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ] |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -2421,7 +2421,7 @@ other<-gabung4|>pivot_longer(!category,names_to = "year",values_to = "values")|>
 other$industry<-"C31T33"
 
 wew<-rbind(food,textiles,wood,paper,chemical,pharma,rubber,onon,basic,fab,com,elec,machine,vehicles,otr,other)
-wew|>write_xlsx('manuficio.xlsx')
+wew|>write_xlsx('VNM.xlsx')
 
 wew|>
   filter(industry!="C10T12") |>
@@ -2429,7 +2429,7 @@ wew|>
 
 wew2<-wew |> mutate(industry=NULL) |> group_by(year) |>
   summarise(across(everything(),sum))
-wew2|>write_xlsx('manuficio2.xlsx')
+wew2|>write_xlsx('VNM2.xlsx')
 ## wew %>% mutate(industry=NULL) |> group_by(year) %>% summarize_all(sum)
 
 ## ARDL test
