@@ -146,7 +146,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ]  |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -297,7 +297,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ]  |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -448,7 +448,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ]  |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -599,7 +599,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ]  |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -750,7 +750,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ]  |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -901,7 +901,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ]  |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -1052,7 +1052,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ]  |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -1203,7 +1203,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ]  |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -1354,7 +1354,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ]  |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -1505,7 +1505,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ]  |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -1656,7 +1656,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ]  |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -1807,7 +1807,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ]  |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -1958,7 +1958,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ]  |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -2109,7 +2109,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ]  |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)
@@ -2411,7 +2411,7 @@ gabung3a<-gabung2a|>slice(-1) |> group_by(category) |>
 
 
 
-gabung4<-gabung|>slice(1:2) |> rename(category=`...1`)
+gabung4<-gabung[gabung$`...1` %in% c("VA","OUT"), ]  |> rename(category=`...1`)
 
 gabung4<-rbind(gabung4,gabung3a)
 gabung4<-rbind(gabung4,gabung3)

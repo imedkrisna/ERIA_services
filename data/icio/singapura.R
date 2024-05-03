@@ -2421,7 +2421,7 @@ other<-gabung4|>pivot_longer(!category,names_to = "year",values_to = "values")|>
 other$industry<-"C31T33"
 
 wew<-rbind(food,textiles,wood,paper,chemical,pharma,rubber,onon,basic,fab,com,elec,machine,vehicles,otr,other)
-wew|>write_xlsx('manuficio.xlsx')
+wew|>write_xlsx('SGP.xlsx')
 
 wew|>
   filter(industry!="C10T12") |>
@@ -2429,7 +2429,7 @@ wew|>
 
 wew2<-wew |> mutate(industry=NULL) |> group_by(year) |>
   summarise(across(everything(),sum))
-wew2|>write_xlsx('manuficio2.xlsx')
+wew2|>write_xlsx('SGP2.xlsx')
 ## wew %>% mutate(industry=NULL) |> group_by(year) %>% summarize_all(sum)
 
 ## ARDL test
