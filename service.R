@@ -3,8 +3,6 @@ library(writexl)
 
 setwd('C:/github/ERIA_services/data/icio')
 
-
-
 srv<-c("IDN_D","IDN_E","IDN_F","IDN_G","IDN_H49","IDN_H50",
        "IDN_H51","IDN_H52","IDN_H53","IDN_I","IDN_J58T60",
        "IDN_J61","IDN_J62_63","IDN_K","IDN_L","IDN_M","IDN_N",
