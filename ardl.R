@@ -23,6 +23,8 @@ models <- list(
 
 modelsummary(models,stars = T,output="reg/reg.docx")
 
+bounds_f_test(pdb2,case = 2)
+
 coba<-pivot_longer(gambar, !Year)
 
 #plot1 x=year, y=value, color=export manufaktur, impor manufaktur, impor servis
