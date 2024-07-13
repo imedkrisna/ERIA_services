@@ -1,12 +1,18 @@
 ---
 title: "Services trade and the Indonesian third unbundling"
-author: "Krisna Gupta"
-institute: "Politeknik APP Jakarta, Center for Indonesian Policy Studies"
+author:
+  - name: Krisna Gupta
+    orcid: 0000-0001-8695-0514
+    email: krisna.gupta@cips-indonesia.org
+    affiliations:
+    - name: Center for Indonesian Policy Studies, Politeknik APP Jakarta
+  - name: Dhany S. Ratana
+    affiliations: Politeknik APP Jakarta
 date: last-modified
 date-format: long
 bibliography: ref.bib
 abstract: "Awokowkoawkoawk."
-abstract-title: "executive summary"
+abstract-title: "abstract"
 format:
   html:
     code-fold: true
@@ -20,9 +26,12 @@ format:
 
 ## Introduction
 
-Indonesia has always been a net-importer on services. Export service is dominated by tourism, while import services is dominated by logistics. Indonesian government often concerned with deficit trade, but trade in services has often neglected in the discussion.
+Trade in services is growing in importance all over the world, Indonesia included. @fig-1 shows Indonesia's export and import in services taken from @seki. Indonesia's services trade is growing steadily from 2000, only to be interrupted by the COVID-19 pandemic.  Export service is dominated by tourism, while import services is dominated by logistics. While the trend is increasing, it is evident that Indonesia's import of services has always been dominating exports.
 
 ```{r}
+#| warning: false
+#| message: false
+#| echo: false
 ## Packages!
 
 library(tidyverse)
@@ -37,28 +46,21 @@ read_excel("data/services.xlsx") |>
   pivot_longer(!year,names_to="flow",values_to="value") |>
   ggplot(aes(x=year,y=value,color=flow))+geom_line(linewidth=1.1)+
   scale_y_continuous(labels = scales::comma)+
-  scale_color_discrete(labels=c('Export', 'Import'))+     
-  labs(x="",y="Million current USD")+theme_classic()
+  scale_color_discrete(labels=c('Import', 'Export'))+     
+  labs(x="",y="Million current USD",caption="source: SEKI")+theme_classic()
   
 ```
 
-@fig-1 shows us how fucked up Indonesia is.
+Indonesian government often concerned with deficit trade, but trade in services has often neglected in the discussion. Indeed, trade balance in goods are often far outweight the deficit in its services counterpart. However, while Indonesia's trade balance fluctuates along with commodity prices and global demand in general, services trade deficit is consistent. With the increasing role of services in the global trade, the deficit looks to be even more important in Indonesia's current account in the future.
 
-- With the ever decreasing cost of trade, separating a value up to tasks level (i.e., the third unbundling) is on the horizon [@baldwin1;@kimura1]
+The importance of trade in services goes beyond current account. With the ever decreasing cost of trade, separating a value up to tasks level (i.e., the third unbundling) is on the horizon [@baldwin1;@kimura1]. Feedback mechanism from the third unbundling may benefits domestic manufacturing [@kimura1]. Therefore, services trade may be important in the next stage of globalization.
 
-- Feedback mechanism from the third unbundling may benefits domestic manufacturing [@kimura1]
-- Services trade may be important in the next stage of globalization.
-Easing the barrier to services trade, therefore, will be very important for countries like Indonesia [@kimura1;@baldwin2]
-- How important is trade in services these days in the Indonesian economy?
+This chapter have at least two objectives. First, we explores the general trade in services in Indonesia. We use BaTIS data [@batis1;@batis2] to show Indonesia's most important services trade and country partners for both export and import. 
 
-## Objective
+Secondly, we investigate the potency of the feedback mechanism from the third unbundling ala @kimura1. That is, we look at how much imported services are embedded in Indonesia's manufacturing sectors aggregated into ICIO classifications. We do this in two ways. First, we use ARDL [@pesaran] to see whether services imports cointegrate with manufacturing exports and GDP. Secondly, we utilize Inter-Country Input-Output (ICIO) data from OECD [@icio] to look at the importance of services for Indonesian manufacturing. 
 
-- Giving an overview of the Indonesian trade in services.
-    - By sectors, by partners.
-- Investigating the potency of the feedback mechanism from the third unbundling ala @kimura1.
-    - That is, see the multiplier effect of import services especially in the manufacturing sector.
-- Provide a policy discussions regarding some specific issues depending on point 2 results.
-    - Probably will be a more nuanced, Indonesian-context policy discussion version of @kimura1.
+
+
 
 ## Data and Method
 
