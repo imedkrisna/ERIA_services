@@ -8,7 +8,7 @@
 
 <meta name="author" content="Krisna Gupta">
 <meta name="author" content="Dhany S. Ratana">
-<meta name="dcterms.date" content="2024-07-13">
+<meta name="dcterms.date" content="2024-07-14">
 
 <title>Services trade and the Indonesian third unbundling</title>
 <style>
@@ -22,40 +22,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 /* CSS for citations */
 div.csl-bib-body { }
@@ -91,6 +57,35 @@ div.csl-indent {
 <link href="services_document_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="services_document_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -98,7 +93,7 @@ div.csl-indent {
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="services_document.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="services_document.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></div>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="services_document.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -135,7 +130,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 13, 2024</p>
+      <p class="date">July 14, 2024</p>
     </div>
   </div>
   
@@ -153,19 +148,23 @@ div.csl-indent {
 </header>
 
 
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This document is a work in progress. Please do not cite. Comments are welcomed. For replication see <a href="https://github.com/imedkrisna/ERIA_services">here</a></p>
+</div>
+</div>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Indonesia has always been a net-importer on services. Export service is dominated by tourism, while import services is dominated by logistics. Indonesian government often concerned with deficit trade, but trade in services has often neglected in the discussion.</p>
+<p>Trade in services is growing in importance all over the world, Indonesia included. <a href="#fig-1" class="quarto-xref">Figure&nbsp;1</a> shows Indonesia’s export and import in services taken from Indonesian Statistic Bureau compiled by the Central Bank <span class="citation" data-cites="seki">(<a href="#ref-seki" role="doc-biblioref">Bank Indonesia, n.d.</a>)</span>. Indonesia’s services trade is growing steadily from 2000, only to be interrupted by the COVID-19 pandemic. Export service is dominated by tourism, while import services is dominated by logistics. While the trend is increasing, it is evident that Indonesia’s import of services has always been dominating exports.</p>
 <div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_excel</span>(<span class="st">"data/services.xlsx"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="sc">!</span>year,<span class="at">names_to=</span><span class="st">"flow"</span>,<span class="at">values_to=</span><span class="st">"value"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>year,<span class="at">y=</span>value,<span class="at">color=</span>flow))<span class="sc">+</span><span class="fu">geom_line</span>(<span class="at">linewidth=</span><span class="fl">1.1</span>)<span class="sc">+</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>comma)<span class="sc">+</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_discrete</span>(<span class="at">labels=</span><span class="fu">c</span>(<span class="st">'Export'</span>, <span class="st">'Import'</span>))<span class="sc">+</span>     </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">""</span>,<span class="at">y=</span><span class="st">"Million current USD"</span>)<span class="sc">+</span><span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output-display">
 <div id="fig-1" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -173,58 +172,1680 @@ div.csl-indent {
 <img src="services_document_files/figure-html/fig-1-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: wkwkw
+Figure&nbsp;1: Indonesian trade in services
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p><a href="#fig-1" class="quarto-xref">Figure&nbsp;1</a> shows us how fucked up Indonesia is.</p>
-<ul>
-<li><p>With the ever decreasing cost of trade, separating a value up to tasks level (i.e., the third unbundling) is on the horizon <span class="citation" data-cites="baldwin1 kimura1">(<a href="#ref-baldwin1" role="doc-biblioref">Baldwin 2011</a>; <a href="#ref-kimura1" role="doc-biblioref">Kimura 2018</a>)</span></p></li>
-<li><p>Feedback mechanism from the third unbundling may benefits domestic manufacturing <span class="citation" data-cites="kimura1">(<a href="#ref-kimura1" role="doc-biblioref">Kimura 2018</a>)</span></p></li>
-<li><p>Services trade may be important in the next stage of globalization. Easing the barrier to services trade, therefore, will be very important for countries like Indonesia <span class="citation" data-cites="kimura1 baldwin2">(<a href="#ref-kimura1" role="doc-biblioref">Kimura 2018</a>; <a href="#ref-baldwin2" role="doc-biblioref">Baldwin, Freeman, and Theodorakopoulos 2024</a>)</span></p></li>
-<li><p>How important is trade in services these days in the Indonesian economy?</p></li>
-</ul>
+<p>Indonesian government often concerned with deficit trade, but trade in services has often neglected in the discussion. Indeed, trade balance in goods are often far outweight the deficit in its services counterpart, as made apparent by <a href="#fig-2" class="quarto-xref">Figure&nbsp;2</a>. However, while Indonesia’s trade balance fluctuates along with commodity prices and global demand in general, services trade deficit is consistent. Additionally, Indonesia’s reliance on services import went up right after COVID-19 and seems to stabilize in a higher than pre-pandemic level. With the increasing role of services in the global trade, the deficit looks to be even more important in Indonesia’s current account in the future.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-2" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="services_document_files/figure-html/fig-2-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Net trade in goods and services of Indonesia, 200
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The importance of trade in services goes beyond current account. With the ever decreasing cost of trade, separating a value up to tasks level (i.e., the third unbundling) is on the horizon <span class="citation" data-cites="baldwin1 kimura1">(<a href="#ref-baldwin1" role="doc-biblioref">Baldwin 2011</a>; <a href="#ref-kimura1" role="doc-biblioref">Kimura 2018</a>)</span>. Feedback mechanism from the third unbundling may benefits domestic manufacturing <span class="citation" data-cites="kimura1">(<a href="#ref-kimura1" role="doc-biblioref">Kimura 2018</a>)</span>. Therefore, services trade may be important in the next stage of globalization.</p>
+<p>This chapter have at least two objectives. First, we explores the general trade in services in Indonesia. We use BaTIS data <span class="citation" data-cites="batis1 batis2">(<a href="#ref-batis1" role="doc-biblioref">WTO/OECD 2022</a>; <a href="#ref-batis2" role="doc-biblioref">Liberatore and Wettstein 2021</a>)</span> to show Indonesia’s most important services trade and country partners for both export and import. Trade in services has been increasing in importance, especially in the rise of deep trade agreements involving integration in trade in services as well as goods <span class="citation" data-cites="aco">(<a href="#ref-aco" role="doc-biblioref">Patunru 2023</a>)</span>. Thus, trade in services’ profile of Indonesia will be most useful to Indonesian academics and policy makers.</p>
+<p>Secondly, we investigate the potency of the feedback mechanism from the third unbundling a la <span class="citation" data-cites="kimura1">Kimura (<a href="#ref-kimura1" role="doc-biblioref">2018</a>)</span>. That is, we look at how much imported services are embedded in Indonesia’s manufacturing sectors aggregated into ICIO classifications. We do this in two ways. First, we use ARDL <span class="citation" data-cites="pesaran">(<a href="#ref-pesaran" role="doc-biblioref">Pesaran and Smith 1995</a>)</span> to see whether services imports cointegrate with manufacturing exports and GDP. Secondly, we utilize Inter-Country Input-Output (ICIO) data from OECD <span class="citation" data-cites="icio">(<a href="#ref-icio" role="doc-biblioref">OECD 2023</a>)</span> to look at the importance of services for Indonesian manufacturing.</p>
+<p>We arrange this chapter in the following. Section 2 discusses the development in research concerning services trade and its development in Indonesia, section 3 discusses about data and methods, section 4 explores Indonesian services trade as well as some third unbundling results, and section 5 concludes.</p>
 </section>
-<section id="objective" class="level2">
-<h2 class="anchored" data-anchor-id="objective">Objective</h2>
-<ul>
-<li>Giving an overview of the Indonesian trade in services.
-<ul>
-<li>By sectors, by partners.</li>
-</ul></li>
-<li>Investigating the potency of the feedback mechanism from the third unbundling ala <span class="citation" data-cites="kimura1">Kimura (<a href="#ref-kimura1" role="doc-biblioref">2018</a>)</span>.
-<ul>
-<li>That is, see the multiplier effect of import services especially in the manufacturing sector.</li>
-</ul></li>
-<li>Provide a policy discussions regarding some specific issues depending on point 2 results.
-<ul>
-<li>Probably will be a more nuanced, Indonesian-context policy discussion version of <span class="citation" data-cites="kimura1">Kimura (<a href="#ref-kimura1" role="doc-biblioref">2018</a>)</span>.</li>
-</ul></li>
-</ul>
+<section id="review-on-services-trade" class="level2">
+<h2 class="anchored" data-anchor-id="review-on-services-trade">Review on services trade</h2>
+<p>kimura</p>
+<p>gupta</p>
 </section>
 <section id="data-and-method" class="level2">
 <h2 class="anchored" data-anchor-id="data-and-method">Data and Method</h2>
-<ul>
-<li><p>The OECD Inter-Country Input-Output (ICIO), which has 45 unique industries based on ISIC Revision 4 (OECD, 2023). The database shows how much sectoral value added, both foreign and domestic, that is used by a certain industry.</p></li>
-<li><p>The OECD Services Trade Restrictiveness Index can also be used to either summarize restriction in trade services, especially Indonesia’s trade partner, also can be use as a distance metric in a gravity-model-fashion.</p></li>
-<li><p>The OECD International Trade in Services which is self explanatory. CEPII for gravity variables.</p></li>
-<li><p>Literature studies, visualization and descriptive stats</p></li>
-<li><p>Describing the pattern of services trade in Indonesia</p></li>
-<li><p>Discussing <span class="citation" data-cites="krisna">Syahputri and Gupta (<a href="#ref-krisna" role="doc-biblioref">2024</a>)</span> which find the inability of IJEPA to foster improvement in trade &amp; services and the lesson for the next trade agreements. IO table <span class="citation" data-cites="baumol">Baumol (<a href="#ref-baumol" role="doc-biblioref">2000</a>)</span></p></li>
-<li><p>Focusing on the manufacturing ISIC rev. 4 (10-27)</p></li>
-<li><p>Using input-output to find multiplier of imported goods in those ISIC.</p></li>
-<li><p>Services gravity model <span class="citation" data-cites="kimura2 krisna">(<a href="#ref-kimura2" role="doc-biblioref">Kimura and Lee 2006</a>; <a href="#ref-krisna" role="doc-biblioref">Syahputri and Gupta 2024</a>)</span> Using PPML to look at the pattern of Indonesian service trade.</p></li>
-</ul>
+<p>There are two main dataset used in this chapter. Namely, Balanced Trade in Services (BaTIS) and the OECD Inter-Country Input-Output (ICIO) dataset.</p>
+<p>The BaTIS database was first launched in 2017 by World Trade organization (WTO) and Organization of Economic Cooperation and Development (OECD) in tandem <span class="citation" data-cites="batis2">(<a href="#ref-batis2" role="doc-biblioref">Liberatore and Wettstein 2021</a>)</span>. Unlike trade in goods, trade in services are harder to track than trade in goods amid gap in data collection by various countries. BaTIS collect both ways from pairs of trading partners, reconcile difference between reporting countries’ trade. BaTIS is also used to build Trade in Value Added (TiVA) database and the ICIO database. BaTIS follows EBOPS 2010 sector classification <span class="citation" data-cites="ebops">(<a href="#ref-ebops" role="doc-biblioref">Liberatore et al. 2021</a>)</span> which can be observed in <a href="#tbl-1" class="quarto-xref">Table&nbsp;1</a>.</p>
+<div id="tbl-1" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Services classification in BaTIS
+</figcaption>
+<div aria-describedby="tbl-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<thead>
+<tr class="header">
+<th>Code</th>
+<th>Category description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SA</td>
+<td>Manufacturing services on physical inputs owned by others</td>
+</tr>
+<tr class="even">
+<td>SB</td>
+<td>Maintenance and repair services n.i.e.</td>
+</tr>
+<tr class="odd">
+<td>SC</td>
+<td>Transport</td>
+</tr>
+<tr class="even">
+<td>SD</td>
+<td>Travel</td>
+</tr>
+<tr class="odd">
+<td>SE</td>
+<td>Construction</td>
+</tr>
+<tr class="even">
+<td>SF</td>
+<td>Insurance and pension services</td>
+</tr>
+<tr class="odd">
+<td>SG</td>
+<td>Financial services</td>
+</tr>
+<tr class="even">
+<td>SH</td>
+<td>Charges for the use of intellectual property n.i.e.</td>
+</tr>
+<tr class="odd">
+<td>SI</td>
+<td>Telecommunications, computer, and information services</td>
+</tr>
+<tr class="even">
+<td>SJ</td>
+<td>Other business services</td>
+</tr>
+<tr class="odd">
+<td>SK</td>
+<td>Personal, cultural and recreational services</td>
+</tr>
+<tr class="even">
+<td>SL</td>
+<td>Government goods and services n.i.e.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Trade services statistics are challenging in nature <span class="citation" data-cites="batis2">(<a href="#ref-batis2" role="doc-biblioref">Liberatore and Wettstein 2021</a>)</span>. Only around 65% of total number of trade in services are recorded bilaterally. Unlike trade in goods, exports are recoreded better than imports, mainly due to advance countries being the majority of service exporters. Only 59% of trade value in BaTIS are fully reported, which are the reported 65% pair. The remaining 41% are estimated using share interpolations and gravity estimations. Since BaTIS is used for other databases including TiVA and ICIO, we should expect similar problems in these two databases.</p>
+<p>Additionally, we also use the Indonesian trade in services statistics compiled by the Indonesian central bank called <em>Statistik Ekonomi dan Keuangan Indonesia</em> (SEKI) <span class="citation" data-cites="seki">(<a href="#ref-seki" role="doc-biblioref">Bank Indonesia, n.d.</a>)</span>. It records Indonesia’s trade in services in the same manner as BaTIS, but with less detail on the trading partners. Moreover, SEKI is also used to observe Indonesia’s manufacturing GDP and goods exports and imports to estimate the third unbundling effect.</p>
+<p>The OECD Inter-Country Input-Output (ICIO) decribes the sale and purchase relationships between sectors, consumers and the government within and across borders. ICIO estimates trades amonng 76 countries and 45 unique industries based on ISIC Revision 4(OECD, 2023). The database shows how much sectoral value added, both foreign and domestic, that is used by a certain industry.</p>
+<p>In this study, we focus the manufacturing sector, specifically ISIC 10-27 in the ISIC rev. 4 classification. The ICIO aggregates these sectors into 16 sectors. We then aggregates all services that sell to these sectors into two categories, namely domestic services and foreign services.</p>
+<p>On the third unbundling discussion, a good quality of firm-level data with information of its services sourced. Unfortunately, this information is not widely distributed in the Indonesian context. The second-best approach is to use international input-output table, which in this case ICIO is used.</p>
+<p>Assume a manufacturing output and value added as a function of its factor or production. The nest of factor of production produces fully complementarily with its goods and services inputs. Let services inputs be complementarily used with goods inputs, but within the value produced by services, there is a degree of substitutability between foreign and domestic input as such:</p>
+<p><span id="eq-1"><span class="math display">\[
+Y_{it}=f(AS^D_{it},AS^F_{it})
+\tag{1}\]</span></span></p>
+<p>for all <span class="math inline">\(i=\)</span> manufacturing sectors and <span class="math inline">\(t=year\)</span>. A is the nest multiplier, <span class="math inline">\(S^D_i\)</span> and <span class="math inline">\(S^F_i\)</span> are total services purchased by industry <span class="math inline">\(i\)</span>, domestically and imported respectively.</p>
+<p>Assuming a cobb-douglass relationship, then we can log-linearize <a href="#eq-1" class="quarto-xref">Equation&nbsp;1</a> to a simple linear system as such:</p>
+<p><span id="eq-2"><span class="math display">\[
+y_{it}=a+\beta_d s^D_{it}+\beta_f s^F_{it}+\varepsilon_{it}
+\tag{2}\]</span></span></p>
+<p>with a lower case represents the natural log of its uppercase counterpart.</p>
+<p>To construct the dataset for the regression, we aggregate non-factor inputs from each manufacuring sectors, separated by whether it is from Indonesia or from other countries. All inputs from foreign countries are aggregated into foreign.</p>
+<p>For comparison purpose, we also do the same for 4 countries in the region, namely Singapore, Malaysia, Thailand and Vietnam. Data from these 5 countries are then concatenated to add one more dimension, countries. Summary statistics on the data is shown in <a href="#tbl-icio" class="quarto-xref">Table&nbsp;2</a>.</p>
+<div class="cell">
+<div id="tbl-icio" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-icio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Summary Statistics from ICIO, million USD, 2002-2021.
+</figcaption>
+<div aria-describedby="tbl-icio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+ 
+
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinytable_tg0oezi1a90vspawvrrj</title>
+    <style>
+.table td.tinytable_css_1ra84fg5mv6u3zm6hpx2, .table th.tinytable_css_1ra84fg5mv6u3zm6hpx2 {    border-bottom: solid 0.1em #d3d8dc; }
+.table td.tinytable_css_32dht0b4wuomlq1li10p, .table th.tinytable_css_32dht0b4wuomlq1li10p {    text-align: center; }
+.table td.tinytable_css_wk6a1t2m12ilwqeteab6, .table th.tinytable_css_wk6a1t2m12ilwqeteab6 {    border-bottom: solid 0.05em #d3d8dc; }
+.table td.tinytable_css_gnyw74m7krfcspukpyof, .table th.tinytable_css_gnyw74m7krfcspukpyof {    text-align: left; }
+.table td.tinytable_css_bqqyaqhd89giwxof21ec, .table th.tinytable_css_bqqyaqhd89giwxof21ec {    text-align: right; }
+.table td.tinytable_css_4nwl681tjjwriafkgz2d, .table th.tinytable_css_4nwl681tjjwriafkgz2d {    text-align: right; }
+.table td.tinytable_css_lljtx0bvkhzmkbnscnax, .table th.tinytable_css_lljtx0bvkhzmkbnscnax {    text-align: right; }
+.table td.tinytable_css_pwzarzkhft90v2wdx78i, .table th.tinytable_css_pwzarzkhft90v2wdx78i {    text-align: right; }
+.table td.tinytable_css_4p3xdhrmb32b0y7p10z2, .table th.tinytable_css_4p3xdhrmb32b0y7p10z2 {    text-align: right; }
+.table td.tinytable_css_jfbl5j4ko4pyztfc71j0, .table th.tinytable_css_jfbl5j4ko4pyztfc71j0 {    text-align: right; }
+.table td.tinytable_css_xyait3xfnrml2c4pqjld, .table th.tinytable_css_xyait3xfnrml2c4pqjld {    text-align: center; }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+  
+
+  
+    <div class="container">
+      <table class="table table-borderless" id="tinytable_tg0oezi1a90vspawvrrj" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+        <thead>
+<tr>
+<th scope="col" align="center" colspan="1"> </th>
+<th scope="col" align="center" colspan="3">all</th>
+<th scope="col" align="center" colspan="3">IDN</th>
+</tr>
+        
+              <tr>
+                <th scope="col"> </th>
+                <th scope="col">Mean</th>
+                <th scope="col">SD</th>
+                <th scope="col">Histogram</th>
+                <th scope="col">Mean</th>
+                <th scope="col">SD</th>
+                <th scope="col">Histogram</th>
+              </tr>
+        </thead>
+        
+        <tbody>
+                <tr>
+                  <td>value added        </td>
+                  <td>4181.70 </td>
+                  <td>6845.40 </td>
+                  <td>▇▁       </td>
+                  <td>8150.56 </td>
+                  <td>12191.95</td>
+                  <td>▇▁        </td>
+                </tr>
+                <tr>
+                  <td>output             </td>
+                  <td>15930.67</td>
+                  <td>21741.55</td>
+                  <td>▇▁       </td>
+                  <td>21529.33</td>
+                  <td>29317.48</td>
+                  <td>▇▁▁       </td>
+                </tr>
+                <tr>
+                  <td>domestic services  </td>
+                  <td>2804.36 </td>
+                  <td>3889.86 </td>
+                  <td>▇▂▁      </td>
+                  <td>3735.21 </td>
+                  <td>4176.07 </td>
+                  <td>▇▅▁       </td>
+                </tr>
+                <tr>
+                  <td>foreign services   </td>
+                  <td>845.74  </td>
+                  <td>1730.29 </td>
+                  <td>▇        </td>
+                  <td>420.05  </td>
+                  <td>339.95  </td>
+                  <td>▇▆▄▃▂▁    </td>
+                </tr>
+                <tr>
+                  <td>domestic goods     </td>
+                  <td>5213.09 </td>
+                  <td>9008.54 </td>
+                  <td>▇▁       </td>
+                  <td>7123.05 </td>
+                  <td>12296.21</td>
+                  <td>▇▁        </td>
+                </tr>
+                <tr>
+                  <td>foreign goods      </td>
+                  <td>7057.46 </td>
+                  <td>9172.47 </td>
+                  <td>▇▁▁      </td>
+                  <td>10240.63</td>
+                  <td>12983.59</td>
+                  <td>▇▁▁       </td>
+                </tr>
+                <tr>
+                  <td>for. services share</td>
+                  <td>5.76    </td>
+                  <td>3.70    </td>
+                  <td>▃▇▃▁     </td>
+                  <td>2.45    </td>
+                  <td>1.34    </td>
+                  <td>▇▆▆▇▄▃▂▂▁ </td>
+                </tr>
+                <tr>
+                  <td>dom. services share</td>
+                  <td>18.02   </td>
+                  <td>6.73    </td>
+                  <td>▂▇▇▇▅▃▁▁ </td>
+                  <td>18.55   </td>
+                  <td>5.41    </td>
+                  <td>▂▆▇▇▅▄▅▃▁ </td>
+                </tr>
+                <tr>
+                  <td>for. goods share   </td>
+                  <td>47.62   </td>
+                  <td>11.39   </td>
+                  <td>▁▂▂▅▇▆▄▂▁</td>
+                  <td>50.30   </td>
+                  <td>11.98   </td>
+                  <td>▁▁▃▇▅▇▅▁▂▁</td>
+                </tr>
+                <tr>
+                  <td>dom. goods share   </td>
+                  <td>28.37   </td>
+                  <td>11.11   </td>
+                  <td>▃▄▇▇▄▂   </td>
+                  <td>28.60   </td>
+                  <td>8.57    </td>
+                  <td>▁▂▂▃▅▇▅▄▂▁</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      function styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(i, j, css_id) {
+        var table = document.getElementById("tinytable_tg0oezi1a90vspawvrrj");
+        table.rows[i].cells[j].classList.add(css_id);
+      }
+      function insertSpanRow(i, colspan, content) {
+        var table = document.getElementById('tinytable_tg0oezi1a90vspawvrrj');
+        var newRow = table.insertRow(i);
+        var newCell = newRow.insertCell(0);
+        newCell.setAttribute("colspan", colspan);
+        // newCell.innerText = content;
+        // this may be unsafe, but innerText does not interpret <br>
+        newCell.innerHTML = content;
+      }
+      function spanCell_tinytable_7wyiydxvkjeyh3mqwyd6(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_tg0oezi1a90vspawvrrj");
+        const targetRow = table.rows[i];
+        const targetCell = targetRow.cells[j];
+        for (let r = 0; r < rowspan; r++) {
+          // Only start deleting cells to the right for the first row (r == 0)
+          if (r === 0) {
+            // Delete cells to the right of the target cell in the first row
+            for (let c = colspan - 1; c > 0; c--) {
+              if (table.rows[i + r].cells[j + c]) {
+                table.rows[i + r].deleteCell(j + c);
+              }
+            }
+          }
+          // For rows below the first, delete starting from the target column
+          if (r > 0) {
+            for (let c = colspan - 1; c >= 0; c--) {
+              if (table.rows[i + r] && table.rows[i + r].cells[j]) {
+                table.rows[i + r].deleteCell(j);
+              }
+            }
+          }
+        }
+        // Set rowspan and colspan of the target cell
+        targetCell.rowSpan = rowspan;
+        targetCell.colSpan = colspan;
+      }
+
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(1, 0, 'tinytable_css_1ra84fg5mv6u3zm6hpx2') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(1, 1, 'tinytable_css_1ra84fg5mv6u3zm6hpx2') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(1, 2, 'tinytable_css_1ra84fg5mv6u3zm6hpx2') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(1, 3, 'tinytable_css_1ra84fg5mv6u3zm6hpx2') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(1, 4, 'tinytable_css_1ra84fg5mv6u3zm6hpx2') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(1, 5, 'tinytable_css_1ra84fg5mv6u3zm6hpx2') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(1, 6, 'tinytable_css_1ra84fg5mv6u3zm6hpx2') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 0, 'tinytable_css_32dht0b4wuomlq1li10p') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 1, 'tinytable_css_32dht0b4wuomlq1li10p') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 2, 'tinytable_css_32dht0b4wuomlq1li10p') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 3, 'tinytable_css_32dht0b4wuomlq1li10p') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 4, 'tinytable_css_32dht0b4wuomlq1li10p') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 5, 'tinytable_css_32dht0b4wuomlq1li10p') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 6, 'tinytable_css_32dht0b4wuomlq1li10p') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 1, 'tinytable_css_wk6a1t2m12ilwqeteab6') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 2, 'tinytable_css_wk6a1t2m12ilwqeteab6') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 0, 'tinytable_css_gnyw74m7krfcspukpyof') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(1, 0, 'tinytable_css_gnyw74m7krfcspukpyof') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(2, 0, 'tinytable_css_gnyw74m7krfcspukpyof') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(3, 0, 'tinytable_css_gnyw74m7krfcspukpyof') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(4, 0, 'tinytable_css_gnyw74m7krfcspukpyof') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(5, 0, 'tinytable_css_gnyw74m7krfcspukpyof') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(6, 0, 'tinytable_css_gnyw74m7krfcspukpyof') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(7, 0, 'tinytable_css_gnyw74m7krfcspukpyof') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(8, 0, 'tinytable_css_gnyw74m7krfcspukpyof') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(9, 0, 'tinytable_css_gnyw74m7krfcspukpyof') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(10, 0, 'tinytable_css_gnyw74m7krfcspukpyof') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(11, 0, 'tinytable_css_gnyw74m7krfcspukpyof') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 1, 'tinytable_css_bqqyaqhd89giwxof21ec') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(1, 1, 'tinytable_css_bqqyaqhd89giwxof21ec') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(2, 1, 'tinytable_css_bqqyaqhd89giwxof21ec') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(3, 1, 'tinytable_css_bqqyaqhd89giwxof21ec') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(4, 1, 'tinytable_css_bqqyaqhd89giwxof21ec') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(5, 1, 'tinytable_css_bqqyaqhd89giwxof21ec') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(6, 1, 'tinytable_css_bqqyaqhd89giwxof21ec') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(7, 1, 'tinytable_css_bqqyaqhd89giwxof21ec') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(8, 1, 'tinytable_css_bqqyaqhd89giwxof21ec') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(9, 1, 'tinytable_css_bqqyaqhd89giwxof21ec') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(10, 1, 'tinytable_css_bqqyaqhd89giwxof21ec') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(11, 1, 'tinytable_css_bqqyaqhd89giwxof21ec') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 2, 'tinytable_css_4nwl681tjjwriafkgz2d') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(1, 2, 'tinytable_css_4nwl681tjjwriafkgz2d') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(2, 2, 'tinytable_css_4nwl681tjjwriafkgz2d') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(3, 2, 'tinytable_css_4nwl681tjjwriafkgz2d') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(4, 2, 'tinytable_css_4nwl681tjjwriafkgz2d') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(5, 2, 'tinytable_css_4nwl681tjjwriafkgz2d') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(6, 2, 'tinytable_css_4nwl681tjjwriafkgz2d') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(7, 2, 'tinytable_css_4nwl681tjjwriafkgz2d') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(8, 2, 'tinytable_css_4nwl681tjjwriafkgz2d') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(9, 2, 'tinytable_css_4nwl681tjjwriafkgz2d') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(10, 2, 'tinytable_css_4nwl681tjjwriafkgz2d') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(11, 2, 'tinytable_css_4nwl681tjjwriafkgz2d') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 3, 'tinytable_css_lljtx0bvkhzmkbnscnax') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(1, 3, 'tinytable_css_lljtx0bvkhzmkbnscnax') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(2, 3, 'tinytable_css_lljtx0bvkhzmkbnscnax') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(3, 3, 'tinytable_css_lljtx0bvkhzmkbnscnax') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(4, 3, 'tinytable_css_lljtx0bvkhzmkbnscnax') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(5, 3, 'tinytable_css_lljtx0bvkhzmkbnscnax') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(6, 3, 'tinytable_css_lljtx0bvkhzmkbnscnax') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(7, 3, 'tinytable_css_lljtx0bvkhzmkbnscnax') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(8, 3, 'tinytable_css_lljtx0bvkhzmkbnscnax') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(9, 3, 'tinytable_css_lljtx0bvkhzmkbnscnax') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(10, 3, 'tinytable_css_lljtx0bvkhzmkbnscnax') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(11, 3, 'tinytable_css_lljtx0bvkhzmkbnscnax') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 4, 'tinytable_css_pwzarzkhft90v2wdx78i') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(1, 4, 'tinytable_css_pwzarzkhft90v2wdx78i') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(2, 4, 'tinytable_css_pwzarzkhft90v2wdx78i') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(3, 4, 'tinytable_css_pwzarzkhft90v2wdx78i') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(4, 4, 'tinytable_css_pwzarzkhft90v2wdx78i') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(5, 4, 'tinytable_css_pwzarzkhft90v2wdx78i') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(6, 4, 'tinytable_css_pwzarzkhft90v2wdx78i') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(7, 4, 'tinytable_css_pwzarzkhft90v2wdx78i') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(8, 4, 'tinytable_css_pwzarzkhft90v2wdx78i') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(9, 4, 'tinytable_css_pwzarzkhft90v2wdx78i') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(10, 4, 'tinytable_css_pwzarzkhft90v2wdx78i') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(11, 4, 'tinytable_css_pwzarzkhft90v2wdx78i') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 5, 'tinytable_css_4p3xdhrmb32b0y7p10z2') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(1, 5, 'tinytable_css_4p3xdhrmb32b0y7p10z2') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(2, 5, 'tinytable_css_4p3xdhrmb32b0y7p10z2') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(3, 5, 'tinytable_css_4p3xdhrmb32b0y7p10z2') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(4, 5, 'tinytable_css_4p3xdhrmb32b0y7p10z2') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(5, 5, 'tinytable_css_4p3xdhrmb32b0y7p10z2') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(6, 5, 'tinytable_css_4p3xdhrmb32b0y7p10z2') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(7, 5, 'tinytable_css_4p3xdhrmb32b0y7p10z2') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(8, 5, 'tinytable_css_4p3xdhrmb32b0y7p10z2') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(9, 5, 'tinytable_css_4p3xdhrmb32b0y7p10z2') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(10, 5, 'tinytable_css_4p3xdhrmb32b0y7p10z2') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(11, 5, 'tinytable_css_4p3xdhrmb32b0y7p10z2') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 6, 'tinytable_css_jfbl5j4ko4pyztfc71j0') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(1, 6, 'tinytable_css_jfbl5j4ko4pyztfc71j0') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(2, 6, 'tinytable_css_jfbl5j4ko4pyztfc71j0') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(3, 6, 'tinytable_css_jfbl5j4ko4pyztfc71j0') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(4, 6, 'tinytable_css_jfbl5j4ko4pyztfc71j0') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(5, 6, 'tinytable_css_jfbl5j4ko4pyztfc71j0') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(6, 6, 'tinytable_css_jfbl5j4ko4pyztfc71j0') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(7, 6, 'tinytable_css_jfbl5j4ko4pyztfc71j0') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(8, 6, 'tinytable_css_jfbl5j4ko4pyztfc71j0') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(9, 6, 'tinytable_css_jfbl5j4ko4pyztfc71j0') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(10, 6, 'tinytable_css_jfbl5j4ko4pyztfc71j0') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(11, 6, 'tinytable_css_jfbl5j4ko4pyztfc71j0') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 0, 'tinytable_css_xyait3xfnrml2c4pqjld') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 1, 'tinytable_css_xyait3xfnrml2c4pqjld') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 2, 'tinytable_css_xyait3xfnrml2c4pqjld') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 3, 'tinytable_css_xyait3xfnrml2c4pqjld') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 4, 'tinytable_css_xyait3xfnrml2c4pqjld') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 5, 'tinytable_css_xyait3xfnrml2c4pqjld') })
+window.addEventListener('load', function () { styleCell_tinytable_7wyiydxvkjeyh3mqwyd6(0, 6, 'tinytable_css_xyait3xfnrml2c4pqjld') })
+    </script>
+
+  
+
+
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p><a href="#tbl-icio" class="quarto-xref">Table&nbsp;2</a> shows Average and standard deviation as well as distribution of value added, output, domestic and foreign goods and services value and share. Unsurprisingly Indonesian manufacturing output and value added is higher than average of 5 countries, amid how large Indonesia is compared to its neighbor. Interestingly, Indonesian manufacturing value added from foreign goods and share is larger than the average, despite Indonesia’s protectionist tendency <span class="citation" data-cites="aco">(<a href="#ref-aco" role="doc-biblioref">Patunru 2023</a>)</span>. Services, on the other hand, is different, as Indonesian services import lags compared to other countries.</p>
+<p>Lastly, we run 6 fixed effect panel regressions. The first panel consists of two indices, country and sector, which both dummies are used as a fixed effect. The other 5 panels are fixed effect regressions by country, where only sectoral fixed effect is used. This way, we can discuss difference in coefficient between selected countries in the region. We use output and value added as our <span class="math inline">\(y_i\)</span>, so we will have 12 fixed effect panel regressions in total.</p>
+<p>The main variable of interest is <span class="math inline">\(\beta_f\)</span>. The third unbundling suggests that since firms can now unbundle tasks up to service level, firms who can unbundle its services tasks will theoretically perform better, shown in its value added and output. Likewise, industries with easier services unbundling will benefited more from services trade since there will be more firms able to exploit the third unbundling in these industries. Therefore, we expect to see a <span class="math inline">\(\beta_f&gt;0\)</span>.</p>
+<p>Given the limitation of ICIO and its underlying sources (i.e., BaTIS), macro level analysis is added to complement the analysis. We use SEKI, Indonesian database compiled by Bank Indonesia, the central bank, to get services trade, manufactures trade, and manufacturing output. We perform ARDL analysis <span class="citation" data-cites="pesaran">(<a href="#ref-pesaran" role="doc-biblioref">Pesaran and Smith 1995</a>)</span> to see whether services trade cointegrates with manufacturing output and export.</p>
+<p>We run four specifications:</p>
+<p><span id="eq-3"><span class="math display">\[
+\begin{align*}
+exM_t&amp;=\alpha_0+\alpha_1 exM_{t-1}+\alpha_2 imM_t+\alpha_3 imSev_t+\nu_i \\
+exM_t&amp;=\gamma_0+\gamma_1 exM_{t-1}+\gamma_2 imM_t+\gamma_3 imSev_t+ \gamma_4 imM_{t-1}+\gamma_5 imSev_{t-1}+\upsilon_i \\
+pdb_t&amp;=\delta_0+\delta_1 exM_{t-1}+\delta_2 imM_t+\delta_3 imSev_t+\omega_i \\
+pdb_t&amp;=\theta_0+\theta_1 exM_{t-1}+\theta_2 imM_t+\theta_3 imSev_t+ \theta_4 imM_{t-1}+\theta_5 imSev_{t-1}+\eta_i
+\end{align*}
+\tag{3}\]</span></span></p>
+<p>where <span class="math inline">\(exM\)</span> is log manufacturing exports, <span class="math inline">\(pdb\)</span> is log manufacturing GDP, <span class="math inline">\(imM\)</span> is log manufacturing imports and <span class="math inline">\(imSev\)</span> is log services imports, all for Indonesian level in time <span class="math inline">\(t\)</span>, where <span class="math inline">\(t\)</span> is from 2005 to 2023. The data availability is restricted by the services import which starts from 2005 in the SEKI data. Specifications that we run are <code>ARDL(1,0,0)</code>, the least restrictive, and <code>ARDL(1,1,1)</code> which is considered from AIC, BIC and RMSE <span class="citation" data-cites="pesaran ardl">(<a href="#ref-pesaran" role="doc-biblioref">Pesaran and Smith 1995</a>; <a href="#ref-ardl" role="doc-biblioref">Natsiopoulos and Tzeremes 2022</a>)</span>.</p>
 </section>
 <section id="discussions" class="level2">
 <h2 class="anchored" data-anchor-id="discussions">Discussions</h2>
-<ul>
-<li>A deep dive on the Indonesian trade in services.</li>
-<li>Provide an insight on the importance of imported and exported services on the Indonesian GVC.</li>
-<li>Policy lessons and possible insight on what to look for the next trade agreements to improve trade in services.</li>
-</ul>
+<section id="indonesian-trade-in-services" class="level3">
+<h3 class="anchored" data-anchor-id="indonesian-trade-in-services">Indonesian trade in services</h3>
+<p><a href="#fig-S" class="quarto-xref">Figure&nbsp;3</a> shows total trade in services in 2021 in million current USD taken from BaTIS. Categories are based on the <a href="#tbl-1" class="quarto-xref">Table&nbsp;1</a>. <a href="#fig-CX" class="quarto-xref">Figure&nbsp;3 (a)</a> and <a href="#fig-CM" class="quarto-xref">Figure&nbsp;3 (b)</a> shows Indonesia’s top 6 exporter and importer of services in 2021. Singapore is the most important partner in trade in services for Indonesia. China, on the other hand, is the main buyer of Indonesia’s services export. Looking at <a href="#fig-SX" class="quarto-xref">Figure&nbsp;3 (c)</a> and <a href="#fig-SM" class="quarto-xref">Figure&nbsp;3 (d)</a>, It is evident that Indonesia’s imports dominates exports in all categories bar travel (SD). Additionally, the highest traded services in Indonesia are transport (SC) and business services (SJ), aligned with global trade statistics <span class="citation" data-cites="ebops">(<a href="#ref-ebops" role="doc-biblioref">Liberatore et al. 2021</a>)</span>.</p>
+<div id="fig-S" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-S-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-S" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-CX" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-CX-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="plot/allcx.png" class="img-fluid figure-img" data-ref-parent="fig-S">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-CX-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Indonesia’s exports by partner, 2021
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-S" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-CM" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-CM-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="plot/allcm.png" class="img-fluid figure-img" data-ref-parent="fig-S">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-CM-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Indonesia’s exports by partner, 2021
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-S" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-SX" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-SX-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="plot/allsx.png" class="img-fluid figure-img" data-ref-parent="fig-S">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-SX-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) Indonesia’s exports by sector, 2021
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-S" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-SM" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-SM-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="plot/allsm.png" class="img-fluid figure-img" data-ref-parent="fig-S">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-SM-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(d) Indonesia’s imports by sector, 2021
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-S-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Indonesia’s total services trade by categories, 2021
+</figcaption>
+</figure>
+</div>
+<p>We then focuses on Indonesia’s four most important services. These are transport (SC), travel (SD), ICT services (SI) and other business services (SJ). Other business services includes consulting management, research and development, and trade-related services <span class="citation" data-cites="ebops">(<a href="#ref-ebops" role="doc-biblioref">Liberatore et al. 2021</a>)</span>. We look at top 6 partners in these sectors annually from 2005-2021 as existed in BaTIS, which can be seen in <a href="#fig-X" class="quarto-xref">Figure&nbsp;4</a> (exports) and <a href="#fig-M" class="quarto-xref">Figure&nbsp;5</a> (imports). Some countries change positions in these top 6 from time to time. A sudden miss of a country does not mean it stops trading with Indonesia, it’s just they are removed from the top 6.</p>
+<div id="fig-X" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-X-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-X" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-SCX" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-SCX-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="plot/SCEX.png" class="img-fluid figure-img" data-ref-parent="fig-X">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-SCX-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Transport
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-X" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-SDX" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-SDX-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="plot/SDEX.png" class="img-fluid figure-img" data-ref-parent="fig-X">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-SDX-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Travel
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-X" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-SIX" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-SIX-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="plot/SIEX.png" class="img-fluid figure-img" data-ref-parent="fig-X">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-SIX-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) ICT services
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-X" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-SJX" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-SJX-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="plot/SJEX.png" class="img-fluid figure-img" data-ref-parent="fig-X">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-SJX-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(d) Other business services
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-X-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Indonesia’s top 6 exporter destinations to 4 categories, 2005-2021
+</figcaption>
+</figure>
+</div>
+<div id="fig-M" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-M-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-M" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-SCM" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-SCM-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="plot/SCIM.png" class="img-fluid figure-img" data-ref-parent="fig-M">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-SCM-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Transport
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-M" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-SDM" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-SDM-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="plot/SDIM.png" class="img-fluid figure-img" data-ref-parent="fig-M">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-SDM-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Travel
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-M" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-SIM" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-SIM-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="plot/SIIM.png" class="img-fluid figure-img" data-ref-parent="fig-M">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-SIM-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) ICT services
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-M" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-SJM" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-SJM-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="plot/SJIM.png" class="img-fluid figure-img" data-ref-parent="fig-M">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-SJM-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(d) Other business services
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-M-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Indonesia’s top 6 import sources in 4 categories, 2005-2021
+</figcaption>
+</figure>
+</div>
+<p>Immediately, <a href="#fig-X" class="quarto-xref">Figure&nbsp;4</a> and <a href="#fig-M" class="quarto-xref">Figure&nbsp;5</a> show significant changes happened in 2020 and 2021, which corroborates the aggregated data in <a href="#fig-1" class="quarto-xref">Figure&nbsp;1</a>. This is likely due to the COVID-19 pandemic that restrict movement of people.</p>
+<p>This shock, however, affects differently between these four sectors. The transportation sector decrease quite significantly in 2020, but recovered relatively quickly in 2021. The impact in the business services is milder compared to the transportation sector. Meanwhile, we see a significant drop in travel services and have not recovered since. Meanwhile, ICT services are the winner here, with the top 6 partners experience significant increase in both 2020 and 2021.</p>
+<p>Singapore is indeed important in both export and import. Singapore relationship with Indonesia in trade in services dwarves the rest, and this is true for almost all sectors. Travel export is slightly the exception. China and Australia dominates as destinations for Indonesian travel export. In Indonesia, most travel exports comes mainly from tourism. Indeed, tourism is Indonesia’s main services export. Pre-2020, travel services from 6 top exporters far dominates the other 3 categories. Pandemic punishes travel exports more than other sectors and it affects Indonesia’s overall balance of trade in services.</p>
+<p>Overall, countries important for Indonesia in trade in services is not significantly different from trade in goods. Singapore leads, but there are also the US, some EU countries, and other RCEP member states. Trade agreements play a huge role in improving trade in services. Measures that affects movement of natural persons, and other non-tariff measures like computing requirement and investment list are crucial as trade in services can be done in 4 different modes that got affected by these rules.</p>
+<p>Typically, overseeing trade in services and regulatory environment required to increase flow of trade in services are more challenging than trade in goods. In Indonesia, these regulations are often oversaw by different Ministries, and typically discussed separately from other sectors or trade negotiations <span class="citation" data-cites="magiera lindblad">(<a href="#ref-magiera" role="doc-biblioref">Magiera 2011</a>; <a href="#ref-lindblad" role="doc-biblioref">Lindblad 2015</a>)</span>. Discussing regulatory environment to improve trade in services would require coordination which is costly compared to trade in goods.</p>
+<p>For example, easing tourism visa requirement typically conducted unilaterally with no consultation with other ministries or any agreements. These kinds of regulation relies more on each Ministers than agreement mechanisms. While IJEPA doesn’t seem to affect trade in services much between Indonesia and Japan <span class="citation" data-cites="krisna">(<a href="#ref-krisna" role="doc-biblioref">Syahputri and Gupta 2024</a>)</span>, IACEPA between Indonesia and Australia seems to improve Australian services export through investment in university and hospital.</p>
+<p>More importantly, easing services trade may benefit Indonesia through the third unbundling mechanisms. Many exported services are skill-intensive products, which arguably not Indonesia’s main strength. If these services are important in a production chain of final goods, then outsourcing services production (e.g., design and research) will benefit Indonesian manufacturing. The next section explores an indicative evidence toward this argument.</p>
+</section>
+<section id="manufacturing" class="level3">
+<h3 class="anchored" data-anchor-id="manufacturing">Manufacturing</h3>
+<section id="icio-panel-regression" class="level4">
+<h4 class="anchored" data-anchor-id="icio-panel-regression">ICIO Panel regression</h4>
+<p>We first turn to our panel regression shown in <a href="#eq-2" class="quarto-xref">Equation&nbsp;2</a>. As discussed, we run a total 12 regressions divided into two tables. <a href="#tbl-regv" class="quarto-xref">Table&nbsp;3</a> shows results for log of value added as the dependent variable, while <a href="#tbl-rego" class="quarto-xref">Table&nbsp;4</a> is on output. Each table has 6 regressions, which the first column show a result from all countries combined and the rest are from each countries.</p>
+<div class="cell">
+<div id="tbl-regv" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-regv-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Panel regression of log manufacturing value added
+</figcaption>
+<div aria-describedby="tbl-regv-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+ 
+
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinytable_nl8jcdz8w7ohawbbsqj5</title>
+    <style>
+.table td.tinytable_css_9flrbfttdnuu5vppoye1, .table th.tinytable_css_9flrbfttdnuu5vppoye1 {    border-bottom: solid 0.1em #d3d8dc; }
+.table td.tinytable_css_5hxi7pq09ephgnlx0jkr, .table th.tinytable_css_5hxi7pq09ephgnlx0jkr {    text-align: left; }
+.table td.tinytable_css_9ycjnvpiztidzn5w1w86, .table th.tinytable_css_9ycjnvpiztidzn5w1w86 {    text-align: center; }
+.table td.tinytable_css_j30ehcmzp1ccw76u7pov, .table th.tinytable_css_j30ehcmzp1ccw76u7pov {    text-align: center; }
+.table td.tinytable_css_8m33tzec3l8nqbrwf2xv, .table th.tinytable_css_8m33tzec3l8nqbrwf2xv {    text-align: center; }
+.table td.tinytable_css_9ym9pl3z0rlc657h8mlr, .table th.tinytable_css_9ym9pl3z0rlc657h8mlr {    text-align: center; }
+.table td.tinytable_css_ag3rhi1deeppttts9phl, .table th.tinytable_css_ag3rhi1deeppttts9phl {    text-align: center; }
+.table td.tinytable_css_i7bwvmyrk8727eppfu5n, .table th.tinytable_css_i7bwvmyrk8727eppfu5n {    text-align: center; }
+.table td.tinytable_css_tmozjphoam0b2m6zpsrm, .table th.tinytable_css_tmozjphoam0b2m6zpsrm {    border-bottom: solid 0.05em black; }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+  
+
+  
+    <div class="container">
+      <table class="table table-borderless" id="tinytable_nl8jcdz8w7ohawbbsqj5" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+        <thead>
+        
+              <tr>
+                <th scope="col"> </th>
+                <th scope="col">all</th>
+                <th scope="col">IDN</th>
+                <th scope="col">SGP</th>
+                <th scope="col">VNM</th>
+                <th scope="col">THA</th>
+                <th scope="col">MYS</th>
+              </tr>
+        </thead>
+        <tfoot><tr><td colspan="7">+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001</td></tr></tfoot>
+        <tbody>
+                <tr>
+                  <td>lfs      </td>
+                  <td>0.159   </td>
+                  <td>-0.207 </td>
+                  <td>0.172  </td>
+                  <td>0.358** </td>
+                  <td>-0.175* </td>
+                  <td>0.082   </td>
+                </tr>
+                <tr>
+                  <td>         </td>
+                  <td>(0.159) </td>
+                  <td>(0.283)</td>
+                  <td>(0.170)</td>
+                  <td>(0.094) </td>
+                  <td>(0.062) </td>
+                  <td>(0.264) </td>
+                </tr>
+                <tr>
+                  <td>lds      </td>
+                  <td>0.708***</td>
+                  <td>0.735* </td>
+                  <td>0.587* </td>
+                  <td>0.479***</td>
+                  <td>1.112***</td>
+                  <td>0.808***</td>
+                </tr>
+                <tr>
+                  <td>         </td>
+                  <td>(0.157) </td>
+                  <td>(0.280)</td>
+                  <td>(0.209)</td>
+                  <td>(0.086) </td>
+                  <td>(0.066) </td>
+                  <td>(0.173) </td>
+                </tr>
+                <tr>
+                  <td>Num.Obs. </td>
+                  <td>1520    </td>
+                  <td>304    </td>
+                  <td>304    </td>
+                  <td>304     </td>
+                  <td>304     </td>
+                  <td>304     </td>
+                </tr>
+                <tr>
+                  <td>R2       </td>
+                  <td>0.825   </td>
+                  <td>0.863  </td>
+                  <td>0.984  </td>
+                  <td>0.993   </td>
+                  <td>0.992   </td>
+                  <td>0.945   </td>
+                </tr>
+                <tr>
+                  <td>R2 Within</td>
+                  <td>0.658   </td>
+                  <td>0.423  </td>
+                  <td>0.780  </td>
+                  <td>0.984   </td>
+                  <td>0.952   </td>
+                  <td>0.727   </td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      function styleCell_tinytable_krk9tlgblmgddqaq48s6(i, j, css_id) {
+        var table = document.getElementById("tinytable_nl8jcdz8w7ohawbbsqj5");
+        table.rows[i].cells[j].classList.add(css_id);
+      }
+      function insertSpanRow(i, colspan, content) {
+        var table = document.getElementById('tinytable_nl8jcdz8w7ohawbbsqj5');
+        var newRow = table.insertRow(i);
+        var newCell = newRow.insertCell(0);
+        newCell.setAttribute("colspan", colspan);
+        // newCell.innerText = content;
+        // this may be unsafe, but innerText does not interpret <br>
+        newCell.innerHTML = content;
+      }
+      function spanCell_tinytable_krk9tlgblmgddqaq48s6(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_nl8jcdz8w7ohawbbsqj5");
+        const targetRow = table.rows[i];
+        const targetCell = targetRow.cells[j];
+        for (let r = 0; r < rowspan; r++) {
+          // Only start deleting cells to the right for the first row (r == 0)
+          if (r === 0) {
+            // Delete cells to the right of the target cell in the first row
+            for (let c = colspan - 1; c > 0; c--) {
+              if (table.rows[i + r].cells[j + c]) {
+                table.rows[i + r].deleteCell(j + c);
+              }
+            }
+          }
+          // For rows below the first, delete starting from the target column
+          if (r > 0) {
+            for (let c = colspan - 1; c >= 0; c--) {
+              if (table.rows[i + r] && table.rows[i + r].cells[j]) {
+                table.rows[i + r].deleteCell(j);
+              }
+            }
+          }
+        }
+        // Set rowspan and colspan of the target cell
+        targetCell.rowSpan = rowspan;
+        targetCell.colSpan = colspan;
+      }
+
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(0, 0, 'tinytable_css_9flrbfttdnuu5vppoye1') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(0, 1, 'tinytable_css_9flrbfttdnuu5vppoye1') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(0, 2, 'tinytable_css_9flrbfttdnuu5vppoye1') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(0, 3, 'tinytable_css_9flrbfttdnuu5vppoye1') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(0, 4, 'tinytable_css_9flrbfttdnuu5vppoye1') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(0, 5, 'tinytable_css_9flrbfttdnuu5vppoye1') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(0, 6, 'tinytable_css_9flrbfttdnuu5vppoye1') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(0, 0, 'tinytable_css_5hxi7pq09ephgnlx0jkr') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(1, 0, 'tinytable_css_5hxi7pq09ephgnlx0jkr') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(2, 0, 'tinytable_css_5hxi7pq09ephgnlx0jkr') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(3, 0, 'tinytable_css_5hxi7pq09ephgnlx0jkr') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(4, 0, 'tinytable_css_5hxi7pq09ephgnlx0jkr') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(5, 0, 'tinytable_css_5hxi7pq09ephgnlx0jkr') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(6, 0, 'tinytable_css_5hxi7pq09ephgnlx0jkr') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(7, 0, 'tinytable_css_5hxi7pq09ephgnlx0jkr') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(0, 1, 'tinytable_css_9ycjnvpiztidzn5w1w86') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(1, 1, 'tinytable_css_9ycjnvpiztidzn5w1w86') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(2, 1, 'tinytable_css_9ycjnvpiztidzn5w1w86') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(3, 1, 'tinytable_css_9ycjnvpiztidzn5w1w86') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(4, 1, 'tinytable_css_9ycjnvpiztidzn5w1w86') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(5, 1, 'tinytable_css_9ycjnvpiztidzn5w1w86') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(6, 1, 'tinytable_css_9ycjnvpiztidzn5w1w86') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(7, 1, 'tinytable_css_9ycjnvpiztidzn5w1w86') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(0, 2, 'tinytable_css_j30ehcmzp1ccw76u7pov') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(1, 2, 'tinytable_css_j30ehcmzp1ccw76u7pov') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(2, 2, 'tinytable_css_j30ehcmzp1ccw76u7pov') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(3, 2, 'tinytable_css_j30ehcmzp1ccw76u7pov') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(4, 2, 'tinytable_css_j30ehcmzp1ccw76u7pov') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(5, 2, 'tinytable_css_j30ehcmzp1ccw76u7pov') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(6, 2, 'tinytable_css_j30ehcmzp1ccw76u7pov') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(7, 2, 'tinytable_css_j30ehcmzp1ccw76u7pov') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(0, 3, 'tinytable_css_8m33tzec3l8nqbrwf2xv') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(1, 3, 'tinytable_css_8m33tzec3l8nqbrwf2xv') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(2, 3, 'tinytable_css_8m33tzec3l8nqbrwf2xv') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(3, 3, 'tinytable_css_8m33tzec3l8nqbrwf2xv') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(4, 3, 'tinytable_css_8m33tzec3l8nqbrwf2xv') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(5, 3, 'tinytable_css_8m33tzec3l8nqbrwf2xv') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(6, 3, 'tinytable_css_8m33tzec3l8nqbrwf2xv') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(7, 3, 'tinytable_css_8m33tzec3l8nqbrwf2xv') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(0, 4, 'tinytable_css_9ym9pl3z0rlc657h8mlr') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(1, 4, 'tinytable_css_9ym9pl3z0rlc657h8mlr') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(2, 4, 'tinytable_css_9ym9pl3z0rlc657h8mlr') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(3, 4, 'tinytable_css_9ym9pl3z0rlc657h8mlr') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(4, 4, 'tinytable_css_9ym9pl3z0rlc657h8mlr') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(5, 4, 'tinytable_css_9ym9pl3z0rlc657h8mlr') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(6, 4, 'tinytable_css_9ym9pl3z0rlc657h8mlr') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(7, 4, 'tinytable_css_9ym9pl3z0rlc657h8mlr') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(0, 5, 'tinytable_css_ag3rhi1deeppttts9phl') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(1, 5, 'tinytable_css_ag3rhi1deeppttts9phl') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(2, 5, 'tinytable_css_ag3rhi1deeppttts9phl') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(3, 5, 'tinytable_css_ag3rhi1deeppttts9phl') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(4, 5, 'tinytable_css_ag3rhi1deeppttts9phl') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(5, 5, 'tinytable_css_ag3rhi1deeppttts9phl') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(6, 5, 'tinytable_css_ag3rhi1deeppttts9phl') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(7, 5, 'tinytable_css_ag3rhi1deeppttts9phl') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(0, 6, 'tinytable_css_i7bwvmyrk8727eppfu5n') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(1, 6, 'tinytable_css_i7bwvmyrk8727eppfu5n') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(2, 6, 'tinytable_css_i7bwvmyrk8727eppfu5n') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(3, 6, 'tinytable_css_i7bwvmyrk8727eppfu5n') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(4, 6, 'tinytable_css_i7bwvmyrk8727eppfu5n') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(5, 6, 'tinytable_css_i7bwvmyrk8727eppfu5n') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(6, 6, 'tinytable_css_i7bwvmyrk8727eppfu5n') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(7, 6, 'tinytable_css_i7bwvmyrk8727eppfu5n') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(4, 0, 'tinytable_css_tmozjphoam0b2m6zpsrm') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(4, 1, 'tinytable_css_tmozjphoam0b2m6zpsrm') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(4, 2, 'tinytable_css_tmozjphoam0b2m6zpsrm') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(4, 3, 'tinytable_css_tmozjphoam0b2m6zpsrm') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(4, 4, 'tinytable_css_tmozjphoam0b2m6zpsrm') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(4, 5, 'tinytable_css_tmozjphoam0b2m6zpsrm') })
+window.addEventListener('load', function () { styleCell_tinytable_krk9tlgblmgddqaq48s6(4, 6, 'tinytable_css_tmozjphoam0b2m6zpsrm') })
+    </script>
+
+  
+
+
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>First, we look at value added. We can see from <a href="#tbl-regv" class="quarto-xref">Table&nbsp;3</a> that domestic services are generally correlates with domestic manufacturing value added. However, foreign value added does not seem to be important in the domestic value added of manufacturing. Vietnam is the exception, where foreign services seem to move together with domestic value added.</p>
+<div class="cell">
+<div id="tbl-rego" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-rego-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: Panel regression of log manufacturing output
+</figcaption>
+<div aria-describedby="tbl-rego-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+ 
+
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinytable_dhnt1ozosjxfc8jg0r6d</title>
+    <style>
+.table td.tinytable_css_7487jxp9tbsgziex6nez, .table th.tinytable_css_7487jxp9tbsgziex6nez {    border-bottom: solid 0.1em #d3d8dc; }
+.table td.tinytable_css_za7voti54qs20y8vybm5, .table th.tinytable_css_za7voti54qs20y8vybm5 {    text-align: left; }
+.table td.tinytable_css_x3whg1zlqfw3rsnakpn6, .table th.tinytable_css_x3whg1zlqfw3rsnakpn6 {    text-align: center; }
+.table td.tinytable_css_krrf7yti7jixcsrp82fw, .table th.tinytable_css_krrf7yti7jixcsrp82fw {    text-align: center; }
+.table td.tinytable_css_5tbs9h3j89twqij80uxx, .table th.tinytable_css_5tbs9h3j89twqij80uxx {    text-align: center; }
+.table td.tinytable_css_0ta8z2cpri76qhosk7gq, .table th.tinytable_css_0ta8z2cpri76qhosk7gq {    text-align: center; }
+.table td.tinytable_css_5xdi91kk0aieayqydy34, .table th.tinytable_css_5xdi91kk0aieayqydy34 {    text-align: center; }
+.table td.tinytable_css_vuj5ng0j4f1oj4ndquq0, .table th.tinytable_css_vuj5ng0j4f1oj4ndquq0 {    text-align: center; }
+.table td.tinytable_css_pfbvwi0dzbq1hfoltobk, .table th.tinytable_css_pfbvwi0dzbq1hfoltobk {    border-bottom: solid 0.05em black; }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+  
+
+  
+    <div class="container">
+      <table class="table table-borderless" id="tinytable_dhnt1ozosjxfc8jg0r6d" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+        <thead>
+        
+              <tr>
+                <th scope="col"> </th>
+                <th scope="col">all</th>
+                <th scope="col">IDN</th>
+                <th scope="col">SGP</th>
+                <th scope="col">VNM</th>
+                <th scope="col">THA</th>
+                <th scope="col">MYS</th>
+              </tr>
+        </thead>
+        <tfoot><tr><td colspan="7">+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001</td></tr></tfoot>
+        <tbody>
+                <tr>
+                  <td>lfs      </td>
+                  <td>0.221+  </td>
+                  <td>-0.070  </td>
+                  <td>0.179  </td>
+                  <td>0.471** </td>
+                  <td>0.112+  </td>
+                  <td>0.155   </td>
+                </tr>
+                <tr>
+                  <td>         </td>
+                  <td>(0.105) </td>
+                  <td>(0.141) </td>
+                  <td>(0.138)</td>
+                  <td>(0.135) </td>
+                  <td>(0.062) </td>
+                  <td>(0.166) </td>
+                </tr>
+                <tr>
+                  <td>lds      </td>
+                  <td>0.745***</td>
+                  <td>0.910***</td>
+                  <td>0.640**</td>
+                  <td>0.547***</td>
+                  <td>0.865***</td>
+                  <td>0.745***</td>
+                </tr>
+                <tr>
+                  <td>         </td>
+                  <td>(0.103) </td>
+                  <td>(0.129) </td>
+                  <td>(0.166)</td>
+                  <td>(0.123) </td>
+                  <td>(0.062) </td>
+                  <td>(0.103) </td>
+                </tr>
+                <tr>
+                  <td>Num.Obs. </td>
+                  <td>1520    </td>
+                  <td>304     </td>
+                  <td>304    </td>
+                  <td>304     </td>
+                  <td>304     </td>
+                  <td>304     </td>
+                </tr>
+                <tr>
+                  <td>R2       </td>
+                  <td>0.962   </td>
+                  <td>0.954   </td>
+                  <td>0.993  </td>
+                  <td>0.995   </td>
+                  <td>0.996   </td>
+                  <td>0.987   </td>
+                </tr>
+                <tr>
+                  <td>R2 Within</td>
+                  <td>0.921   </td>
+                  <td>0.880   </td>
+                  <td>0.914  </td>
+                  <td>0.990   </td>
+                  <td>0.973   </td>
+                  <td>0.891   </td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      function styleCell_tinytable_7szbu115kpntc5syuxut(i, j, css_id) {
+        var table = document.getElementById("tinytable_dhnt1ozosjxfc8jg0r6d");
+        table.rows[i].cells[j].classList.add(css_id);
+      }
+      function insertSpanRow(i, colspan, content) {
+        var table = document.getElementById('tinytable_dhnt1ozosjxfc8jg0r6d');
+        var newRow = table.insertRow(i);
+        var newCell = newRow.insertCell(0);
+        newCell.setAttribute("colspan", colspan);
+        // newCell.innerText = content;
+        // this may be unsafe, but innerText does not interpret <br>
+        newCell.innerHTML = content;
+      }
+      function spanCell_tinytable_7szbu115kpntc5syuxut(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_dhnt1ozosjxfc8jg0r6d");
+        const targetRow = table.rows[i];
+        const targetCell = targetRow.cells[j];
+        for (let r = 0; r < rowspan; r++) {
+          // Only start deleting cells to the right for the first row (r == 0)
+          if (r === 0) {
+            // Delete cells to the right of the target cell in the first row
+            for (let c = colspan - 1; c > 0; c--) {
+              if (table.rows[i + r].cells[j + c]) {
+                table.rows[i + r].deleteCell(j + c);
+              }
+            }
+          }
+          // For rows below the first, delete starting from the target column
+          if (r > 0) {
+            for (let c = colspan - 1; c >= 0; c--) {
+              if (table.rows[i + r] && table.rows[i + r].cells[j]) {
+                table.rows[i + r].deleteCell(j);
+              }
+            }
+          }
+        }
+        // Set rowspan and colspan of the target cell
+        targetCell.rowSpan = rowspan;
+        targetCell.colSpan = colspan;
+      }
+
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(0, 0, 'tinytable_css_7487jxp9tbsgziex6nez') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(0, 1, 'tinytable_css_7487jxp9tbsgziex6nez') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(0, 2, 'tinytable_css_7487jxp9tbsgziex6nez') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(0, 3, 'tinytable_css_7487jxp9tbsgziex6nez') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(0, 4, 'tinytable_css_7487jxp9tbsgziex6nez') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(0, 5, 'tinytable_css_7487jxp9tbsgziex6nez') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(0, 6, 'tinytable_css_7487jxp9tbsgziex6nez') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(0, 0, 'tinytable_css_za7voti54qs20y8vybm5') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(1, 0, 'tinytable_css_za7voti54qs20y8vybm5') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(2, 0, 'tinytable_css_za7voti54qs20y8vybm5') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(3, 0, 'tinytable_css_za7voti54qs20y8vybm5') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(4, 0, 'tinytable_css_za7voti54qs20y8vybm5') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(5, 0, 'tinytable_css_za7voti54qs20y8vybm5') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(6, 0, 'tinytable_css_za7voti54qs20y8vybm5') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(7, 0, 'tinytable_css_za7voti54qs20y8vybm5') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(0, 1, 'tinytable_css_x3whg1zlqfw3rsnakpn6') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(1, 1, 'tinytable_css_x3whg1zlqfw3rsnakpn6') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(2, 1, 'tinytable_css_x3whg1zlqfw3rsnakpn6') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(3, 1, 'tinytable_css_x3whg1zlqfw3rsnakpn6') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(4, 1, 'tinytable_css_x3whg1zlqfw3rsnakpn6') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(5, 1, 'tinytable_css_x3whg1zlqfw3rsnakpn6') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(6, 1, 'tinytable_css_x3whg1zlqfw3rsnakpn6') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(7, 1, 'tinytable_css_x3whg1zlqfw3rsnakpn6') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(0, 2, 'tinytable_css_krrf7yti7jixcsrp82fw') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(1, 2, 'tinytable_css_krrf7yti7jixcsrp82fw') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(2, 2, 'tinytable_css_krrf7yti7jixcsrp82fw') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(3, 2, 'tinytable_css_krrf7yti7jixcsrp82fw') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(4, 2, 'tinytable_css_krrf7yti7jixcsrp82fw') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(5, 2, 'tinytable_css_krrf7yti7jixcsrp82fw') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(6, 2, 'tinytable_css_krrf7yti7jixcsrp82fw') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(7, 2, 'tinytable_css_krrf7yti7jixcsrp82fw') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(0, 3, 'tinytable_css_5tbs9h3j89twqij80uxx') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(1, 3, 'tinytable_css_5tbs9h3j89twqij80uxx') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(2, 3, 'tinytable_css_5tbs9h3j89twqij80uxx') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(3, 3, 'tinytable_css_5tbs9h3j89twqij80uxx') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(4, 3, 'tinytable_css_5tbs9h3j89twqij80uxx') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(5, 3, 'tinytable_css_5tbs9h3j89twqij80uxx') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(6, 3, 'tinytable_css_5tbs9h3j89twqij80uxx') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(7, 3, 'tinytable_css_5tbs9h3j89twqij80uxx') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(0, 4, 'tinytable_css_0ta8z2cpri76qhosk7gq') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(1, 4, 'tinytable_css_0ta8z2cpri76qhosk7gq') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(2, 4, 'tinytable_css_0ta8z2cpri76qhosk7gq') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(3, 4, 'tinytable_css_0ta8z2cpri76qhosk7gq') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(4, 4, 'tinytable_css_0ta8z2cpri76qhosk7gq') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(5, 4, 'tinytable_css_0ta8z2cpri76qhosk7gq') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(6, 4, 'tinytable_css_0ta8z2cpri76qhosk7gq') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(7, 4, 'tinytable_css_0ta8z2cpri76qhosk7gq') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(0, 5, 'tinytable_css_5xdi91kk0aieayqydy34') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(1, 5, 'tinytable_css_5xdi91kk0aieayqydy34') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(2, 5, 'tinytable_css_5xdi91kk0aieayqydy34') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(3, 5, 'tinytable_css_5xdi91kk0aieayqydy34') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(4, 5, 'tinytable_css_5xdi91kk0aieayqydy34') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(5, 5, 'tinytable_css_5xdi91kk0aieayqydy34') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(6, 5, 'tinytable_css_5xdi91kk0aieayqydy34') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(7, 5, 'tinytable_css_5xdi91kk0aieayqydy34') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(0, 6, 'tinytable_css_vuj5ng0j4f1oj4ndquq0') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(1, 6, 'tinytable_css_vuj5ng0j4f1oj4ndquq0') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(2, 6, 'tinytable_css_vuj5ng0j4f1oj4ndquq0') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(3, 6, 'tinytable_css_vuj5ng0j4f1oj4ndquq0') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(4, 6, 'tinytable_css_vuj5ng0j4f1oj4ndquq0') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(5, 6, 'tinytable_css_vuj5ng0j4f1oj4ndquq0') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(6, 6, 'tinytable_css_vuj5ng0j4f1oj4ndquq0') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(7, 6, 'tinytable_css_vuj5ng0j4f1oj4ndquq0') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(4, 0, 'tinytable_css_pfbvwi0dzbq1hfoltobk') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(4, 1, 'tinytable_css_pfbvwi0dzbq1hfoltobk') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(4, 2, 'tinytable_css_pfbvwi0dzbq1hfoltobk') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(4, 3, 'tinytable_css_pfbvwi0dzbq1hfoltobk') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(4, 4, 'tinytable_css_pfbvwi0dzbq1hfoltobk') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(4, 5, 'tinytable_css_pfbvwi0dzbq1hfoltobk') })
+window.addEventListener('load', function () { styleCell_tinytable_7szbu115kpntc5syuxut(4, 6, 'tinytable_css_pfbvwi0dzbq1hfoltobk') })
+    </script>
+
+  
+
+
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Next, we go to <a href="#tbl-rego" class="quarto-xref">Table&nbsp;4</a> to look at the relationship between services inputs and manufacturing output. In this case, the general correlation of services inputs are positive. But again, this positive impact is driven mainly by Vietnam and weakly by Thailand. Most correlation still comes from domestic services value added.</p>
+<p>The results from Thailand seems to suggests the effect of volume <span class="citation" data-cites="aco2">(<a href="#ref-aco2" role="doc-biblioref">Athukorala and Patunru 2023</a>)</span>.That is, while domestic value added is reduced by increasing foreign input, but the resulting output means that the reduction of domestic value added is covered by output volume. Indeed, Thailand’s manufacturing tends to be sold abroad a bit more than large economy like Indonesia.</p>
+</section>
+<section id="ardl-results" class="level4">
+<h4 class="anchored" data-anchor-id="ardl-results">ARDL results</h4>
+<p>We complement previous analysis with more macro, less structured approach. We test whether services import and manufacturing export and output moves together. <a href="#fig-idn" class="quarto-xref">Figure&nbsp;6</a> shows data we use. Manufacturing GDP is omitted for scaling reason, but we can see the vast difference between merchandise trade and services trade during the pandemic in 2020. While we use internet and computer application services more during the pandemic, the huge drop in travels visually dominates Indonesia’s import services. In fact, it is because we can have digital presence that traveling abroad is less needed even as restriction eases.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-idn" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-idn-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="services_document_files/figure-html/fig-idn-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-idn-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Indonesian trade dynamics
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The log version of variables in <a href="#fig-idn" class="quarto-xref">Figure&nbsp;6</a> is used for the regression, along with log of manufacturing GDP. Summary statistics are presented in <a href="#tbl-sum2" class="quarto-xref">Table&nbsp;5</a>.</p>
+<div class="cell">
+<div id="tbl-sum2" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sum2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5: Summary statistics
+</figcaption>
+<div aria-describedby="tbl-sum2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+ 
+
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinytable_xqif92dig8ysf0alnq03</title>
+    <style>
+.table td.tinytable_css_yeqym5ecduvtkysxqa2u, .table th.tinytable_css_yeqym5ecduvtkysxqa2u {    border-bottom: solid 0.1em #d3d8dc; }
+.table td.tinytable_css_f4aws6nlzmzokniu1glu, .table th.tinytable_css_f4aws6nlzmzokniu1glu {    text-align: left; }
+.table td.tinytable_css_r9tizn5hndw1e4vz2j4l, .table th.tinytable_css_r9tizn5hndw1e4vz2j4l {    text-align: right; }
+.table td.tinytable_css_dovo17gxluk15ym11if0, .table th.tinytable_css_dovo17gxluk15ym11if0 {    text-align: right; }
+.table td.tinytable_css_a7skwxk32klhbudtowzh, .table th.tinytable_css_a7skwxk32klhbudtowzh {    text-align: right; }
+.table td.tinytable_css_78hew1k48awicjw5r9g7, .table th.tinytable_css_78hew1k48awicjw5r9g7 {    text-align: right; }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+  
+
+  
+    <div class="container">
+      <table class="table table-borderless" id="tinytable_xqif92dig8ysf0alnq03" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+        <thead>
+        
+              <tr>
+                <th scope="col"> </th>
+                <th scope="col">Mean</th>
+                <th scope="col">Median</th>
+                <th scope="col">SD</th>
+                <th scope="col">Histogram</th>
+              </tr>
+        </thead>
+        
+        <tbody>
+                <tr>
+                  <td>log value added      </td>
+                  <td>7.62</td>
+                  <td>7.67</td>
+                  <td>1.26</td>
+                  <td>▁▁▃▅▇▆▃▁ </td>
+                </tr>
+                <tr>
+                  <td>log output           </td>
+                  <td>9.01</td>
+                  <td>9.06</td>
+                  <td>1.21</td>
+                  <td>▁▂▄▆▇▄▂  </td>
+                </tr>
+                <tr>
+                  <td>log foreign services </td>
+                  <td>5.98</td>
+                  <td>6.00</td>
+                  <td>1.21</td>
+                  <td>▂▄▇▇▄▁   </td>
+                </tr>
+                <tr>
+                  <td>log domestic services</td>
+                  <td>7.23</td>
+                  <td>7.23</td>
+                  <td>1.25</td>
+                  <td>▁▁▃▅▇▆▄▂▁</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      function styleCell_tinytable_zmkic9d9kxee6qo7fssg(i, j, css_id) {
+        var table = document.getElementById("tinytable_xqif92dig8ysf0alnq03");
+        table.rows[i].cells[j].classList.add(css_id);
+      }
+      function insertSpanRow(i, colspan, content) {
+        var table = document.getElementById('tinytable_xqif92dig8ysf0alnq03');
+        var newRow = table.insertRow(i);
+        var newCell = newRow.insertCell(0);
+        newCell.setAttribute("colspan", colspan);
+        // newCell.innerText = content;
+        // this may be unsafe, but innerText does not interpret <br>
+        newCell.innerHTML = content;
+      }
+      function spanCell_tinytable_zmkic9d9kxee6qo7fssg(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_xqif92dig8ysf0alnq03");
+        const targetRow = table.rows[i];
+        const targetCell = targetRow.cells[j];
+        for (let r = 0; r < rowspan; r++) {
+          // Only start deleting cells to the right for the first row (r == 0)
+          if (r === 0) {
+            // Delete cells to the right of the target cell in the first row
+            for (let c = colspan - 1; c > 0; c--) {
+              if (table.rows[i + r].cells[j + c]) {
+                table.rows[i + r].deleteCell(j + c);
+              }
+            }
+          }
+          // For rows below the first, delete starting from the target column
+          if (r > 0) {
+            for (let c = colspan - 1; c >= 0; c--) {
+              if (table.rows[i + r] && table.rows[i + r].cells[j]) {
+                table.rows[i + r].deleteCell(j);
+              }
+            }
+          }
+        }
+        // Set rowspan and colspan of the target cell
+        targetCell.rowSpan = rowspan;
+        targetCell.colSpan = colspan;
+      }
+
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(0, 0, 'tinytable_css_yeqym5ecduvtkysxqa2u') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(0, 1, 'tinytable_css_yeqym5ecduvtkysxqa2u') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(0, 2, 'tinytable_css_yeqym5ecduvtkysxqa2u') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(0, 3, 'tinytable_css_yeqym5ecduvtkysxqa2u') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(0, 4, 'tinytable_css_yeqym5ecduvtkysxqa2u') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(0, 0, 'tinytable_css_f4aws6nlzmzokniu1glu') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(1, 0, 'tinytable_css_f4aws6nlzmzokniu1glu') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(2, 0, 'tinytable_css_f4aws6nlzmzokniu1glu') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(3, 0, 'tinytable_css_f4aws6nlzmzokniu1glu') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(4, 0, 'tinytable_css_f4aws6nlzmzokniu1glu') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(0, 1, 'tinytable_css_r9tizn5hndw1e4vz2j4l') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(1, 1, 'tinytable_css_r9tizn5hndw1e4vz2j4l') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(2, 1, 'tinytable_css_r9tizn5hndw1e4vz2j4l') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(3, 1, 'tinytable_css_r9tizn5hndw1e4vz2j4l') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(4, 1, 'tinytable_css_r9tizn5hndw1e4vz2j4l') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(0, 2, 'tinytable_css_dovo17gxluk15ym11if0') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(1, 2, 'tinytable_css_dovo17gxluk15ym11if0') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(2, 2, 'tinytable_css_dovo17gxluk15ym11if0') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(3, 2, 'tinytable_css_dovo17gxluk15ym11if0') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(4, 2, 'tinytable_css_dovo17gxluk15ym11if0') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(0, 3, 'tinytable_css_a7skwxk32klhbudtowzh') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(1, 3, 'tinytable_css_a7skwxk32klhbudtowzh') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(2, 3, 'tinytable_css_a7skwxk32klhbudtowzh') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(3, 3, 'tinytable_css_a7skwxk32klhbudtowzh') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(4, 3, 'tinytable_css_a7skwxk32klhbudtowzh') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(0, 4, 'tinytable_css_78hew1k48awicjw5r9g7') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(1, 4, 'tinytable_css_78hew1k48awicjw5r9g7') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(2, 4, 'tinytable_css_78hew1k48awicjw5r9g7') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(3, 4, 'tinytable_css_78hew1k48awicjw5r9g7') })
+window.addEventListener('load', function () { styleCell_tinytable_zmkic9d9kxee6qo7fssg(4, 4, 'tinytable_css_78hew1k48awicjw5r9g7') })
+    </script>
+
+  
+
+
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Results from executing <a href="#eq-3" class="quarto-xref">Equation&nbsp;3</a> is shown in <a href="#tbl-2" class="quarto-xref">Table&nbsp;6</a>. There are four column, with the first two use log manufactures exports as the left hand-side variable while the latter two uses log manufacturing GDP. <code>ARDL(1,0,0)</code> is used for the first column and <code>ARDL(1,1,1)</code> is used for the second column of each, as discussed in the previous section.</p>
+<div class="cell">
+<div id="tbl-2" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;6: ARDL results on four specifications
+</figcaption>
+<div aria-describedby="tbl-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+ 
+
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinytable_thbhh22e7i9rjxdm5yf7</title>
+    <style>
+.table td.tinytable_css_0uiiwryami005ks69nes, .table th.tinytable_css_0uiiwryami005ks69nes {    border-bottom: solid 0.1em #d3d8dc; }
+.table td.tinytable_css_d57hj5iem7ox23kj64jj, .table th.tinytable_css_d57hj5iem7ox23kj64jj {    text-align: left; }
+.table td.tinytable_css_icqpjn6wau9nwp3kqs29, .table th.tinytable_css_icqpjn6wau9nwp3kqs29 {    text-align: center; }
+.table td.tinytable_css_6sdaybea1k38zhlla6wc, .table th.tinytable_css_6sdaybea1k38zhlla6wc {    text-align: center; }
+.table td.tinytable_css_9wxrlssmgd8hms2gf1ha, .table th.tinytable_css_9wxrlssmgd8hms2gf1ha {    text-align: center; }
+.table td.tinytable_css_zy54p71g1mvsfzjho8wf, .table th.tinytable_css_zy54p71g1mvsfzjho8wf {    text-align: center; }
+.table td.tinytable_css_63emjw8u9m3ja9cm2kb8, .table th.tinytable_css_63emjw8u9m3ja9cm2kb8 {    border-bottom: solid 0.05em black; }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+  
+
+  
+    <div class="container">
+      <table class="table table-borderless" id="tinytable_thbhh22e7i9rjxdm5yf7" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+        <thead>
+        
+              <tr>
+                <th scope="col"> </th>
+                <th scope="col">Export 1</th>
+                <th scope="col">Export 2</th>
+                <th scope="col">GDP 1</th>
+                <th scope="col">GDP 2</th>
+              </tr>
+        </thead>
+        <tfoot><tr><td colspan="5">+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001</td></tr></tfoot>
+        <tbody>
+                <tr>
+                  <td>(Intercept)</td>
+                  <td>0.704  </td>
+                  <td>1.354+  </td>
+                  <td>0.112   </td>
+                  <td>0.243+  </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.724)</td>
+                  <td>(0.692) </td>
+                  <td>(0.127) </td>
+                  <td>(0.128) </td>
+                </tr>
+                <tr>
+                  <td>L(exM, 1)  </td>
+                  <td>0.676**</td>
+                  <td>1.135***</td>
+                  <td>        </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.222)</td>
+                  <td>(0.177) </td>
+                  <td>        </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>imM        </td>
+                  <td>0.273  </td>
+                  <td>0.307*  </td>
+                  <td>-0.003  </td>
+                  <td>-0.023  </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.184)</td>
+                  <td>(0.127) </td>
+                  <td>(0.020) </td>
+                  <td>(0.022) </td>
+                </tr>
+                <tr>
+                  <td>imSev      </td>
+                  <td>-0.106 </td>
+                  <td>-0.130  </td>
+                  <td>0.098** </td>
+                  <td>0.110***</td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>(0.247)</td>
+                  <td>(0.146) </td>
+                  <td>(0.029) </td>
+                  <td>(0.024) </td>
+                </tr>
+                <tr>
+                  <td>L(imM, 1)  </td>
+                  <td>       </td>
+                  <td>-0.151  </td>
+                  <td>        </td>
+                  <td>0.031   </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>       </td>
+                  <td>(0.166) </td>
+                  <td>        </td>
+                  <td>(0.023) </td>
+                </tr>
+                <tr>
+                  <td>L(imSev, 1)</td>
+                  <td>       </td>
+                  <td>-0.485* </td>
+                  <td>        </td>
+                  <td>-0.083* </td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>       </td>
+                  <td>(0.182) </td>
+                  <td>        </td>
+                  <td>(0.030) </td>
+                </tr>
+                <tr>
+                  <td>L(pdb, 1)  </td>
+                  <td>       </td>
+                  <td>        </td>
+                  <td>0.917***</td>
+                  <td>0.938***</td>
+                </tr>
+                <tr>
+                  <td>           </td>
+                  <td>       </td>
+                  <td>        </td>
+                  <td>(0.024) </td>
+                  <td>(0.022) </td>
+                </tr>
+                <tr>
+                  <td>Num.Obs.   </td>
+                  <td>18     </td>
+                  <td>18      </td>
+                  <td>18      </td>
+                  <td>18      </td>
+                </tr>
+                <tr>
+                  <td>R2         </td>
+                  <td>0.881  </td>
+                  <td>0.967   </td>
+                  <td>0.997   </td>
+                  <td>0.998   </td>
+                </tr>
+                <tr>
+                  <td>Log.Lik.   </td>
+                  <td>32.291 </td>
+                  <td>43.772  </td>
+                  <td>70.818  </td>
+                  <td>76.085  </td>
+                </tr>
+                <tr>
+                  <td>RMSE       </td>
+                  <td>0.04   </td>
+                  <td>0.02    </td>
+                  <td>0.00    </td>
+                  <td>0.00    </td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      function styleCell_tinytable_wcstm984ndrt5vhtj4ha(i, j, css_id) {
+        var table = document.getElementById("tinytable_thbhh22e7i9rjxdm5yf7");
+        table.rows[i].cells[j].classList.add(css_id);
+      }
+      function insertSpanRow(i, colspan, content) {
+        var table = document.getElementById('tinytable_thbhh22e7i9rjxdm5yf7');
+        var newRow = table.insertRow(i);
+        var newCell = newRow.insertCell(0);
+        newCell.setAttribute("colspan", colspan);
+        // newCell.innerText = content;
+        // this may be unsafe, but innerText does not interpret <br>
+        newCell.innerHTML = content;
+      }
+      function spanCell_tinytable_wcstm984ndrt5vhtj4ha(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_thbhh22e7i9rjxdm5yf7");
+        const targetRow = table.rows[i];
+        const targetCell = targetRow.cells[j];
+        for (let r = 0; r < rowspan; r++) {
+          // Only start deleting cells to the right for the first row (r == 0)
+          if (r === 0) {
+            // Delete cells to the right of the target cell in the first row
+            for (let c = colspan - 1; c > 0; c--) {
+              if (table.rows[i + r].cells[j + c]) {
+                table.rows[i + r].deleteCell(j + c);
+              }
+            }
+          }
+          // For rows below the first, delete starting from the target column
+          if (r > 0) {
+            for (let c = colspan - 1; c >= 0; c--) {
+              if (table.rows[i + r] && table.rows[i + r].cells[j]) {
+                table.rows[i + r].deleteCell(j);
+              }
+            }
+          }
+        }
+        // Set rowspan and colspan of the target cell
+        targetCell.rowSpan = rowspan;
+        targetCell.colSpan = colspan;
+      }
+
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(0, 0, 'tinytable_css_0uiiwryami005ks69nes') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(0, 1, 'tinytable_css_0uiiwryami005ks69nes') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(0, 2, 'tinytable_css_0uiiwryami005ks69nes') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(0, 3, 'tinytable_css_0uiiwryami005ks69nes') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(0, 4, 'tinytable_css_0uiiwryami005ks69nes') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(0, 0, 'tinytable_css_d57hj5iem7ox23kj64jj') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(1, 0, 'tinytable_css_d57hj5iem7ox23kj64jj') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(2, 0, 'tinytable_css_d57hj5iem7ox23kj64jj') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(3, 0, 'tinytable_css_d57hj5iem7ox23kj64jj') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(4, 0, 'tinytable_css_d57hj5iem7ox23kj64jj') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(5, 0, 'tinytable_css_d57hj5iem7ox23kj64jj') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(6, 0, 'tinytable_css_d57hj5iem7ox23kj64jj') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(7, 0, 'tinytable_css_d57hj5iem7ox23kj64jj') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(8, 0, 'tinytable_css_d57hj5iem7ox23kj64jj') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(9, 0, 'tinytable_css_d57hj5iem7ox23kj64jj') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(10, 0, 'tinytable_css_d57hj5iem7ox23kj64jj') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(11, 0, 'tinytable_css_d57hj5iem7ox23kj64jj') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(12, 0, 'tinytable_css_d57hj5iem7ox23kj64jj') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(13, 0, 'tinytable_css_d57hj5iem7ox23kj64jj') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(14, 0, 'tinytable_css_d57hj5iem7ox23kj64jj') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(15, 0, 'tinytable_css_d57hj5iem7ox23kj64jj') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(16, 0, 'tinytable_css_d57hj5iem7ox23kj64jj') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(17, 0, 'tinytable_css_d57hj5iem7ox23kj64jj') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(18, 0, 'tinytable_css_d57hj5iem7ox23kj64jj') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(0, 1, 'tinytable_css_icqpjn6wau9nwp3kqs29') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(1, 1, 'tinytable_css_icqpjn6wau9nwp3kqs29') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(2, 1, 'tinytable_css_icqpjn6wau9nwp3kqs29') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(3, 1, 'tinytable_css_icqpjn6wau9nwp3kqs29') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(4, 1, 'tinytable_css_icqpjn6wau9nwp3kqs29') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(5, 1, 'tinytable_css_icqpjn6wau9nwp3kqs29') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(6, 1, 'tinytable_css_icqpjn6wau9nwp3kqs29') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(7, 1, 'tinytable_css_icqpjn6wau9nwp3kqs29') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(8, 1, 'tinytable_css_icqpjn6wau9nwp3kqs29') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(9, 1, 'tinytable_css_icqpjn6wau9nwp3kqs29') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(10, 1, 'tinytable_css_icqpjn6wau9nwp3kqs29') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(11, 1, 'tinytable_css_icqpjn6wau9nwp3kqs29') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(12, 1, 'tinytable_css_icqpjn6wau9nwp3kqs29') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(13, 1, 'tinytable_css_icqpjn6wau9nwp3kqs29') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(14, 1, 'tinytable_css_icqpjn6wau9nwp3kqs29') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(15, 1, 'tinytable_css_icqpjn6wau9nwp3kqs29') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(16, 1, 'tinytable_css_icqpjn6wau9nwp3kqs29') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(17, 1, 'tinytable_css_icqpjn6wau9nwp3kqs29') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(18, 1, 'tinytable_css_icqpjn6wau9nwp3kqs29') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(0, 2, 'tinytable_css_6sdaybea1k38zhlla6wc') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(1, 2, 'tinytable_css_6sdaybea1k38zhlla6wc') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(2, 2, 'tinytable_css_6sdaybea1k38zhlla6wc') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(3, 2, 'tinytable_css_6sdaybea1k38zhlla6wc') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(4, 2, 'tinytable_css_6sdaybea1k38zhlla6wc') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(5, 2, 'tinytable_css_6sdaybea1k38zhlla6wc') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(6, 2, 'tinytable_css_6sdaybea1k38zhlla6wc') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(7, 2, 'tinytable_css_6sdaybea1k38zhlla6wc') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(8, 2, 'tinytable_css_6sdaybea1k38zhlla6wc') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(9, 2, 'tinytable_css_6sdaybea1k38zhlla6wc') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(10, 2, 'tinytable_css_6sdaybea1k38zhlla6wc') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(11, 2, 'tinytable_css_6sdaybea1k38zhlla6wc') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(12, 2, 'tinytable_css_6sdaybea1k38zhlla6wc') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(13, 2, 'tinytable_css_6sdaybea1k38zhlla6wc') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(14, 2, 'tinytable_css_6sdaybea1k38zhlla6wc') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(15, 2, 'tinytable_css_6sdaybea1k38zhlla6wc') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(16, 2, 'tinytable_css_6sdaybea1k38zhlla6wc') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(17, 2, 'tinytable_css_6sdaybea1k38zhlla6wc') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(18, 2, 'tinytable_css_6sdaybea1k38zhlla6wc') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(0, 3, 'tinytable_css_9wxrlssmgd8hms2gf1ha') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(1, 3, 'tinytable_css_9wxrlssmgd8hms2gf1ha') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(2, 3, 'tinytable_css_9wxrlssmgd8hms2gf1ha') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(3, 3, 'tinytable_css_9wxrlssmgd8hms2gf1ha') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(4, 3, 'tinytable_css_9wxrlssmgd8hms2gf1ha') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(5, 3, 'tinytable_css_9wxrlssmgd8hms2gf1ha') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(6, 3, 'tinytable_css_9wxrlssmgd8hms2gf1ha') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(7, 3, 'tinytable_css_9wxrlssmgd8hms2gf1ha') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(8, 3, 'tinytable_css_9wxrlssmgd8hms2gf1ha') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(9, 3, 'tinytable_css_9wxrlssmgd8hms2gf1ha') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(10, 3, 'tinytable_css_9wxrlssmgd8hms2gf1ha') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(11, 3, 'tinytable_css_9wxrlssmgd8hms2gf1ha') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(12, 3, 'tinytable_css_9wxrlssmgd8hms2gf1ha') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(13, 3, 'tinytable_css_9wxrlssmgd8hms2gf1ha') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(14, 3, 'tinytable_css_9wxrlssmgd8hms2gf1ha') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(15, 3, 'tinytable_css_9wxrlssmgd8hms2gf1ha') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(16, 3, 'tinytable_css_9wxrlssmgd8hms2gf1ha') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(17, 3, 'tinytable_css_9wxrlssmgd8hms2gf1ha') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(18, 3, 'tinytable_css_9wxrlssmgd8hms2gf1ha') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(0, 4, 'tinytable_css_zy54p71g1mvsfzjho8wf') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(1, 4, 'tinytable_css_zy54p71g1mvsfzjho8wf') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(2, 4, 'tinytable_css_zy54p71g1mvsfzjho8wf') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(3, 4, 'tinytable_css_zy54p71g1mvsfzjho8wf') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(4, 4, 'tinytable_css_zy54p71g1mvsfzjho8wf') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(5, 4, 'tinytable_css_zy54p71g1mvsfzjho8wf') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(6, 4, 'tinytable_css_zy54p71g1mvsfzjho8wf') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(7, 4, 'tinytable_css_zy54p71g1mvsfzjho8wf') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(8, 4, 'tinytable_css_zy54p71g1mvsfzjho8wf') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(9, 4, 'tinytable_css_zy54p71g1mvsfzjho8wf') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(10, 4, 'tinytable_css_zy54p71g1mvsfzjho8wf') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(11, 4, 'tinytable_css_zy54p71g1mvsfzjho8wf') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(12, 4, 'tinytable_css_zy54p71g1mvsfzjho8wf') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(13, 4, 'tinytable_css_zy54p71g1mvsfzjho8wf') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(14, 4, 'tinytable_css_zy54p71g1mvsfzjho8wf') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(15, 4, 'tinytable_css_zy54p71g1mvsfzjho8wf') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(16, 4, 'tinytable_css_zy54p71g1mvsfzjho8wf') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(17, 4, 'tinytable_css_zy54p71g1mvsfzjho8wf') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(18, 4, 'tinytable_css_zy54p71g1mvsfzjho8wf') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(14, 0, 'tinytable_css_63emjw8u9m3ja9cm2kb8') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(14, 1, 'tinytable_css_63emjw8u9m3ja9cm2kb8') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(14, 2, 'tinytable_css_63emjw8u9m3ja9cm2kb8') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(14, 3, 'tinytable_css_63emjw8u9m3ja9cm2kb8') })
+window.addEventListener('load', function () { styleCell_tinytable_wcstm984ndrt5vhtj4ha(14, 4, 'tinytable_css_63emjw8u9m3ja9cm2kb8') })
+    </script>
+
+  
+
+
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="conclusions" class="level2">
+<h2 class="anchored" data-anchor-id="conclusions">Conclusions</h2>
 </section>
 <section id="references" class="level2 unnumbered">
 
@@ -232,23 +1853,47 @@ Figure&nbsp;1: wkwkw
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-aco2" class="csl-entry" role="listitem">
+Athukorala, Prema-chandra, and Arianto A. Patunru. 2023. <span>“Domestic Value Added, Exports and Employment: An Input–Output Analysis of Indonesian Manufacturing.”</span> Journal Article. <em>Bulletin of Indonesian Economic Studies</em> 59 (3): 365–90. <a href="https://doi.org/10.1080/00074918.2022.2134554">https://doi.org/10.1080/00074918.2022.2134554</a>.
+</div>
 <div id="ref-baldwin1" class="csl-entry" role="listitem">
 Baldwin, Richard. 2011. <span>“21st Cebtury Regionalism: Filling the Gap Between 21st Century Trade and 20th Century Trade Rules.”</span> Journal Article. <em>CEPR Policy Insight</em> 56.
 </div>
-<div id="ref-baldwin2" class="csl-entry" role="listitem">
-Baldwin, Richard, Rebecca Freeman, and Angelos Theodorakopoulos. 2024. <span>“Deconstructing Deglobalization: The Future of Trade Is in Intermediate Services.”</span> Journal Article. <em>Asian Economic Policy Review</em> 19 (1): 18–37. https://doi.org/<a href="https://doi.org/10.1111/aepr.12440">https://doi.org/10.1111/aepr.12440</a>.
-</div>
-<div id="ref-baumol" class="csl-entry" role="listitem">
-Baumol, William J. 2000. <span>“Leontief’s Great Leap Forward: Beyond Quesnay, Marx and von Bortkiewicz.”</span> Journal Article. <em>Economic Systems Research</em> 12 (2): 141–52. <a href="https://doi.org/10.1080/09535310050005662">https://doi.org/10.1080/09535310050005662</a>.
+<div id="ref-seki" class="csl-entry" role="listitem">
+Bank Indonesia. n.d. <span>“Statistik Ekonomi Dan Keuangan Indonesia.”</span> Dataset. Bank Indonesia,. <a href="https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/Default.aspx#headingFour">https://www.bi.go.id/id/statistik/ekonomi-keuangan/seki/Default.aspx#headingFour</a>.
 </div>
 <div id="ref-kimura1" class="csl-entry" role="listitem">
 Kimura, Fukunari. 2018. <span>“Unbundling Regimes and Development Strategies in ASEAN: Old Issues and New Challenges.”</span> Journal Article. <em>Southeast Asian Economies</em> 35 (1): 13–21. <a href="https://doi.org/10.1355/ae35-1c">https://doi.org/10.1355/ae35-1c</a>.
 </div>
-<div id="ref-kimura2" class="csl-entry" role="listitem">
-Kimura, Fukunari, and Hyun-Hoon Lee. 2006. <span>“The Gravity Equation in International Trade in Services.”</span> Journal Article. <em>Review of World Economics</em> 142 (1): 92–121. https://doi.org/<a href="https://doi.org/10.1007/s10290-006-0058-8">https://doi.org/10.1007/s10290-006-0058-8</a>.
+<div id="ref-ebops" class="csl-entry" role="listitem">
+Liberatore, Antonella, Rodolfo Ostolaza, Malik Bani Hani, Silvia Amiel, Maria Fernanda L’Hopital, Markie Muryawan, Vysaul Nyirongo, and Habibur Khan. 2021. <span>“C.6 Trade in Services Classifications.”</span> Report. International Monetary Fund. <a href="https://www.imf.org/external/pubs/ft/bop/2021/pdf/VM2/21-05.pdf">https://www.imf.org/external/pubs/ft/bop/2021/pdf/VM2/21-05.pdf</a>.
+</div>
+<div id="ref-batis2" class="csl-entry" role="listitem">
+Liberatore, Antonella, and Steen Wettstein. 2021. <span>“The OECD-WTO Balanced Trade in Services Database (BaTIS).”</span> Report. OECD/WTO. <a href="https://www.oecd.org/content/dam/oecd/en/data/methods/OECD-WTO-Balanced-Trade-in-Services-database-methodology-BPM6.pdf">https://www.oecd.org/content/dam/oecd/en/data/methods/OECD-WTO-Balanced-Trade-in-Services-database-methodology-BPM6.pdf</a>.
+</div>
+<div id="ref-lindblad" class="csl-entry" role="listitem">
+Lindblad, J. Thomas. 2015. <span>“Foreign Direct Investment in Indonesia: Fifty Years of Discourse.”</span> Journal Article. <em>Bulletin of Indonesian Economic Studies</em> 51 (2): 217–37. <a href="https://doi.org/10.1080/00074918.2015.1061913">https://doi.org/10.1080/00074918.2015.1061913</a>.
+</div>
+<div id="ref-magiera" class="csl-entry" role="listitem">
+Magiera, Stephen. 2011. <span>“Indonesia’s Investment Negative List: An Evaluation for Selected Services Sectors.”</span> Journal Article. <em>Bulletin of Indonesian Economic Studies</em> 47 (2): 195–219.
+</div>
+<div id="ref-ardl" class="csl-entry" role="listitem">
+Natsiopoulos, Kleanthis, and TNickolaos G Tzeremes. 2022. <span>“ARDL Bounds Test for Countegration: Replicating the Pesaran Et Al. (2001) Results for the UK Earnings Equation Using r.”</span> Journal Article. <em>Journal of Applied Econometrics</em> 37 (5): 22. <a href="https://doi.org/doi.org/10.1002/jae.2919">https://doi.org/doi.org/10.1002/jae.2919</a>.
+</div>
+<div id="ref-icio" class="csl-entry" role="listitem">
+OECD. 2023. <span>“OECD Inter-Country Input-Output Database.”</span> Dataset. <a href="http://oe.cd/icio">http://oe.cd/icio</a>.
+</div>
+<div id="ref-aco" class="csl-entry" role="listitem">
+Patunru, Arianto A. 2023. <span>“Trade Policy in Indonesia: Between Ambivalence, Pragmatism and Nationalism.”</span> Journal Article. <em>Bulletin of Indonesian Economic Studies</em> 59 (3): 311–40. <a href="https://doi.org/10.1080/00074918.2023.2282821">https://doi.org/10.1080/00074918.2023.2282821</a>.
+</div>
+<div id="ref-pesaran" class="csl-entry" role="listitem">
+Pesaran, M. Hashem, and Ron Smith. 1995. <span>“Estimating Long-Run Relationships from Dynamic Heterogeneous Panels.”</span> Journal Article. <em>Journal of Econometrics</em> 68 (1): 79–113. https://doi.org/<a href="https://doi.org/10.1016/0304-4076(94)01644-F">https://doi.org/10.1016/0304-4076(94)01644-F</a>.
 </div>
 <div id="ref-krisna" class="csl-entry" role="listitem">
-Syahputri, Evanti Andiani, and Krisna Gupta. 2024. <span>“Analysis of the Effect of Indonesia-Japan Economic Partnership Agreement (IJEPA) on the Trade in Service Sector in Indonesia.”</span> <a href="https://www.researchgate.net/publication/378439291_Analysis_of_the_Effect_of_Indonesia-Japan_Economic_Partnership_Agreement_IJEPA_on_the_Trade_in_Service_Sector_in_Indonesia">https://www.researchgate.net/publication/378439291_Analysis_of_the_Effect_of_Indonesia-Japan_Economic_Partnership_Agreement_IJEPA_on_the_Trade_in_Service_Sector_in_Indonesia</a>.
+Syahputri, Evanti Andriani, and Krisna Gupta. 2024. <span>“Analysis of the Effect of Indonesia-Japan Economic Partnership Agreement (IJEPA) on the Trade in Service Sector in Indonesia.”</span> Journal Article. <em>Jurnal Manajemen Industri Dan Logistik</em> 8 (1). <a href="https://doi.org/10.30988/jmil.v8i1.1356">https://doi.org/10.30988/jmil.v8i1.1356</a>.
+</div>
+<div id="ref-batis1" class="csl-entry" role="listitem">
+WTO/OECD. 2022. <span>“OECD-WTO: Balanced International Trade in Services - EBOPS 2002 (Edition 2021).”</span> Dataset. OECD Statistics on International Trade in Services (database). <a href="https://doi.org/10.1787/54a469fc-en">https://doi.org/10.1787/54a469fc-en</a>.
 </div>
 </div></section></div></main>
 <!-- /main column -->

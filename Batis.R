@@ -8,6 +8,52 @@ library('hrbrthemes')
 
 serv<-read_excel('data/batis.xlsx')
 
+allsx <- serv %>%
+  filter(counterpart =="World",code !="SPX1", code !="SOX1", code !="SOX", code !="SPX4", flow == "X", time =="2021")
+
+allsm <- serv %>%
+  filter(counterpart =="World",code !="SPX1", code !="SOX1", code !="SOX", code !="SPX4", flow == "M", time =="2021")
+
+allsx|>  
+  ggplot(aes(x=code, y=value)) + 
+  geom_bar(position = "stack",stat = "identity")+
+  labs(x="",y="Million USD")+
+  scale_y_continuous(limits = c(0,8500),expand = c(0,0))+
+  theme_classic()
+ggsave("plot/allsx.png", width=8,height=5,units= "in")
+
+allsm|>  
+  ggplot(aes(x=code, y=value)) + 
+  geom_bar(position = "stack",stat = "identity")+
+  labs(x="",y="Million USD")+
+  scale_y_continuous(limits = c(0,8500),expand = c(0,0))+
+  theme_classic()
+ggsave("plot/allsm.png", width=8,height=5,units= "in")
+
+allcx <- serv %>%
+  filter(counterpart !="World",code =="SOX", flow == "X", time =="2021") |>
+  top_n(6)
+
+allcm <- serv %>%
+  filter(counterpart !="World",code =="SOX", flow == "M", time =="2021") |>
+  top_n(6)
+
+allcx|>  
+  ggplot(aes(x=counterpart, y=value)) + 
+  geom_bar(position = "stack",stat = "identity")+
+  labs(x="",y="Million USD")+
+  scale_y_continuous(expand = c(0,0),limits = c(0,6000))+
+  theme_classic()
+ggsave("plot/allcx.png", width=8,height=5,units= "in")
+
+allcm|>  
+  ggplot(aes(x=counterpart, y=value)) + 
+  geom_bar(position = "stack",stat = "identity")+
+  labs(x="",y="Million USD")+
+  scale_y_continuous(expand = c(0,0),limits = c(0,6000))+
+  theme_classic()
+ggsave("plot/allcm.png", width=8,height=5,units= "in")
+
 allsectex <- serv %>%
   filter(counterpart !="World",code !="SPX1", code !="SOX1", code !="SOX", code !="SPX4", flow == "X", time =="2021") %>%
   group_by(code) %>%
@@ -18,7 +64,7 @@ allsectex %>%
   geom_bar(position = "stack",stat = "identity")+
   labs(title="Indonesian Service Export 2021")+
   theme_classic()+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("services code")
 ggsave("plot/Indonesian Service export.png", width=8,height=5,units= "in")
     
@@ -32,7 +78,7 @@ allsectim %>%
   geom_bar(position = "stack",stat = "identity")+
   labs(title="Indonesian Service Import 2021")+
   theme_classic()+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("services code")
 ggsave("plot/Indonesian Service import.png", width=8,height=5,units= "in")
 
@@ -64,9 +110,8 @@ SCEX %>%
   geom_area(alpha=0.6 , size=.5, colour="white")+
   scale_fill_viridis(discrete = T) +
   theme_classic()+
-  labs(title="Transport Export")+
-  ylab("in Million USD")+
-  xlab("Year")
+  ylab("Million USD")+
+  xlab("")
 write_xlsx(SCEX, "sheet/SCEX transport.xlsx")
 ggsave("plot/SCEX.png")
 
@@ -80,9 +125,8 @@ SCIM %>%
   geom_area(alpha=0.6 , size=.5, colour="white")+
   scale_fill_viridis(discrete = T) +
   theme_classic()+
-  labs(title="Transport Import")+
-  ylab("in Million USD")+
-  xlab("Year")
+  ylab("Million USD")+
+  xlab("")
 write_xlsx(SCIM, "sheet/SCIM transport.xlsx")
 ggsave("plot/SCIM.png")
 
@@ -97,7 +141,7 @@ SAEX %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Manufacturing Services Export")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SAEX, "sheet/SAEX Manufacturing Services.xlsx")
 ggsave("plot/SAEX.png")
@@ -113,7 +157,7 @@ SAIM %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Manufacturing Services Import")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SAIM, "sheet/SAIM transport.xlsx")
 ggsave("plot/SAIM.png")
@@ -129,7 +173,7 @@ SBEX %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Maintenance and repair Export")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SBEX, "sheet/SBEX Maintenance and repair.xlsx")
 ggsave("plot/SBEX.png")
@@ -145,7 +189,7 @@ SBIM %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Maintenance and repair Import")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SBIM, "sheet/SBIM Maintenance and repair.xlsx")
 ggsave("plot/SBIM.png")
@@ -160,9 +204,8 @@ SDEX %>%
   geom_area(alpha=0.6 , size=.5, colour="white")+
   scale_fill_viridis(discrete = T) +
   theme_classic()+
-  labs(title="Travel Export")+
-  ylab("in Million USD")+
-  xlab("Year")
+  ylab("Million USD")+
+  xlab("")
 write_xlsx(SDEX, "sheet/SDEX Travel.xlsx")
 ggsave("plot/SDEX.png")
 
@@ -176,9 +219,8 @@ SDIM %>%
   geom_area(alpha=0.6 , size=.5, colour="white")+
   scale_fill_viridis(discrete = T) +
   theme_classic()+
-  labs(title="Travel Import")+
-  ylab("in Million USD")+
-  xlab("Year")
+  ylab("Million USD")+
+  xlab("")
 write_xlsx(SDIM, "sheet/SDIM Travel.xlsx")
 ggsave("plot/SDIM.png")
 
@@ -193,7 +235,7 @@ SEEX %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Construction Export")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SEEX, "sheet/SEEX Construction.xlsx")
 ggsave("plot/SEEX.png")
@@ -209,7 +251,7 @@ SEIM %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Construction Import")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SEIM, "sheet/SEIM Construction.xlsx")
 ggsave("plot/SEIM.png")
@@ -225,7 +267,7 @@ SFEX %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Insurance and pension Export")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SFEX, "sheet/SFEX Insurance and pension.xlsx")
 ggsave("plot/SFEX.png")
@@ -241,7 +283,7 @@ SFIM %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Insurance and pension Import")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SFIM, "sheet/SFIM Insurance and pension.xlsx")
 ggsave("plot/SFIM.png")
@@ -257,7 +299,7 @@ SGEX %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Financial Services")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SGEX, "sheet/SGEX Financial Services.xlsx")
 ggsave("plot/SGEX.png")
@@ -273,7 +315,7 @@ SGIM %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Financial Services Import")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SGIM, "sheet/SGIM Financial Services.xlsx")
 ggsave("plot/SGIM.png")
@@ -289,7 +331,7 @@ SHEX %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Intelectual Property Export")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SHEX, "sheet/SHEX transport.xlsx")
 ggsave("plot/SHEX.png")
@@ -305,7 +347,7 @@ SHIM %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Intelectual Property Import")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SHIM, "sheet/SHIM Intelectual Property.xlsx")
 ggsave("plot/SHIM.png")
@@ -320,9 +362,8 @@ SIEX %>%
   geom_area(alpha=0.6 , size=.5, colour="white")+
   scale_fill_viridis(discrete = T) +
   theme_classic()+
-  labs(title="Telecomunications, computer, and information Export")+
-  ylab("in Million USD")+
-  xlab("Year")
+  ylab("Million USD")+
+  xlab("")
 write_xlsx(SIEX, "sheet/SIEX Telecomunications, computer, and information.xlsx")
 ggsave("plot/SIEX.png")
 
@@ -336,9 +377,8 @@ SIIM %>%
   geom_area(alpha=0.6 , size=.5, colour="white")+
   scale_fill_viridis(discrete = T) +
   theme_classic()+
-  labs(title="Telecomunications, computer, and information Import")+
-  ylab("in Million USD")+
-  xlab("Year")
+  ylab("Million USD")+
+  xlab("")
 write_xlsx(SIIM, "sheet/SIIM Telecomunications, computer, and information.xlsx")
 ggsave("plot/SIIM.png")
 
@@ -352,9 +392,8 @@ SJEX %>%
   geom_area(alpha=0.6 , size=.5, colour="white")+
   scale_fill_viridis(discrete = T) +
   theme_classic()+
-  labs(title="Other Business")+
-  ylab("in Million USD")+
-  xlab("Year")
+  ylab("Million USD")+
+  xlab("")
 write_xlsx(SJEX, "sheet/SJEX Other Business.xlsx")
 ggsave("plot/SJEX.png")
 
@@ -368,9 +407,8 @@ SJIM %>%
   geom_area(alpha=0.6 , size=.5, colour="white")+
   scale_fill_viridis(discrete = T) +
   theme_classic()+
-  labs(title="Other Business")+
-  ylab("in Million USD")+
-  xlab("Year")
+  ylab("Million USD")+
+  xlab("")
 write_xlsx(SJIM, "sheet/SJIM Other Business.xlsx")
 ggsave("plot/SJIM.png")
 
@@ -385,7 +423,7 @@ SKEX %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Personal cultural recreational Export")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SKEX, "sheet/SKEX Personal cultural recreational.xlsx")
 ggsave("plot/SKEX.png")
@@ -401,7 +439,7 @@ SKIM %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Personal cultural recreational Import")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SKIM, "sheet/SKIM Personal cultural recreational.xlsx")
 ggsave("plot/SKIM.png")
@@ -417,7 +455,7 @@ SLEX %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Government goods and services Export")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SLEX, "sheet/SLEX Government goods and services.xlsx")
 ggsave("plot/SLEX.png")
@@ -433,7 +471,7 @@ SLIM %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Government goods and services Import")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SLIM, "sheet/SLIM Government goods and services.xlsx")
 ggsave("plot/SLIM.png")
@@ -449,7 +487,7 @@ SOXEX %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Memo Grouping Export")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SOXEX, "sheet/SOXEX Memo Grouping.xlsx")
 ggsave("plot/SOXEX.png")
@@ -465,7 +503,7 @@ SOXIM %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Memo Grouping Import")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SOXIM, "sheet/SOXIM Memo Grouping.xlsx")
 ggsave("plot/SOXIM.png")
@@ -481,7 +519,7 @@ SOX1EX %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Other Commercial Services Export")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SOX1EX, "sheet/SOX1EX Other Commercial Services.xlsx")
 ggsave("plot/SOX1EX.png")
@@ -497,7 +535,7 @@ SOX1IM %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Other Commercial Services Import")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SOX1IM, "sheet/SOX1IM Other Commercial Services.xlsx")
 ggsave("plot/SOX1IM.png")
@@ -513,7 +551,7 @@ SPX1EX %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Other Services Export")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SPX1EX, "sheet/SPX1EX Other Services.xlsx")
 ggsave("plot/SPX1EX.png")
@@ -529,7 +567,7 @@ SPX1IM %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Other Services Import")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SPX1IM, "sheet/SPX1IM Other Services.xlsx")
 ggsave("plot/SPX1IM.png")
@@ -545,7 +583,7 @@ SPX1EX %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Goods related services Export")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SPX4EX, "sheet/SPX4EX Goods related services.xlsx")
 ggsave("plot/SPX4EX.png")
@@ -561,7 +599,7 @@ SPX4IM %>%
   scale_fill_viridis(discrete = T) +
   theme_classic()+
   labs(title="Goods related services Import")+
-  ylab("in Million USD")+
+  ylab("Million USD")+
   xlab("Year")
 write_xlsx(SPX4IM, "sheet/SPX4IM Goods related services.xlsx")
 ggsave("plot/SPX4IM.png")
