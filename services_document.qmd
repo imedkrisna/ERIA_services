@@ -11,7 +11,7 @@ author:
 date: last-modified
 date-format: long
 bibliography: ref.bib
-abstract: "Awokowkoawkoawk."
+abstract: ""
 abstract-title: "abstract"
 execute: 
   echo: false
@@ -83,9 +83,25 @@ We arrange this chapter in the following. Section 2 discusses the development in
 
 ## Review on services trade
 
-kimura
+The concept of trade has been evolving from the the way goods (and later services) value chain can be broken. @baldwin coined the term "unbundling" to express the variety of trade can be done by how much part of the supply chain of production can be traded across border. T
 
-gupta
+@kimura1 use this concept Kimura took the concept of “unbundling” which was proposed by Baldwin (2016). Baldwin (2016) posits that when transportation is costly, few products could be profitably shipped to any other region except the shortest distance and thus made production were forcibly bundled with consumption. After technological breakthrough in transportation such as steamships and railways, products can finally be sold across national borders, and this is the first unbundling (Kimura 2018).
+
+The second unbundling no longer involve goods, but ideas, facilitating joint production among countries in terms of production processes or tasks leading to massive international trade in parts and components. Lastly, the third unbundling has emerged, and the object of the third unbundling is “tasks”. These “tasks” can be unbundled and handled by persons in different locations.
+
+The first unbundling has unequivocally accelerated international trade throughout the world. People nowadays are consuming goods which in their country is costly or have no resource to produce. While not all the ASEAN Countries have participated in the second unbundling, they can however can develop strategies to also embrace the third unbundling.
+
+Now with trade cost is even lower, unbundling the service sector become feasible. Some firms allowing some firms to leap ahead [@kimura1]. Trade in services can be either source from abroad, or exported to foreign firms. Service sectors will accelerate both the second unbundling or third unbundling, allowing firms that utilize it to leap ahead of the competition.
+
+Service sector can provide an important advantage for many firms, especially manufacturing ones. It can brigde information gap on the market, business customs and regulations in other countries, especially for new firms entering export market [@lodefalk]. As has been shown by [@melitz], a non-trivial trade cost limits firm who can enter the export market. A reduction in trade cost in services would help lower the productivity threshold for firms, enabling more to enter the export market. This entrance would then induce learning-by-doing for these low productivity firms.
+
+@lodefalk study Sweeden's manufacturing firm in 2001-2007. They conclude that firms with higher services embeded in its final products increases its intensity of export. In the Indonesian context, @hing find that 10 per cent increase in service intensity of a firm increase its productivity by 7 to 8 per cent. The two papers use firms level data with information on what services each firm purchase. Information on whether the service is imported, however, is lacking.
+
+Lower services cost can reduce firms' cost of service outsourcing. In the Indonesian context, @krisna uses gravity in service trade approach [@kimura1] to see whether IJEPA helps with improving Indonesia's trade in services. Utilizing services data from BaTIS, @krisna find that IJEPA, one of the first comprehensive economic agreement in Indonesia, does not increase service trade between the two countries.
+
+Indonesia does not seem to use services a lot. Services account for only around 2% of Indonesian manufacturing firms' output [@hing], Indonesia's trade in services is also falls short. Services trade requires easing in four different modes. Therefore, regulations typically rarely discussed in a trade agreement such as investment impediment, movement of natural persons and technical barrier all makes service trade much harder [@krisna;@magiera]. 
+
+With _hilirisasi_ or downstreaming policy, tendency to reduce import is more apparent. This policy’s objective was to increase the added value of the manufacturing sector by reducing foreign content in the domestic value chain. Local Content Requirements (LCR) put emphasize on domestic value added which means making production in the same area/country, running counter to joining internationally oriented global value chains/GVCs [@aco2]. GVCs involve dividing up production process across borders, equivalent of the second unbundling. Thus, hilirisasi and LCR policies ended up bundling up production processes that could be divvied up among countries. This meant undoing the second unbundling, let alone encouraging the third unbundling.
 
 ## Data and Method
 
@@ -401,8 +417,22 @@ models <- list(
 modelsummary(models,stars = T,,gof_omit = 'FE|IC|Std.|Adj.')
 ```
 
+@tbl-2 shows that Indonesia's current import service does not seem to contribute much to the country's manufacturing export. The coefficient is found to be negative but not different from zero. This does not seem to be surprising since it corroborates findings in @tbl-regv and @tbl-regv. Additionally, Indonesian firms does not seem to have much in house services to begin with, and those who do are only a small fraction of very productive firms [@hing]. 
 
+For manufacturing output, however, we find that import services correlates significantly with manufacturing output. A 1% increase in service import correlates with a 0.1% increase in manufacturing output. This correlation may stem from imported goods import. That is, Indonesian manufacturers requires various imported intermediate inputs. Therefore, increasing production requires importing various goods, increasing the use of transport service, which is dominated by foreign firms. This explains why imported service does not correlate with manufacturing export, and why manufactures import correlates positively with exports.
 
-## Conclusions
+This findings seem to suggests that Indonesian manufacturing use services mostly for international trade purposes. Since transport dominates Indonesia's trade in services, it seems to suggest that Indonesian manufacturing does not use services outside of transport. Something like consulting for marketing purposes or research and development sourced from abroad is not yet widely used by Indonesian manufacturing. Considering the government is trying to boost manufacturing output using Indonesia 4.0 program, this type of services may have a room to grow.
+
+This study is limited by the use of a rather aggregated data. While this study can show a more helicopter view of Indonesia's trade in services dynamics, it failed to capture the benefit of services trade in a more micro setting. We do not have the same level access of manufacturing firms' data as @hing, but even then it cannot differentiate domestically sourced services with foreign services. It will require a set of data Indonesians not yet produce, which may presents with an opportunity for future data collection project and studies.
+
+But research in the growth of services sector in general is even more important. The third unbundling suggests Indonesia and the ASEAN region in general can be benefited from the growth of service sectors and embedding services to overall network of productin, even within service sectors [@kimura1]. With more granular data on the service level, future studies on the opportunities to grow from services is promising.
+
+## Conclusions and policy implication
+
+With the reduction of trade cost, face-to-face communication in particular, the third unbundling can potentially be the next form of globalization and trade in services to be the next source of growth for many countries including Indonesia. Additionally, Indonesian government has long been very careful with Indonesia's current account deficit, but have not really paid close attention to trade in services which its always in deficit. This chapter covers the snapshot on Indonesia's services sector trade in EBOPS classification and maps how much it trade and which countries are important. Moreover, we investigate, using macro data, whether services contribute to the manufacturing sector.
+
+Our finding suggests Indonesia have not really use much of its services trade to support manufacturing. Moreover, with much of the service imported are transport, it is suggestive that most of the services import is not yet embedded in its manufacturing sector. In fact, with manufacturing sector mostly import inputs and exploit domestic market, transport service will ended up be the main driver of service sector deficit.
+
+In terms of surplus, travel is Indonesia's main service export. This is driven by tourism, which is highly concentrated in some areas and got punished heavily by COVID-19 pandemic. Looking for other source of growth in services production and export thus become one of the main challenges for Indonesia. Indonesia should utilize its deep trade agreement better to improve its service sector as an end product or as inputs for other sectors like manufacturing. Additionally, with services often requires highly educated people, improvement in the capability to build human capital is even more crucial, considering the third unbundling is said to be the new face of globalization.
 
 ## References {.unnumbered}
