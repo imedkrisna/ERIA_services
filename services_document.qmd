@@ -21,6 +21,7 @@ format:
     code-fold: true
   docx:
     toc: false
+  pdf: default
 ---
 
 ::: {.callout-warning}
