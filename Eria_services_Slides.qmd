@@ -1,0 +1,33 @@
+---
+title: "Services trade and the Indonesian third unbundling"
+author:
+  - name: Krisna Gupta
+    orcid: 0000-0001-8695-0514
+    email: krisna.gupta@cips-indonesia.org
+    affiliations:
+    - name: Center for Indonesian Policy Studies, Politeknik APP Jakarta
+  - name: Dhany S. Ratana
+    affiliations: Politeknik APP Jakarta
+format: revealjs
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+
+## Bullets
+
+When you click the **Render** button a document will be generated that includes:
+
+-   Content authored with markdown
+-   Output from executable code
+
+## Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+
