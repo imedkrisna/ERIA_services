@@ -8,26 +8,21 @@ author:
     - name: Center for Indonesian Policy Studies, Politeknik APP Jakarta
   - name: Dhany S. Ratana
     affiliations: Politeknik APP Jakarta
-format: revealjs
+date: "2024-07-25"
+date-format: "%d %B %Y"
+bibliography: ../references.bib
+format: 
+  revealjs:
+    theme: [simple,mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
 ---
 
-## Quarto
+## Content
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+- The importance of trade in services in Indonesia
 
-## Bullets
-
-When you click the **Render** button a document will be generated that includes:
-
--   Content authored with markdown
--   Output from executable code
-
-## Code
-
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-```{r}
-1 + 1
-```
-
-
+- 
