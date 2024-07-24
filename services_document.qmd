@@ -203,14 +203,14 @@ Given the limitation of ICIO and its underlying sources (i.e., BaTIS), macro lev
 
 We run four specifications:
 
-
+$$
 \begin{align}
 exM_t&=\alpha_0+\alpha_1 exM_{t-1}+\alpha_2 imM_t+\alpha_3 imSev_t+\nu_i \\
 exM_t&=\gamma_0+\gamma_1 exM_{t-1}+\gamma_2 imM_t+\gamma_3 imSev_t+ \gamma_4 imM_{t-1}+\gamma_5 imSev_{t-1}+\upsilon_i \\
 pdb_t&=\delta_0+\delta_1 exM_{t-1}+\delta_2 imM_t+\delta_3 imSev_t+\omega_i \\
 pdb_t&=\theta_0+\theta_1 exM_{t-1}+\theta_2 imM_t+\theta_3 imSev_t+ \theta_4 imM_{t-1}+\theta_5 imSev_{t-1}+\eta_i
 \end{align}
-
+$$ {#eq-3}
 
 where $exM$ is log manufacturing exports, $pdb$ is log manufacturing GDP, $imM$ is log manufacturing imports and $imSev$ is log services imports, all for Indonesian level in time $t$, where $t$ is from 2005 to 2023. The data availability is restricted by the services import which starts from 2005 in the SEKI data. Specifications that we run are `ARDL(1,0,0)`, the least restrictive, and `ARDL(1,1,1)` which is considered from AIC, BIC and RMSE [@pesaran;@ardl].
 
@@ -392,7 +392,7 @@ datasummary((`log value added`=lv)+
 
 ```
 
-Results from executing equation 3 to 6 is shown in @tbl-2. There are four column, with the first two use log manufactures exports as the left hand-side variable while the latter two uses log manufacturing GDP. `ARDL(1,0,0)` is used for the first column and `ARDL(1,1,1)` is used for the second column of each, as discussed in the previous section.
+Results from executing @eq-3 is shown in @tbl-2. There are four column, with the first two use log manufactures exports as the left hand-side variable while the latter two uses log manufacturing GDP. `ARDL(1,0,0)` is used for the first column and `ARDL(1,1,1)` is used for the second column of each, as discussed in the previous section.
 
 ```{r}
 #| label: tbl-2
