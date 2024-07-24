@@ -84,13 +84,9 @@ We arrange this chapter in the following. Section 2 discusses the development in
 
 ## Review on services trade
 
-The concept of trade has been evolving from the the way goods (and later services) value chain can be broken. @baldwin coined the term "unbundling" to express the variety of trade can be done by how much part of the supply chain of production can be traded across border. T
+The concept of trade has been evolving from the the way goods (and later services) value chain can be broken. @baldwin coined the term "unbundling" to express the variety of trade can be done by how much part of the supply chain of production can be traded across border. Lower costs in various trade barriers (trade costs, communication costs, and face-to-face costs) leads to more possible breakdowns of a value chain, promotes better division of tasks.
 
-@kimura1 use this concept Kimura took the concept of “unbundling” which was proposed by Baldwin (2016). Baldwin (2016) posits that when transportation is costly, few products could be profitably shipped to any other region except the shortest distance and thus made production were forcibly bundled with consumption. After technological breakthrough in transportation such as steamships and railways, products can finally be sold across national borders, and this is the first unbundling (Kimura 2018).
-
-The second unbundling no longer involve goods, but ideas, facilitating joint production among countries in terms of production processes or tasks leading to massive international trade in parts and components. Lastly, the third unbundling has emerged, and the object of the third unbundling is “tasks”. These “tasks” can be unbundled and handled by persons in different locations.
-
-The first unbundling has unequivocally accelerated international trade throughout the world. People nowadays are consuming goods which in their country is costly or have no resource to produce. While not all the ASEAN Countries have participated in the second unbundling, they can however can develop strategies to also embrace the third unbundling.
+@kimura1 use this concept to argue three possible development paths for ASEAN member states to take. A country can move slowly, step-by-step by lowering trade cost traditionally from agriculture to machinaries to digital economy. One can also take a leap-frogging path, directly joining Global Value Chain by starting in the downstream, or even go directly to services trade, which is available through unbundling tasks in the service sectors. Lastly, A country can do a feedback mechanism, where advanced technology changes how old industries work. Looking at the last two approaches, services trade can be utilize either by learning from manufacturing to services export, or using services to create a better manufacturing.
 
 Now with trade cost is even lower, unbundling the service sector become feasible. Some firms allowing some firms to leap ahead [@kimura1]. Trade in services can be either source from abroad, or exported to foreign firms. Service sectors will accelerate both the second unbundling or third unbundling, allowing firms that utilize it to leap ahead of the competition.
 
@@ -207,14 +203,14 @@ Given the limitation of ICIO and its underlying sources (i.e., BaTIS), macro lev
 
 We run four specifications:
 
-$$
-\begin{align*}
+
+\begin{align}
 exM_t&=\alpha_0+\alpha_1 exM_{t-1}+\alpha_2 imM_t+\alpha_3 imSev_t+\nu_i \\
 exM_t&=\gamma_0+\gamma_1 exM_{t-1}+\gamma_2 imM_t+\gamma_3 imSev_t+ \gamma_4 imM_{t-1}+\gamma_5 imSev_{t-1}+\upsilon_i \\
 pdb_t&=\delta_0+\delta_1 exM_{t-1}+\delta_2 imM_t+\delta_3 imSev_t+\omega_i \\
 pdb_t&=\theta_0+\theta_1 exM_{t-1}+\theta_2 imM_t+\theta_3 imSev_t+ \theta_4 imM_{t-1}+\theta_5 imSev_{t-1}+\eta_i
-\end{align*}
-$$ {#eq-3}
+\end{align}
+
 
 where $exM$ is log manufacturing exports, $pdb$ is log manufacturing GDP, $imM$ is log manufacturing imports and $imSev$ is log services imports, all for Indonesian level in time $t$, where $t$ is from 2005 to 2023. The data availability is restricted by the services import which starts from 2005 in the SEKI data. Specifications that we run are `ARDL(1,0,0)`, the least restrictive, and `ARDL(1,1,1)` which is considered from AIC, BIC and RMSE [@pesaran;@ardl].
 
@@ -396,7 +392,7 @@ datasummary((`log value added`=lv)+
 
 ```
 
-Results from executing @eq-3 is shown in @tbl-2. There are four column, with the first two use log manufactures exports as the left hand-side variable while the latter two uses log manufacturing GDP. `ARDL(1,0,0)` is used for the first column and `ARDL(1,1,1)` is used for the second column of each, as discussed in the previous section.
+Results from executing equation 3 to 6 is shown in @tbl-2. There are four column, with the first two use log manufactures exports as the left hand-side variable while the latter two uses log manufacturing GDP. `ARDL(1,0,0)` is used for the first column and `ARDL(1,1,1)` is used for the second column of each, as discussed in the previous section.
 
 ```{r}
 #| label: tbl-2
