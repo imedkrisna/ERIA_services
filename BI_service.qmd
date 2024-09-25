@@ -1,0 +1,525 @@
+---
+title: "Servicification, manufacturing"
+subtitle: "and the Indonesian third unbundling"
+author: "Krisna Gupta & Dhany Ratana"
+institute: "CIPS, Politeknik APP Jakarta"
+date: "2024-09-25"
+date-format: long
+bibliography: ref.bib
+format: 
+  revealjs:
+    theme: [simple,mytheme.scss]
+    chalkboard: true
+    incremental: false
+    transition: convex
+    background-transition: fade
+    slide-number: true
+  beamer: default
+---
+
+## Intro
+
+Greetings! 
+
+1. Why services matter for manufacturing?
+
+2. The case for services trade.
+
+2. Trade in services and its role in Indonesian manufacturing.
+
+## Services and manufacturing
+
+It is important to distinct manufacturing services and servicification.
+
+- Manufacturing services can mean a service on manufacturing inputs owned by someone else [@batis2], e.g., clothing.
+
+- More broadly, Servicification of manufacturing: the increasing use, production, and sale of services [@lodefalk2]
+
+- In general, share of services in manufacturing firms' output are increasing.
+
+## Why servicification
+
+- Some services are integral to manufacturing (e.g., transportation, insurance)
+
+- services may improve productivity (e.g., R&D, consulting)
+
+- product differentiation (e.g., software, aftersales)
+
+- reduces barrier to entry to new market or GVC integration.
+
+## Indonesian services {.m}
+
+:::: columns
+::: {.column width=47%}
+![](plot/slides/fig1.png)
+
+Indonesia has always been a net importer of trade. Export services is dominated by tourism, while import services is dominated by logistics and business services.
+
+:::
+::: {.column width=47%}
+![](plot/slides/fig2.png)
+
+Indonesian government often concerned with deficit trade, but trade in services has often neglected in the discussion.
+
+:::
+::::
+
+## But more!
+
+- With the ever decreasing cost of trade, separating a value up to tasks level [@baldwin2;@kimura1].
+
+- Feedback mechanism from the third unbundling may benefits domestic manufacturing [@kimura1].
+
+- In fact, exporting high-value services directly can be a good strategy for growth.
+
+## About the chapter
+
+- The state of trade in services in Indonesia
+
+- Services as manufacturing inputs
+    
+    - using Input-Output.
+    
+    - services import-manufacturing export cointegration.
+
+- Preliminary conclusions
+
+## The third unbundling
+
+- Unbundling: how much part of the supply chain of production can be traded across border increase the use of comparative advantage [@baldwin;@kimura1].
+
+    - trade cost: 1st, communication costs: 2nd, face-to-face costs: 3rd.
+
+- 3 development paths: step-by-step, leap-frogging, feedback [@kimura1]
+
+- The last two makes services ever more important:
+
+    - leap-frog to supplying part of a services tasks, or;
+    
+    - Feedback, using services to improve manufacturing.
+    
+## Services in manufacturing
+
+- @melitz: non-trivial trade cost makes small-margin firms lose.
+
+- Services can lower this cost: brigde information gap on the market, business customs and regulations in other countries, especially for new firms entering export market [@lodefalk]
+
+- In Sweden, firms with higher services embeded in its final products increases its intensity of export [@lodefalk]
+
+- In Indonesia, 10 per cent increase in service intensity of a firm increase its productivity by 7 to 8 per cent [@hing]
+
+## Services trade in Indonesia
+
+- Trade in services is complicated amid 4 modes [@magiera]:
+
+    - mode 2 & 4 $\rightarrow$ Visa and KITAS regulations
+    
+    - mode 3 $\rightarrow$ investment and operational.
+    
+- @magiera: complicated authorities, unlike goods. Makes it hard to discuss Deep Trade Agreements [@krisna].
+
+- IJEPA: no evidence it improves services trade [@krisna]
+
+## Data: BaTIS {.m}
+
+:::: columns
+
+::: {.column width=47%}
+- First launched in 2017 by OECD and WTO [@batis2], 
+
+- Balanced data from two trading partners.
+
+- Not very good outside of rich countries.
+
+- used to build other databases like TiVA.
+:::
+::: {.column width=47% .s}
+| Code | Category description |
+| --- | --------------------- |
+| SA | Manufacturing services on physical inputs owned by others |
+| SB | Maintenance and repair services n.i.e. |
+| SC | Transport |
+| SD | Travel |
+| SE | Construction |
+| SF | Insurance and pension services |
+| SG | Financial services |
+| SH | Charges for the use of intellectual property n.i.e. |
+| SI | Telecommunications, computer, and information services |
+| SJ | Other business services |
+| SK | Personal, cultural and recreational services |
+| SL | Government goods and services n.i.e. |
+
+: Services classification in BaTIS {#tbl-1}
+:::
+::::
+
+## Trade by partner,2021 {.m}
+
+:::: columns
+::: {.column width=47%}
+
+![Indonesia's exports by partner, 2021](plot/allcx.png){#fig-CX}
+
+:::
+::: {.column width=47%}
+
+![Indonesia's imports by partner, 2021](plot/allcm.png){#fig-CM}
+
+:::
+::::
+
+Singapore is the most important partner in trade in services for Indonesia. China, on the other hand, is the main buyer of Indonesia's services export
+
+## Trade by sector, 2021 {.m}
+
+:::: columns
+::: {.column width=47%}
+
+![Indonesia's exports by sector, 2021](plot/allsx.png){#fig-SX}
+
+:::
+::: {.column width=47%}
+
+![Indonesia's imports by sector, 2021](plot/allsm.png){#fig-SM}
+
+:::
+::::
+
+Indonesia's imports dominates exports in all categories bar travel (SD). Additionally, the highest traded services in Indonesia are transport (SC) and business services (SJ)
+
+## Top services: travel {.m}
+
+:::: columns
+::: {.column width=47%}
+
+![Indonesia's travel export, top 6 partners](plot/SDEX.png){#fig-SX}
+
+:::
+::: {.column width=47%}
+
+![Indonesia's travel import, top 6 partners](plot/SDIM.png){#fig-SM}
+
+:::
+::::
+
+The only net export got punished by the pandemic. China+Australia important export destination,
+
+## Top services: transport {.m}
+
+:::: columns
+::: {.column width=47%}
+
+![Indonesia's travel export, top 6 partners](plot/SCEX.png){#fig-SX}
+
+:::
+::: {.column width=47%}
+
+![Indonesia's travel import, top 6 partners](plot/SCIM.png){#fig-SM}
+
+:::
+::::
+
+Singapore's dominance is apparent here. Very important for manufactures trade.
+
+## Top services: ICT services {.m}
+
+:::: columns
+::: {.column width=47%}
+
+![Indonesia's ICT service export, top 6 partners](plot/SIEX.png){#fig-SX}
+
+:::
+::: {.column width=47%}
+
+![Indonesia's ICT service import, top 6 partners](plot/SIIM.png){#fig-SM}
+
+:::
+::::
+
+Perhaps the most relevant services to leap-frogging and feedback. Also the highest beneficiary of the pandemic.
+
+## Top services: biz services {.m}
+
+:::: columns
+::: {.column width=47%}
+
+![Indonesia's ICT service export, top 6 partners](plot/SIEX.png){#fig-SX}
+
+:::
+::: {.column width=47%}
+
+![Indonesia's ICT service import, top 6 partners](plot/SIIM.png){#fig-SM}
+
+:::
+::::
+
+Other business services includes consulting management, research and development, and trade-related services [@ebops]
+
+## All in all
+
+- Singapore is important for Indonesia
+
+- Travel carry the trade balance. Most travel exports comes mainly from tourism, which is bad since the pandemic punishes it disproportionately.
+
+- Trade agreements play a huge role in improving trade in services. 
+
+- Measures that affects movement of natural persons (e.g., qualification harmonization), and other non-tariff measures like computing requirement and investment list are crucial as trade in services can be done in 4 different modes that got affected by these rules.
+
+## Manufacturing feedback
+
+- We look at the role of imported services to Indonesian manufacturing, a sector Indonesian government tries to revive for a long time.
+
+- Two approaches: input-output table and ARDL cointegration.
+
+- Input-Output utilises ICIO data [@icio], the ARDL uses Indonesian Central Bank data [@seki]
+
+## ICIO {.m}
+
+Let there be a nest of product from some degree of substitutable services input:
+
+$$
+Y_{it}=f(AS^D_{it},AS^F_{it})
+$$ 
+
+for all $i=$ manufacturing sectors and $t=year$. A is the nest multiplier, $S^D_i$ and $S^F_i$ are total services purchased by industry $i$, domestically and imported respectively.
+
+Assuming a Cobb-Douglass relationship, a log-linearized version thus
+
+$$
+y_{it}=a+\beta_d s^D_{it}+\beta_f s^F_{it}+\varepsilon_{it}
+$$
+
+## ICIO
+
+To construct the dataset for the regression, we aggregate non-factor inputs from each manufacuring sectors, separated by whether it is from Indonesia or from other countries. All inputs from foreign countries are aggregated into foreign. 
+
+For comparison purpose, we also do the same for 4 countries in the region, namely Singapore, Malaysia, Thailand and Vietnam. Data from these 5 countries are then concatenated to add one more dimension, countries. Summary statistics on the data is shown in @tbl-icio.
+
+## Summary {.scrollable .ss}
+
+```{r}
+#| label: tbl-icio
+#| tbl-cap: "Summary Statistics from ICIO, million USD, 2002-2021."
+
+library(tidyverse)
+library(readxl)
+library(modelsummary)
+library(ARDL)
+library(fixest)
+
+idn<-read_excel("data/icio/manuficio.xlsx")
+idn$country<-"IDN"
+sgp<-read_excel("data/icio/SGP.xlsx")
+sgp$country<-"SGP"
+vnm<-read_excel("data/icio/VNM.xlsx")
+vnm$country<-"VNM"
+mys<-read_excel("data/icio/MYS.xlsx")
+mys$country<-"MYS"
+tha<-read_excel("data/icio/THA.xlsx")
+tha$country<-"THA"
+icio<-rbind(idn,sgp,vnm,tha,mys)
+icio$psds<-icio$sds*100
+icio$psfs<-icio$sfs*100
+icio$psfg<-icio$sfg*100
+icio$psdg<-icio$sdg*100
+icio<-icio|>
+  select(year,industry,country,VA,OUT,ds,fs,dg,fg,psfs,psds,psfg,psdg)
+
+icio1<-icio|>
+  select(`value added`=VA,`output`=OUT,
+         `domestic services`=ds,`foreign services`=fs,
+         `domestic goods`=dg,`foreign goods`=fg,
+         `for. services share`=psfs,
+         `dom. services share`=psds,
+         `for. goods share`=psfg,
+         `dom. goods share`=psdg,country)
+icio1$what<-"all"
+icio2<-icio1|>filter(country=="IDN")
+icio2$what<-'IDN'
+icio3<-rbind(icio1,icio2)
+# Add histogram in html  
+datasummary(All(icio3)~what*(Mean+SD+Histogram),data=icio3)
+
+
+```
+
+
+
+## ICIO {.s}
+
+```{r}
+
+icio$lv<-log(icio$VA)
+icio$lo<-log(icio$OUT)
+icio$lfs<-log(icio$fs)
+icio$lds<-log(icio$ds)
+icio$lfg<-log(icio$fg)
+icio$ldg<-log(icio$dg)
+
+idn2<-icio|>filter(country=="IDN")
+sgp2<-icio|>filter(country=="SGP")
+vnm2<-icio|>filter(country=="VNM")
+tha2<-icio|>filter(country=="THA")
+mys2<-icio|>filter(country=="MYS")
+
+all3<-feols(lv~lfs+lds | industry+country,icio)
+idn3<-feols(lv~lfs+lds | industry,idn2)
+sgp3<-feols(lv~lfs+lds| industry,sgp2)
+vnm3<-feols(lv~lfs+lds | industry,vnm2)
+tha3<-feols(lv~lfs+lds | industry,tha2)
+mys3<-feols(lv~lfs+lds | industry,mys2)
+
+regols<-list(
+  "all"=all3,
+  "IDN"=idn3,
+  "SGP"=sgp3,
+  "VNM"=vnm3,
+  "THA"=tha3,
+  "MYS"=mys3
+)
+
+all5<-feols(lo~lfs+lds | industry+country,icio)
+idn5<-feols(lo~lfs+lds | industry,idn2)
+sgp5<-feols(lo~lfs+lds | industry,sgp2)
+vnm5<-feols(lo~lfs+lds | industry,vnm2)
+tha5<-feols(lo~lfs+lds | industry,tha2)
+mys5<-feols(lo~lfs+lds | industry,mys2)
+
+oregols<-list(
+  "all"=all5,
+  "IDN"=idn5,
+  "SGP"=sgp5,
+  "VNM"=vnm5,
+  "THA"=tha5,
+  "MYS"=mys5
+)
+
+```
+
+```{r}
+#| label: tbl-regv
+#| tbl-cap: "Panel regression of log manufacturing value added"
+regols|>modelsummary(stars=T,gof_omit = 'FE|IC|RMSE|Std.|Adj.')
+```
+
+all has country and sector dummy, while country regressions only has sector dummy.
+
+For value added, log foreign services (lfs) do not seem to be significant bar Vietnam, while log domestic services (lds) generally significant.
+
+## OLS {.s}
+
+```{r}
+#| label: tbl-rego
+#| tbl-cap: "Panel regression of log manufacturing output"
+oregols|>modelsummary(stars=T,gof_omit = 'FE|IC|RMSE|Std.|Adj.')
+```
+
+For output, log foreign services (lfs) do not seem to be significant bar Vietnam, while log domestic services (lds) generally significant.
+
+Indonesia's low share of foreign services seem to be the reason why it has no correlation with both output and value added.
+
+## ARDL {.s}
+
+We complement previous analysis with ARDL cointegration analysis by using aggregate export and import data from the central bank [@selo]
+
+\begin{align}
+exM_t&=\alpha_0+\alpha_1 exM_{t-1}+\alpha_2 imM_t+\alpha_3 imSev_t+\nu_i \\
+exM_t&=\gamma_0+\gamma_1 exM_{t-1}+\gamma_2 imM_t+\gamma_3 imSev_t+ \gamma_4 imM_{t-1}+\gamma_5 imSev_{t-1}+\upsilon_i \\
+pdb_t&=\delta_0+\delta_1 pdb_{t-1}+\delta_2 imM_t+\delta_3 imSev_t+\omega_i \\
+pdb_t&=\theta_0+\theta_1 pdb_{t-1}+\theta_2 imM_t+\theta_3 imSev_t+ \theta_4 imM_{t-1}+\theta_5 imSev_{t-1}+\eta_i
+\end{align}
+
+where $exM$ is log manufacturing exports, $pdb$ is log manufacturing GDP, $imM$ is log manufacturing imports and $imSev$ is log services imports, all for Indonesian level in time $t$, where $t$ is from 2005 to 2023.
+
+Specifications that we run are `ARDL(1,0,0)`, the least restrictive, and `ARDL(1,1,1)` which is considered from AIC, BIC and RMSE [@pesaran;@ardl].
+
+## ARDL
+
+```{r}
+#| label: fig-idn
+#| fig-cap: Indonesian trade dynamics
+
+gambar<-read_excel('data/plot.xlsx')
+coba<-pivot_longer(gambar, !Year)
+coba %>%
+  filter(name!="Sexport") %>%
+  filter(name!="PDB") %>%
+  ggplot(aes(Year, value, color=name))+
+  geom_point()+
+  geom_line()+
+  scale_color_discrete(labels=c('Manufactures export', 'Manufactures import','Services import'))+
+  labs(x="",y="Million current USD",caption="source: SEKI")+
+  theme_classic()
+```
+
+## ARDL
+
+```{r}
+#| label: tbl-sum2
+#| tbl-cap: "Summary statistics"
+
+
+
+datasummary((`log value added`=lv)+
+              (`log output`=lo)+
+              (`log foreign services`=lfs)+
+              (`log domestic services`=lds)~
+              Mean+Median+SD+Histogram,data=icio)
+
+```
+
+## ARDL {.s .scrollable}
+
+```{r}
+#| label: tbl-2
+#| tbl-cap: "ARDL results on four specifications"
+dat<-read_excel('data/tes.xlsx')
+ekspor1<-ardl(exM~imM+imSev,data=dat,order = c(1,0,0))
+ekspor2<-ardl(exM~imM+imSev,data=dat,order = c(1,1,1))
+pdb1<-ardl(pdb~imM+imSev,data=dat,order = c(1,0,0))
+pdb2<-ardl(pdb~imM+imSev,data=dat,order = c(1,1,1))
+
+models <- list(
+  "Export 1" = ekspor1,
+  "Export 2" = ekspor2,
+  "GDP 1"=pdb1,
+  "GDP 2"=pdb2
+  
+)
+
+modelsummary(models,stars = T,,gof_omit = 'FE|IC|Std.|Adj.')
+```
+
+## ARDL
+
+- Indonesia's current import service does not seem to contribute much to the country's manufacturing export.
+
+- This corroborates findings in ICIO regression. 
+
+- Indonesian firms does not seem to have much in house services to begin with, and those who do are only a small fraction of very productive firms [@hing].
+
+## All in all
+
+- By itself, Indonesian services export relies on travel. Looks to be net-importing for some time.
+
+- Services content in manufacturing seems to be an untapped potential: increasing services content may be beneficial for Indonesian manufacturing thus the feedback mechanism a la @kimura1.
+
+- Exports will be needed if manufacturing to increase its services content beyond transport to justify the cost.
+
+## Challenges
+
+- Regulatory restriction and uncertainty.
+
+    - Services typically delivered through 4 modes, all controlled by various ministries.
+    
+    - Most FTA doesn't take trade in services seriously.
+    
+- Negative investment list.
+
+- Intense services often are not needed unless more complex and diverse prodects are required.
+
+    - the need to diversify only comes after the firm is already big.
+
+
+
+## References {.s}
