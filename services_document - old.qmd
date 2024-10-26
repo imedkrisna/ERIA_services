@@ -324,105 +324,75 @@ We first turn to our panel regression shown in @eq-2. As discussed, we run a tot
 
 
 ```{r}
-# here we sum all industry
+
 
 icio$s<-icio$fs+icio$ds
-agg<-icio|>select(!industry)|>group_by(year,country)|>summarise(across(everything(),sum))
 
-indi<-c(
-  "MVA"="NV.IND.MANF.CD",
-  "MVAf"="NV.IND.MANF.ZS"
+icio$lv<-log(icio$VA)
+icio$lo<-log(icio$OUT)
+icio$lfs<-log(icio$fs)
+icio$lds<-log(icio$ds)
+icio$lfg<-log(icio$fg)
+icio$ldg<-log(icio$dg)
+
+idn2<-icio|>filter(country=="IDN")
+sgp2<-icio|>filter(country=="SGP")
+vnm2<-icio|>filter(country=="VNM")
+tha2<-icio|>filter(country=="THA")
+mys2<-icio|>filter(country=="MYS")
+
+all3<-feols(lv~lfs+lds | industry+country,icio)
+idn3<-feols(lv~lfs+lds | industry,idn2)
+sgp3<-feols(lv~lfs+lds| industry,sgp2)
+vnm3<-feols(lv~lfs+lds | industry,vnm2)
+tha3<-feols(lv~lfs+lds | industry,tha2)
+mys3<-feols(lv~lfs+lds | industry,mys2)
+
+regols<-list(
+  "all"=all3,
+  "IDN"=idn3,
+  "SGP"=sgp3,
+  "VNM"=vnm3,
+  "THA"=tha3,
+  "MYS"=mys3
 )
 
-dun<-tibble(WDI(
-  country=c("IDN","SGP","VNM","THA","MYS"),
-  indicator=indi,start=2002,end=2020
-))
+all5<-feols(lo~lfs+lds | industry+country,icio)
+idn5<-feols(lo~lfs+lds | industry,idn2)
+sgp5<-feols(lo~lfs+lds | industry,sgp2)
+vnm5<-feols(lo~lfs+lds | industry,vnm2)
+tha5<-feols(lo~lfs+lds | industry,tha2)
+mys5<-feols(lo~lfs+lds | industry,mys2)
 
-dun<-dun|>select(iso3c,year,MVA,MVAf)|>rename(country=iso3c)
-dun<-tibble(dun)
-agg$year<-as.integer(agg$year)
+oregols<-list(
+  "all"=all5,
+  "IDN"=idn5,
+  "SGP"=sgp5,
+  "VNM"=vnm5,
+  "THA"=tha5,
+  "MYS"=mys5
+)
 
-aggg<-inner_join(dun,agg)
-
-aggg$lmva<-log(aggg$MVA)
-aggg$lds<-log(aggg$ds)
-aggg$ls<-log(aggg$s)
-aggg$lfs<-log(aggg$fs)
-aggg$ldg<-log(aggg$dg)
-aggg$lfg<-log(aggg$fg)
-aggg$psfs<-aggg$fs/aggg$OUT*100
-aggg$pfs<-aggg$fs/(aggg$OUT-aggg$VA)*100
-
-```
-
-```{r}
-#| label: fig-ser
-#| fig-ncol: 2
-aggg|>ggplot(aes(x=year,y=ds,color=country))+
-  geom_line(linewidth=1.1)+
-  scale_y_continuous(expand = c(0,0),labels = scales::comma)+
-  labs(x="",y="",title = "(a) Domestic service input, million USD")+
-  theme_classic()
-
-aggg|>ggplot(aes(x=year,y=fs,color=country))+
-  geom_line(linewidth=1.1)+
-  scale_y_continuous(expand = c(0,0),labels = scales::comma)+
-  labs(x="",y="",title="(b) Domestic service input, million USD",
-       caption = "note the scale difference of Y-axis")+
-  theme_classic()
-```
-
-```{r}
-
-aggg|>ggplot(aes(x=lfs,y=lmva,color=country))+
-  geom_point()+
-  scale_x_continuous(expand = c(0,0),labels = scales::comma)+
-  scale_y_continuous(expand = c(0,0),labels = scales::comma)+
-  labs(x="",y="",caption = "")+
-  theme_classic()
-aggg|>ggplot(aes(x=psfs,y=MVAf,color=country))+
-  geom_point()+
-  scale_x_continuous(expand = c(0,0),labels = scales::comma)+
-  scale_y_continuous(expand = c(0,0),labels = scales::comma)+
-  labs(x="",y="",caption = "")+
-  theme_classic()
-```
 ```
 
 ```{r}
 #| label: tbl-regv
 #| tbl-cap: "Panel regression of log manufacturing value added"
-ols<-feols(lmva~lfs+lds,aggg)
-ctr<-feols(lmva~lfs+lds | country,aggg)
-twfe<-feols(lmva~lfs+lds | country+year,aggg)
-
-
-ols2<-feols(MVAf~psfs+psds,aggg)
-ctr2<-feols(MVAf~psfs+psds | country,aggg)
-twfe2<-feols(MVAf~psfs+psds | country+year,aggg)
-
-regols<-list(
-  "OLS"=ols,
-  "FE"=ctr,
-  "TWFE"=twfe
-)
-
-regols2<-list(
-  "RE"=ols2,
-  "FE"=ctr2,
-  "TWFE"=twfe2
-)
 regols|>modelsummary(stars=T,gof_omit = 'FE|IC|RMSE|Std.|Adj.')
 ```
 
 First, we look at value added. We can see from @tbl-regv that domestic services are generally correlates with domestic manufacturing value added. However, foreign value added does not seem to be important in the domestic value added of manufacturing. Vietnam is the exception, where foreign services seem to move together with domestic value added.
 
+
 ```{r}
-#| label: tbl-regv
-#| tbl-cap: "Panel regression of log manufacturing value added"
-regols2|>modelsummary(stars=T,gof_omit = 'FE|IC|RMSE|Std.|Adj.')
+#| label: tbl-rego
+#| tbl-cap: "Panel regression of log manufacturing output"
+oregols|>modelsummary(stars=T,gof_omit = 'FE|IC|RMSE|Std.|Adj.')
 ```
+
+Next, we go to @tbl-rego to look at the relationship between services inputs and manufacturing output. In this case, the general correlation of services inputs are positive. But again, this positive impact is driven mainly by Vietnam and weakly by Thailand. Most correlation still comes from domestic services value added.
+
+The results from Thailand seems to suggests the effect of volume [@aco2].That is, while domestic value added is reduced by increasing foreign input, but the resulting output means that the reduction of domestic value added is covered by output volume. Indeed, Thailand's manufacturing tends to be sold abroad a bit more than large economy like Indonesia.
 
 #### ARDL results
 
