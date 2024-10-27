@@ -1,5 +1,5 @@
 ---
-title: "Services trade and the Indonesian third unbundling"
+title: "Services and the Third Unbundling in Indonesia"
 author:
   - name: Krisna Gupta
     orcid: 0000-0001-8695-0514
@@ -68,7 +68,7 @@ wew<-tibble(
 wew|>ggplot(aes(x=year,y=value,color=`net trade`))+
   geom_line(linewidth=1.1)+geom_hline(yintercept=0)+
   scale_y_continuous(expand = c(0,0),limits = c(-22000,65000),labels = scales::comma)+
-  scale_x_continuous(breaks = c(2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023))+
+  scale_x_continuous(breaks = c(2010,2012,2014,2016,2018,2020,2022))+
   labs(x="",y="Million USD",caption = "source: SEKI")+
   theme_classic()
 ```
@@ -82,8 +82,8 @@ Even by itself, trade in services seems to be the new future for developing coun
 #| layout-ncol: 2
 #| fig-cap: "Goods and services trade in Indonesia and the World"
 #| fig-subcap:
-#|   - "World trade (% of GDP)"
-#|   - "Indonesian trade (% of GDP)"
+#|   - "Goods trade (% of GDP)"
+#|   - "Services trade (% of GDP)"
 
 library(WDI)
 indi<-c(            # membuat dictionary
@@ -107,12 +107,12 @@ dat|>
   ggplot(aes(x=year,y=services,color=iso3c,lty=iso3c))+
   geom_line(linewidth=1.1)+
   scale_y_continuous(labels = scales::comma)+
-  labs(x="",y="",caption="source: WDI. Note the different scale of the y-axis")+theme_classic()
+  labs(x="",y="")+theme_classic()
 ```
 
-Indonesia, some argue, has missed the opportunity of the globalization of production network [@aco,@hill]. The next form of globalization, thus, should be optimized by Indonesia. As seen in the @fig-trade, however, Indonesia seems to going to miss the services train as well. Trade in services in Indonesia is underdeveloped, and barriers to entry for services trade remains high [@magiera;@aco].
+Indonesia, some argue, has missed the opportunity of the globalization of production network [@aco;@hill]. The next form of globalization, thus, should be optimized by Indonesia. As seen in the @fig-trade, however, Indonesia seems to going to miss the services trade train as well. Trade in services in Indonesia is underdeveloped, and barriers to entry for services trade remains high [@magiera;@aco].
 
-This chapter have at least two objectives. First, we explores the general trade in services in Indonesia. We use BaTIS data [@batis1;@batis2] and ICIO [@ICIO] to show Indonesia's most important services trade and country partners for both export and import. We also 
+This chapter have at least two objectives. First, we explores the general trade in services in Indonesia. We use BaTIS data [@batis1;@batis2] to show Indonesia's most important services trade and country partners for both export and import. We also use ICIO [@icio] to show how important services are to manufacturing, both domestic and foreign.
 
 Secondly, we look at the development of Indonesia's regulations related to trade in services. We extend @magiera to examine Indonesia's development in regulatory practices around trade in services. We find the importance of foreign direct investment in opening trade in services, and show that relaxation of services stringency index seemed to stem from relaxation of foreign ownership restrictions in Indonesia's service sector. Additionally, relaxing trade in services in Indonesia is more complicated amid involvement of number of ministries magnitudes higher than ones involved in tariff reduction.
 
@@ -184,7 +184,6 @@ y_{it}=a+\beta_d s^D_{it}+\beta_f s^F_{it}+\varepsilon_{it}
 $$ {#eq-2}
 
 with a lower case represents the natural log of its uppercase counterpart. 
-
 To construct the dataset for the regression, we aggregate non-factor inputs from each manufacuring sectors, separated by whether it is from Indonesia or from other countries. All inputs from foreign countries are aggregated into foreign. 
 
 For comparison purpose, we also do the same for 4 countries in the region, namely Singapore, Malaysia, Thailand and Vietnam. Data from these 5 countries are then concatenated to add one more dimension, countries. Summary statistics on the data is shown in @tbl-icio.
@@ -231,24 +230,9 @@ datasummary(All(icio3)~what*(Mean+SD+Histogram),data=icio3)
 
 @tbl-icio shows Average and standard deviation as well as distribution of value added, output, domestic and foreign goods and services value and share. Unsurprisingly Indonesian manufacturing output and value added is higher than average of 5 countries, amid how large Indonesia is compared to its neighbor. Interestingly, Indonesian manufacturing value added from foreign goods and share is larger than the average, despite Indonesia's protectionist tendency [@aco]. Services, on the other hand, is different, as Indonesian services import lags compared to other countries.
 
-Lastly, we run 6 fixed effect panel regressions. The first panel consists of two indices, country and sector, which both dummies are used as a fixed effect. The other 5 panels are fixed effect regressions by country, where only sectoral fixed effect is used. This way, we can discuss difference in coefficient between selected countries in the region. We use output and value added as our $y_i$, so we will have 12 fixed effect panel regressions in total.
+Lastly, we run a fixed effect panel regressions. We use manufacturing value added in current USD taken from World Development Indicators (WDI) as our dependent variable. The objective is to show whether movement in the services input to manufacturing, both foreign and domestic, aligns with manufacturing value added.
 
 The main variable of interest is $\beta_f$. The third unbundling suggests that since firms can now unbundle tasks up to service level, firms who can unbundle its services tasks will theoretically perform better, shown in its value added and output. Likewise, industries with easier services unbundling will benefited more from services trade since there will be more firms able to exploit the third unbundling in these industries. Therefore, we expect to see a $\beta_f>0$.
-
-Given the limitation of ICIO and its underlying sources (i.e., BaTIS), macro level analysis is added to complement the analysis. We use SEKI, Indonesian database compiled by Bank Indonesia, the central bank, to get services trade, manufactures trade, and manufacturing output. We perform ARDL analysis [@pesaran] to see whether services trade cointegrates with manufacturing output and export.
-
-We run four specifications:
-
-$$
-\begin{align}
-exM_t&=\alpha_0+\alpha_1 exM_{t-1}+\alpha_2 imM_t+\alpha_3 imSev_t+\nu_i \\
-exM_t&=\gamma_0+\gamma_1 exM_{t-1}+\gamma_2 imM_t+\gamma_3 imSev_t+ \gamma_4 imM_{t-1}+\gamma_5 imSev_{t-1}+\upsilon_i \\
-pdb_t&=\delta_0+\delta_1 exM_{t-1}+\delta_2 imM_t+\delta_3 imSev_t+\omega_i \\
-pdb_t&=\theta_0+\theta_1 exM_{t-1}+\theta_2 imM_t+\theta_3 imSev_t+ \theta_4 imM_{t-1}+\theta_5 imSev_{t-1}+\eta_i
-\end{align}
-$$ {#eq-3}
-
-where $exM$ is log manufacturing exports, $pdb$ is log manufacturing GDP, $imM$ is log manufacturing imports and $imSev$ is log services imports, all for Indonesian level in time $t$, where $t$ is from 2005 to 2023. The data availability is restricted by the services import which starts from 2005 in the SEKI data. Specifications that we run are `ARDL(1,0,0)`, the least restrictive, and `ARDL(1,1,1)` which is considered from AIC, BIC and RMSE [@pesaran;@ardl].
 
 ## Discussions
 
@@ -310,17 +294,38 @@ Singapore is indeed important in both export and import. Singapore relationship 
 
 Overall, countries important for Indonesia in trade in services is not significantly different from trade in goods. Singapore leads, but there are also the US, some EU countries, and other RCEP member states. Trade agreements play a huge role in improving trade in services. Measures that affects movement of natural persons, and other non-tariff measures like computing requirement and investment list are crucial as trade in services can be done in 4 different modes that got affected by these rules.
 
+### Importance of investment policy
+
 Typically, overseeing trade in services and regulatory environment required to increase flow of trade in services are more challenging than trade in goods. In Indonesia, these regulations are often oversaw by different Ministries, and typically discussed separately from other sectors or trade negotiations [@magiera;@lindblad]. Discussing regulatory environment to improve trade in services would require coordination which is costly compared to trade in goods.
 
 For example, easing tourism visa requirement typically conducted unilaterally with no consultation with other ministries or any agreements. These kinds of regulation relies more on each Ministers than agreement mechanisms. While IJEPA doesn't seem to affect trade in services much between Indonesia and Japan [@krisna], IACEPA between Indonesia and Australia seems to improve Australian services export through investment in university and hospital.
 
-More importantly, easing services trade may benefit Indonesia through the third unbundling mechanisms. Many exported services are skill-intensive products, which arguably not Indonesia's main strength. If these services are important in a production chain of final goods, then outsourcing services production (e.g., design and research) will benefit Indonesian manufacturing. The next section explores an indicative evidence toward this argument.
+@magiera state that laws and regulations regulating investments in Indonesia have been plagued by uncertainty, more so on courier services. The uncertainty comes from two points: First, the regulations changed frequently and/or enacted by different levels of government. Second, the regulations are unclear, leaving decisions whether or not to grant licenses to government officials’ discretion. Because of this nature, there was little direct foreign investment in the sector.
 
-### Manufacturing
+Moreover, @magiera further points the importance of a clear and transparent investment negative list, because company representatives interviewed were uncertain about the foreign equity limit and under the impression that The Ministry of Communication and Information Technology, the governing body on this space, would not grant them license. Cominfo as courier governing body further muddled the issue, because in Indonesia, at least up to Presidential Regulations no 44/2016 still put postal service (courier) in the Communication and Information Technology sector.
 
-#### ICIO Panel regression
+As of Law 25/2007 which was amended by Law 11/2020 about “cipta kerja”, all business sectors are open to investment, including foreign investment, unless specified in a Negative Investment List (DNI). In which case foreign investment is either prohibited, or conditionally permitted. This list was already applicable with keppres 96/2000, but when Law 25/2007 enforced in April 2007, any business sectors not listed in keppres 96/2000 would be open to investment. Thus, in July 2007, perpres 77/2007 was passed and updated with 111/2007, followed by 36/2010, 39/2014, 44/2016, and then 10/2021.
 
-We first turn to our panel regression shown in @eq-2. As discussed, we run a total 12 regressions divided into two tables. @tbl-regv shows results for log of value added as the dependent variable, while @tbl-rego is on output. Each table has 6 regressions, which the first column show a result from all countries combined and the rest are from each countries.
+![figure 1](plot/stri1.png)
+
+As depicted in figure 1, STRI falls much of the logistics industry sectors in 2016 and 2021. This is because most of the sectors have a limit of Foreign Equity Limit capped at 49% before 36/2016, and enlarged to 67% in cargo-handling and freight forwarding after. In 2021 distribution took a deep dive, this is because land transportation (including taxis and travel agents) and all of services related to supporting sectors on transportation such as port facilities, terminals, ports services were no longer have Foreign Equity Limit.
+
+![figure 2](plot/stri2.png)
+
+In the field of broadcasting, motion pictures and sound recording. 36/2016 no longer list motion pictures and sound recording as a DNI so Foreign Equity Limit went from restricted (0%) to free (100%) and there are no longer minimum capital requirements. 
+
+![figure 3](plot/stri3.png)
+
+As for the dips in air transport and road freight, we can’t find any changes that can explain this. Especially intriguing is the bucket shape of air transport. Best guess is that supporting service for air passenger transport (KBLI 51102) and supporting service for air passenger transport (KBLI 51202) eased from 49% Foreign Equity Limit to 67%. But these services were absolved from DNI in 10/2021, which should have made the line bend further down. One explanation we can come up with is that the air transport service and the supporting service both have the same KBLI 51102 and 51202 but one is the supporting (reservations, ground service for passenger, aircraft leasing, etc) and the other is the actual transporting service. The supporting one’ Foreign Equity Limit went from 49% in 2014 to 67% in 2016 and then 100% in 2021.
+
+![figure 4](plot/stri4.png)
+![figure 5](plot/stri5.png)
+
+Easing services trade may benefit Indonesia through the third unbundling mechanisms. Many exported services are skill-intensive products, which arguably not Indonesia's main strength. If these services are important in a production chain of final goods, then outsourcing services production (e.g., design and research) will benefit Indonesian manufacturing. The next section explores an indicative evidence toward this argument.
+
+### Services input and manufacturing
+
+We first turn to our panel regression shown in @eq-2. @fig-ser shows  5 countries' domestic (panel a) and foreign (panel b) services input to manufacturing.
 
 
 ```{r}
@@ -373,6 +378,10 @@ aggg|>ggplot(aes(x=year,y=fs,color=country))+
   theme_classic()
 ```
 
+Few things can be inferred from @fig-ser. First, it is clear that the use of domestic services outweight the use of foreign services in manufacturing in all countries. Additionally, the use of foreign inputs seems to stagnate since 2011, the year often attributed to the end of hyperglobalization. Another point is the obvious trajectory of Vietnam. Its use of domestic services converge with Singapore and Malaysia, and its foreign services input in manufacturing keeps trending upward despite others' slowdown.
+
+Indonesia, despite its larger manufacturing output, uses similar domestic services input as Thailand, and do not deviate too far from the rest of the countries. More strikingly, its use of foreign services in manufacturing lies at the bottom compared to the rest of the countries. This is in line with the previous discussion on Indonesia's underdeveloped services trade, but also suggests an untapped opportunity for developing Indonesia's manufacturing through the use of more foreign services.
+
 ```{r}
 
 aggg|>ggplot(aes(x=lfs,y=lmva,color=country))+
@@ -419,75 +428,12 @@ regols|>modelsummary(stars=T,gof_omit = 'FE|IC|RMSE|Std.|Adj.')
 First, we look at value added. We can see from @tbl-regv that domestic services are generally correlates with domestic manufacturing value added. However, foreign value added does not seem to be important in the domestic value added of manufacturing. Vietnam is the exception, where foreign services seem to move together with domestic value added.
 
 ```{r}
-#| label: tbl-regv
+#| label: tbl-regvv
 #| tbl-cap: "Panel regression of log manufacturing value added"
 regols2|>modelsummary(stars=T,gof_omit = 'FE|IC|RMSE|Std.|Adj.')
 ```
 
-#### ARDL results
-
-We complement previous analysis with more macro, less structured approach. We test whether services import and manufacturing export and output moves together. @fig-idn shows data we use. Manufacturing GDP is omitted for scaling reason, but we can see the vast difference between merchandise trade and services trade during the pandemic in 2020. While we use internet and computer application services more during the pandemic, the huge drop in travels visually dominates Indonesia's import services. In fact, it is because we can have digital presence that traveling abroad is less needed even as restriction eases.
-
-```{r}
-#| label: fig-idn
-#| fig-cap: Indonesian trade dynamics
-
-gambar<-read_excel('data/plot.xlsx')
-coba<-pivot_longer(gambar, !Year)
-coba %>%
-  filter(name!="Sexport") %>%
-  filter(name!="PDB") %>%
-  ggplot(aes(Year, value, color=name))+
-  geom_point()+
-  geom_line()+
-  scale_color_discrete(labels=c('Manufactures export', 'Manufactures import','Services import'))+
-  labs(x="",y="Million current USD",caption="source: SEKI")+
-  theme_classic()
-```
-
-The log version of variables in @fig-idn is used for the regression, along with log of manufacturing GDP. Summary statistics are presented in @tbl-sum2. 
-
-```{r}
-#| label: tbl-sum2
-#| tbl-cap: "Summary statistics"
-
-
-
-datasummary((`log value added`=lv)+
-              (`log output`=lo)+
-              (`log foreign services`=lfs)+
-              (`log domestic services`=lds)~
-              Mean+Median+SD+Histogram,data=icio)
-
-```
-
-Results from executing @eq-3 is shown in @tbl-2. There are four column, with the first two use log manufactures exports as the left hand-side variable while the latter two uses log manufacturing GDP. `ARDL(1,0,0)` is used for the first column and `ARDL(1,1,1)` is used for the second column of each, as discussed in the previous section.
-
-```{r}
-#| label: tbl-2
-#| tbl-cap: "ARDL results on four specifications"
-dat<-read_excel('data/tes.xlsx')
-ekspor1<-ardl(exM~imM+imSev,data=dat,order = c(1,0,0))
-ekspor2<-ardl(exM~imM+imSev,data=dat,order = c(1,1,1))
-pdb1<-ardl(pdb~imM+imSev,data=dat,order = c(1,0,0))
-pdb2<-ardl(pdb~imM+imSev,data=dat,order = c(1,1,1))
-
-models <- list(
-  "Export 1" = ekspor1,
-  "Export 2" = ekspor2,
-  "GDP 1"=pdb1,
-  "GDP 2"=pdb2
-  
-)
-
-modelsummary(models,stars = T,,gof_omit = 'FE|IC|Std.|Adj.')
-```
-
-@tbl-2 shows that Indonesia's current import service does not seem to contribute much to the country's manufacturing export. The coefficient is found to be negative but not different from zero. This does not seem to be surprising since it corroborates findings in @tbl-regv and @tbl-regv. Additionally, Indonesian firms does not seem to have much in house services to begin with, and those who do are only a small fraction of very productive firms [@hing]. 
-
-For manufacturing output, however, we find that import services correlates significantly with manufacturing output. A 1% increase in service import correlates with a 0.1% increase in manufacturing output. This correlation may stem from imported goods import. That is, Indonesian manufacturers requires various imported intermediate inputs. Therefore, increasing production requires importing various goods, increasing the use of transport service, which is dominated by foreign firms. This explains why imported service does not correlate with manufacturing export, and why manufactures import correlates positively with exports.
-
-This findings seem to suggests that Indonesian manufacturing use services mostly for international trade purposes. Since transport dominates Indonesia's trade in services, it seems to suggest that Indonesian manufacturing does not use services outside of transport. Something like consulting for marketing purposes or research and development sourced from abroad is not yet widely used by Indonesian manufacturing. Considering the government is trying to boost manufacturing output using Indonesia 4.0 program, this type of services may have a room to grow.
+Indonesian manufacturing use services mostly for international trade purposes. Since transport dominates Indonesia's trade in services, it seems to suggest that Indonesian manufacturing does not use services outside of transport. Something like consulting for marketing purposes or research and development sourced from abroad is not yet widely used by Indonesian manufacturing. Considering the government is trying to boost manufacturing output using Indonesia 4.0 program, this type of services may have a room to grow.
 
 This study is limited by the use of a rather aggregated data. While this study can show a more helicopter view of Indonesia's trade in services dynamics, it failed to capture the benefit of services trade in a more micro setting. We do not have the same level access of manufacturing firms' data as @hing, but even then it cannot differentiate domestically sourced services with foreign services. It will require a set of data Indonesians not yet produce, which may presents with an opportunity for future data collection project and studies.
 
