@@ -3,6 +3,7 @@
 *.dta
 *.dbf
 *.xls
+*.csv
 
 # Prerequisites
 *.d
