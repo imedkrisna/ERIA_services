@@ -119,14 +119,13 @@ ggsave("plot/plots/WDI2.png",width=6,height=4,dpi=300)
 aggg|>ggplot(aes(x=year,y=ds,color=country))+
   geom_line(linewidth=1.1)+
   scale_y_continuous(expand = c(0,0),labels = scales::comma)+
-  labs(x="",y="",title = "(a) Domestic service input, million USD")+
+  labs(x="",y="")+
   theme_classic()
 ggsave("plot/plots/DS.png",width=6,height=4,dpi=300)
 
 aggg|>ggplot(aes(x=year,y=fs,color=country))+
   geom_line(linewidth=1.1)+
   scale_y_continuous(expand = c(0,0),labels = scales::comma)+
-  labs(x="",y="",title="(b) Domestic service input, million USD",
-       caption = "note the scale difference of Y-axis")+
+  labs(x="",y="")+
   theme_classic()
 ggsave("plot/plots/FS.png",width=6,height=4,dpi=300)
