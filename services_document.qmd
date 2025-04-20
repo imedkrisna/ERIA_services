@@ -325,7 +325,7 @@ Easing services trade may benefit Indonesia through the third unbundling mechani
 
 ### Services input and manufacturing
 
-We first turn to our panel regression shown in @eq-2. @fig-ser shows  5 countries' domestic (panel a) and foreign (panel b) services input to manufacturing.
+First we look at services input to manufacturing in selected ASEAN regions from the ICIO. 
 
 
 ```{r}
@@ -363,20 +363,26 @@ aggg$pfs<-aggg$fs/(aggg$OUT-aggg$VA)*100
 
 ```{r}
 #| label: fig-ser
-#| fig-ncol: 2
+#| fig-cap: "Domestic and foreign services input to manufacturing, 2002-2021, in million USD"
+#| fig-subcap:
+#|  - "Domestic services input"
+#|  - "Foreign services input"
+#| layout-ncol: 2
+
 aggg|>ggplot(aes(x=year,y=ds,color=country))+
   geom_line(linewidth=1.1)+
   scale_y_continuous(expand = c(0,0),labels = scales::comma)+
-  labs(x="",y="",title = "(a) Domestic service input, million USD")+
+  labs(x="",y="")+
   theme_classic()
 
 aggg|>ggplot(aes(x=year,y=fs,color=country))+
   geom_line(linewidth=1.1)+
   scale_y_continuous(expand = c(0,0),labels = scales::comma)+
-  labs(x="",y="",title="(b) Domestic service input, million USD",
-       caption = "note the scale difference of Y-axis")+
+  labs(x="",y="")+
   theme_classic()
 ```
+
+@fig-ser shows  5 countries' domestic (panel a) and foreign (panel b) services input to manufacturing.
 
 Few things can be inferred from @fig-ser. First, it is clear that the use of domestic services outweight the use of foreign services in manufacturing in all countries. Additionally, the use of foreign inputs seems to stagnate since 2011, the year often attributed to the end of hyperglobalization. Another point is the obvious trajectory of Vietnam. Its use of domestic services converge with Singapore and Malaysia, and its foreign services input in manufacturing keeps trending upward despite others' slowdown.
 
@@ -397,11 +403,12 @@ aggg|>ggplot(aes(x=psfs,y=MVAf,color=country))+
   labs(x="",y="",caption = "")+
   theme_classic()
 ```
-```
+
 
 ```{r}
 #| label: tbl-regv
 #| tbl-cap: "Panel regression of log manufacturing value added"
+
 ols<-feols(lmva~lfs+lds,aggg)
 ctr<-feols(lmva~lfs+lds | country,aggg)
 twfe<-feols(lmva~lfs+lds | country+year,aggg)
@@ -422,10 +429,14 @@ regols2<-list(
   "FE"=ctr2,
   "TWFE"=twfe2
 )
+
 regols|>modelsummary(stars=T,gof_omit = 'FE|IC|RMSE|Std.|Adj.')
+
 ```
 
+
 First, we look at value added. We can see from @tbl-regv that domestic services are generally correlates with domestic manufacturing value added. However, foreign value added does not seem to be important in the domestic value added of manufacturing. Vietnam is the exception, where foreign services seem to move together with domestic value added.
+
 
 ```{r}
 #| label: tbl-regvv
