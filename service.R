@@ -1,4 +1,4 @@
-ibrary(tidyverse)
+library(tidyverse)
 library(writexl)
 
 setwd('C:/github/ERIA_services/data/icio')
